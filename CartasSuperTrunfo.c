@@ -54,8 +54,8 @@ int main() {
     printf("\nCidade: %s\n", cidades[i].codigo);
     printf("População: %d habitantes\n",cidades[i].populacao);
     printf("Área: %.2f km²\n", cidades[i].area);
-    printf("PIB: %2f milhões\n", cidades[i].pib);
-    printf("Pontos turísticos: %d\n, cidades[i].pontos_turisticos");
+    printf("PIB: %.2f milhões\n", cidades[i].pib);
+    printf("Pontos turísticos:%d\n", cidades[i].pontos_turisticos);
    }    
 
 return 0;
