@@ -3,7 +3,7 @@
 //Jogo de cartas Super Trunfo - Parte 1
 // Objetivo: Cadastro das Cartas
 
-//Abaixo, vamos inserir a variavei que iremos trabalhar...
+//Abaixo, vamos inserir as variaveis que iremos trabalhar...
 int main() {
     char Estado[20], Estado2[20];
     char Cod_carta [5], Cod_carta2[5];
@@ -41,6 +41,8 @@ int main() {
     scanf("%d", & Tot_Pontos_Turisticos);
 
     printf("\n");
+    
+    //Cidade/Carta 2...
 
     printf ("Dados da Carta 2.. \n");
 
@@ -67,8 +69,8 @@ int main() {
  
     printf("\n");
 
-    //Exibição dos dados inserido pelo usuario:
-    
+    //Exibição dos dados inseridos pelo usuario:
+
     printf("Carta 1: \n");
     printf("Nome do Estado: %s \n", Estado);
     printf("Código da Carta: %s \n", Cod_carta);
