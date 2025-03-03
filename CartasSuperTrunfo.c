@@ -25,14 +25,22 @@ int main() {
     // Sugestão: Utilize a função scanf para capturar as entradas do usuário para cada atributo.
     // Solicite ao usuário que insira as informações de cada cidade, como o código, nome, população, área, etc.
     
-    printf("BEM-VINDO AO JOGO DE CARTAS SUPER TRUNFO!\n");
+    printf("BEM-VINDO AO JOGO DE CARTAS SUPER TRUNFO!\n VAMOS COMEÇAR!\n");
     printf("Cadastre as Cartas:\n");
     printf("Carta: %d\n", carta_um);
     printf("Escreva o nome do País: ");
     fgets(nome_do_pais,50,stdin);
     printf("Nome do País: %s" , nome_do_pais);
-    printf("Escreva o código do País: ");
-
+    printf("Escreva o código da Cidade: ");
+    scanf("%s", &codigo_da_cidade);
+    printf("Código da Cidade: %s", codigo_da_cidade);
+    printf("Insira o número da população: ");
+    scanf("%f", &populacao);
+    printf("Insira a área em Km da Cidade: ");
+    scanf("%f", &area_km);
+    printf("insira o PIB: ");
+    scanf("%f", &pib);
+    printf("%d", pontos_turisticos);
 
 
     // Exibição dos Dados das Cartas:
