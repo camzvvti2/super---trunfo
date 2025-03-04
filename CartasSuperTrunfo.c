@@ -14,7 +14,7 @@ int main() {
     int carta_um = 1;
     int carta_dois = 2;
     char nome_do_pais[50];
-    char codigo_da_cidade[50];
+    int codigo_ddd_da_cidade[50];
     char nome_da_cidade[50];
     float populacao;
     float area_km;
@@ -33,32 +33,51 @@ int main() {
     printf("Escreva o nome do País: ");
     fgets(nome_do_pais,50,stdin);
     printf("Nome do País: %s" , nome_do_pais);
-    printf("Escreva o código da Cidade: ");
-    scanf("%s", &codigo_da_cidade);
-    printf("Código da Cidade: %s", codigo_da_cidade);
-    printf("Insira o número da população: ");
+    printf("Insira o nome da Cidade: ");
+    fgets(nome_da_cidade,50, stdin);
+    printf("Nome da Cidade: %s");
+    printf("Escreva o código do DDD telefônico da Cidade: ");
+    scanf("%d", &codigo_ddd_da_cidade);
+    printf("Código DDD da Cidade: %d", codigo_ddd_da_cidade); 
+      printf("Insira o número da População: ");
     scanf("%f", &populacao);
+    printf("População: %f", populacao);
     printf("Insira a área em Km da Cidade: ");
     scanf("%f", &area_km);
+    printf("Área: %f",area_km);
     printf("insira o PIB: ");
     scanf("%f", &pib);
+    printf("PIB: %f", pib);
+    printf("Insira o Numer de pontos Turisticos: ");
+    scanf("%d", &pontos_turisticos);
     printf("%d", pontos_turisticos);
 
+
+
+    printf("---------------------//---------------------");
 
     printf("Cadastre a carta Número Dois!");
     printf("Carta: %d\n", carta_dois);
     printf("Escreva o nome do País: ");
     fgets(nome_do_pais,50,stdin);
     printf("Nome do País: %s" , nome_do_pais);
-    printf("Escreva o código da Cidade: ");
-    scanf("%s", &codigo_da_cidade);
-    printf("Código da Cidade: %s", codigo_da_cidade);
-    printf("Insira o número da população: ");
+    printf("Insira o nome da Cidade: ");
+    fgets(nome_da_cidade,50, stdin);
+    printf("Nome da Cidade: %s");
+    printf("Escreva o código do DDD telefônico da Cidade: ");
+    scanf("%d", &codigo_ddd_da_cidade);
+    printf("Código DDD da Cidade: %d", codigo_ddd_da_cidade); 
+      printf("Insira o número da População: ");
     scanf("%f", &populacao);
+    printf("População: %f", populacao);
     printf("Insira a área em Km da Cidade: ");
     scanf("%f", &area_km);
+    printf("Área: %f",area_km);
     printf("insira o PIB: ");
     scanf("%f", &pib);
+    printf("PIB: %f", pib);
+    printf("Insira o Numer de pontos Turisticos: ");
+    scanf("%d", &pontos_turisticos);
     printf("%d", pontos_turisticos);
 
 
@@ -68,8 +87,12 @@ int main() {
 
     printf("Carta: %d", carta_um);
     printf("País: %s", nome_do_pais);
-    printf("Nome da Cidade: %s", codigo_da_cidade);
-    printf("")
+    printf("Nome da Cidade: %s", codigo_ddd_da_cidade);
+    printf("Código DDD da Cidade: %d");
+    printf("População: %f");
+    printf("Área: %f");
+    printf("PIB: %f");
+    printf("Número de Pontos Turísticos: %d");
 
     return 0;
 }
