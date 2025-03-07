@@ -1,5 +1,6 @@
 {
     "files.associations": {
-        "SUPERTRUNFO.C": "cpp"
+        "SUPERTRUNFO.C": "cpp",
+        "super_trunfo.C": "cpp"
     }
 }
