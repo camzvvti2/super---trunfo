@@ -20,6 +20,8 @@ int main() {
     float area_km;
     float pib;
     int pontos_turisticos;
+    float densidadePopulacional;
+    float perCapita;
 
     //Variáveis carta 2 e os tipos para alocar os dados inseridos
 
@@ -31,6 +33,8 @@ int main() {
     float area_km_dois;
     float pib_dois;
     int pontos_turisticos_dois;
+    float densidadePopulacionalDois;
+    float perCapitaDois;
 
     
     // Apresentando o jogo e Solicitandp ao usuário que insira as informações dos dados.
@@ -87,6 +91,13 @@ int main() {
     scanf("%d", &pontos_turisticos);
     printf("Número de pontos Turísticos: %d \n", pontos_turisticos);
 
+    //Cálculo densidade populacional:
+    densidadePopulacional = populacao / area_km;
+
+    //Cálculo PIB per capita:
+    perCapita = pib / populacao;
+
+
     printf("\n");
     printf("\n");
 
@@ -138,6 +149,12 @@ int main() {
     scanf("%d", &pontos_turisticos_dois);
     printf("Número de pontos Turísticos: %d \n", pontos_turisticos_dois);
 
+    //Cálculo densidade populacional:
+        densidadePopulacionalDois = populacao_dois / area_km_dois;
+
+     //Cálculo PIB per capita:
+        perCapitaDois = pib_dois / populacao_dois;
+
     printf("\n");
     printf("\n");
 
@@ -152,6 +169,8 @@ int main() {
     printf("Área km²: %.2f\n", area_km);
     printf("PIB: %.2f\n", pib);
     printf("Número de Pontos Turísticos: %d\n", pontos_turisticos);
+    printf("Densidade populacional: %.2f hab/km² \n", densidadePopulacional);
+    printf("PIB per capita: %.2f reais \n", perCapita);
 
     printf("\n");
     printf("\n");
@@ -165,6 +184,8 @@ int main() {
     printf("Área km²: %.2f\n", area_km_dois);
     printf("PIB: %.2f\n", pib_dois);
     printf("Número de Pontos Turísticos: %d\n", pontos_turisticos_dois);
+    printf("Densidade populacional: %.2f hab/km² \n", densidadePopulacionalDois);
+    printf("PIB per capita: %.2f reais \n", perCapitaDois);
 
     printf("\n");
     printf("\n");
