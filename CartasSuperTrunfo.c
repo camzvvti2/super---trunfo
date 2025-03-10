@@ -24,13 +24,26 @@ int main() {
   
     char cidade [20]; 
   
-    float população; 
+    int população; 
   
     float area; 
   
     float pib; 
   
     int turismo; 
+
+    printf("Digite o estado:\n");
+
+    scanf("%c", &estado);
+        
+    printf("Estado:%c\n", estado);
+   
+    printf("Digite o codigo da carta: \n");
+  
+    scanf("%s", codigo);
+  
+    printf("O codigo da carta é:%s\n", codigo);
+  
 
 
     return 0;
