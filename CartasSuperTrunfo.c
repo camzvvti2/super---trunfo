@@ -14,7 +14,7 @@ int main() {
     //Variáveis carta 1 e os tipos para alocar os dados inseridos
     int carta_um = 1;
     char nome_do_pais[50];
-    int codigo_ddd_da_cidade;
+    int codigo_da_carta;
     char nome_da_cidade[50];
     unsigned long int populacao;
     float area_km;
@@ -28,7 +28,7 @@ int main() {
     //Variáveis carta 2 e os tipos para alocar os dados inseridos
     int carta_dois = 2;
     char nome_do_pais_dois[50];
-    int codigo_ddd_da_cidade_dois;
+    int codigo_da_carta_dois;
     char nome_da_cidade_dois[50];
     unsigned long int populacao_dois;
     float area_km_dois;
@@ -73,10 +73,10 @@ int main() {
     fgets(nome_da_cidade,50, stdin);
     printf("Nome da Cidade: %s", nome_da_cidade);
 
-    //Dados Número de DDD Telefônco da Cidade:
-    printf("Escreva o código do DDD telefônico da Cidade: ");
-    scanf("%d", &codigo_ddd_da_cidade);
-    printf("Código DDD da Cidade: %d\n", codigo_ddd_da_cidade); 
+    //Dados Código da carta A:
+    printf("Escreva o código DA Carta: ");
+    scanf("%s", &codigo_da_carta_dois);
+    printf("Código da Carta B: %s\n", codigo_da_carta_dois); 
 
     //Dados Número da População:
     printf("Insira o número da População: ");
@@ -130,10 +130,10 @@ int main() {
     fgets(nome_da_cidade_dois,50, stdin);
     printf("Nome da Cidade: %s", nome_da_cidade_dois);
 
-     //Dados Número de DDD Telefônco da Cidade:
-    printf("Escreva o código do DDD telefônico da Cidade: ");
-    scanf("%d", &codigo_ddd_da_cidade_dois);
-    printf("Código DDD da Cidade: %d\n", codigo_ddd_da_cidade_dois); 
+     //Dados Código da carta:
+    printf("Escreva o código DA Carta: ");
+    scanf("%s", &codigo_da_carta_dois);
+    printf("Código da Carta B: %s\n", codigo_da_carta_dois); 
 
      //Dados Número da População:
     printf("Insira o número da População: ");
@@ -171,7 +171,7 @@ int main() {
     printf("Carta: %d\n", carta_um);
     printf("País: %s", nome_do_pais);
     printf("Nome da Cidade: %s", nome_da_cidade);
-    printf("Código DDD da Cidade: %d\n", codigo_ddd_da_cidade);
+    printf("Código da Carta A: %s\n", codigo_da_carta);
     printf("População: %lu\n", populacao);
     printf("Área km²: %.2f\n", area_km);
     printf("PIB: %.2f\n", pib);
@@ -186,7 +186,7 @@ int main() {
     printf("Carta: %d\n", carta_dois);
     printf("País: %s", nome_do_pais_dois);
     printf("Nome da Cidade: %s", nome_da_cidade_dois);
-    printf("Código DDD da Cidade: %d\n", codigo_ddd_da_cidade_dois);
+    printf("Código da Carta B: %s\n", codigo_da_carta_dois);
     printf("População: %lu\n", populacao_dois);
     printf("Área km²: %.2f\n", area_km_dois);
     printf("PIB: %.2f\n", pib_dois);
