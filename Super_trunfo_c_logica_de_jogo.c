@@ -1,9 +1,10 @@
 #include <stdio.h>
+#include <string.h>
 
 // Estrutura para armazenar as informações de uma carta
 typedef struct {
     char estado[3];        // Estado (ex: SP, RJ, MG)
-    char codigo[10];       // Código da cidade (ex: A01)
+    char codigo[10];       // Código da carta (ex: A01)
     char nome[50];         // Nome da cidade
     int populacao;         // População da cidade
     float area;            // Área da cidade em km²
@@ -13,22 +14,25 @@ typedef struct {
 
 // Função para calcular a densidade populacional
 float calcularDensidade(int populacao, float area) {
-    return (area > 0) ? populacao / area : 0;
+    // Retorna a densidade populacional (população / área)
+    return (area > 0) ? (float)populacao / area : 0;  
 }
 
 // Função para calcular o PIB per capita
 float calcularPIBperCapita(float pib, int populacao) {
-    return (populacao > 0) ? pib / populacao : 0;
+    // Retorna o PIB per capita (PIB / população)
+    return (populacao > 0) ? pib / populacao : 0;  
 }
 
-// Função para comparar duas cartas com base em um atributo específico
+// Função para comparar duas cartas com base em um atributo fixo
 void compararCartas(Carta c1, Carta c2) {
-    // Escolha do atributo para comparação (definido diretamente no código)
-    char atributoEscolhido[] = "População";  // Alterar para "Área", "PIB", "Densidade Populacional" ou "PIB per Capita"
-    
-    float valorC1, valorC2;
-    int criterio = 1;  // 1 para maior vence, -1 para menor vence
+    // Atributo escolhido para a comparação. Aqui, estamos comparando a População.
+    char atributoEscolhido[] = "População";  
 
+    float valorC1 = 0, valorC2 = 0;
+    int criterio = 1; // 1 = maior valor vence, -1 = menor valor vence
+
+    // Determinando qual atributo será comparado
     if (strcmp(atributoEscolhido, "População") == 0) {
         valorC1 = c1.populacao;
         valorC2 = c2.populacao;
@@ -46,35 +50,37 @@ void compararCartas(Carta c1, Carta c2) {
         valorC1 = calcularPIBperCapita(c1.pib, c1.populacao);
         valorC2 = calcularPIBperCapita(c2.pib, c2.populacao);
     } else {
-        printf("Erro: Atributo desconhecido para comparação!\n");
+        // Caso o atributo não seja válido, exibe uma mensagem de erro
+        printf("Atributo inválido para comparação.\n");
         return;
     }
 
-    // Determinar a carta vencedora
-    printf("\n Comparação de cartas (Atributo: %s):\n", atributoEscolhido);
-    printf("\n Carta 1 - %s (%s): %.2f", c1.nome, c1.estado, valorC1);
-    printf("\n Carta 2 - %s (%s): %.2f", c2.nome, c2.estado, valorC2);
+    // Exibindo os valores comparados
+    printf("\n===== Comparação: %s =====\n", atributoEscolhido);
+    printf("Carta 1 - %s (%s): %.2f\n", c1.nome, c1.estado, valorC1);
+    printf("Carta 2 - %s (%s): %.2f\n", c2.nome, c2.estado, valorC2);
 
-    if ((criterio == 1 && valorC1 > valorC2) || (criterio == -1 && valorC1 < valorC2)) {
-        printf("\n Resultado: Carta 1 (%s) venceu!\n", c1.nome);
+    // Determinando o vencedor com base no critério escolhido (maior ou menor)
+    if ((criterio == 1 && valorC1 > valorC2)) {
+        printf("Resultado: Carta 1 (%s) venceu!\n", c1.nome);
     } else if (valorC1 == valorC2) {
-        printf("\n Resultado: Empate!\n");
+        printf("Resultado: Empate!\n");
     } else {
-        printf("\n Resultado: Carta 2 (%s) venceu!\n", c2.nome);
+        printf("Resultado: Carta 2 (%s) venceu!\n", c2.nome);
     }
 }
 
 // Função principal
 int main() {
-    // Criando duas cartas fixas para comparação
+    // Criando duas cartas fixas para a comparação
     Carta carta1 = {"SP", "A01", "São Paulo", 12300000, 1521.0, 699.28, 100};
     Carta carta2 = {"RJ", "A02", "Rio de Janeiro", 6710000, 1200.0, 415.26, 120};
 
-    // Exibir os detalhes das cartas
-    printf(" Carta 1: %s (%s)\n", carta1.nome, carta1.estado);
-    printf(" Carta 2: %s (%s)\n", carta2.nome, carta2.estado);
+    // Exibindo os detalhes das cartas
+    printf("Carta 1: %s (%s)\n", carta1.nome, carta1.estado);
+    printf("Carta 2: %s (%s)\n", carta2.nome, carta2.estado);
 
-    // Chamar a função para comparar as cartas
+    // Chamando a função para comparar as duas cartas
     compararCartas(carta1, carta2);
 
     return 0;
