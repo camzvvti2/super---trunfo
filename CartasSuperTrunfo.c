@@ -92,5 +92,18 @@ int main() {
     printf("Densidade Populacional: %.2f hab/km²\n", densidade2);
     printf("PIB per Capita: %.2f\n", pibPerCapita2);
 
+    printf("Carta1 - %c: %d habitantes", nomeCidade1, populacao1);
+    printf("Carta2 - %c: %d habitantes", nomeCidade2, populacao2)
+
+    if (area1 > area2)
+    {
+        printf("Resultado: A cidade %s venceu!\n", nomeCidade1);
+    }
+    else
+    {
+        printf("Resultado: A cidade %s venceu!\n", nomeCidade2);
+    }
+
+
     return 0;
 }
