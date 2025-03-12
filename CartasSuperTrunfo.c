@@ -43,6 +43,18 @@ int main() {
     scanf("%s", codigo);
   
     printf("O codigo da carta é:%s\n", codigo);
+
+    printf("Digite o nome da cidade é:\n");
+  
+    scanf("%s", cidade);
+  
+    printf("O nome da cidade é:%s\n", cidade);
+
+    printf("Qual a população da cidade:\n");
+  
+    scanf("%f", &população);
+  
+    printf("A população da cidade é de :%f\n", população);
   
 
 
