@@ -24,7 +24,7 @@ int main() {
   
     char cidade [20]; 
   
-    int população; 
+    int populacao; 
   
     float area; 
   
@@ -52,9 +52,9 @@ int main() {
 
     printf("Qual a população da cidade:\n");
   
-    scanf("%f", &população);
+    scanf("%f", &populacao);
   
-    printf("A população da cidade é de :%f\n", população);
+    printf("A população da cidade é de :%f\n", populacao);
   
 
 
