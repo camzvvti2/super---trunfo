@@ -96,5 +96,6 @@ int main() {
     printf("pib2: %f\n", pib2);
     printf("turistico2: %d\n", turistico2);
     
+    printf("novo commit\n");
     return 0;
 }
