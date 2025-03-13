@@ -68,7 +68,7 @@ int main() {
     printf("\nCARTA 02\n");
 
     // CAPTURA DO ESTADO
-    printf("Digite a Inicial do seu Estado:\n");
+    printf("Digite a UF do seu Estado:\n");
     scanf("%2s", estado_1);  // Limita a entrada a 2 caracteres
     getchar();
 
