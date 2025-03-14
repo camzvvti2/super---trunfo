@@ -8,43 +8,41 @@ int main() {
 
     char estado1, estado2;
     char codigo1, codigo2;
-    char cidade1[100], cidade2[100];
+    char cidade1[30], cidade2[30];
     int populacao1, populacao2;
     float area1, area2;
     float pib1, pib2;
     int pontosTuristicos1, pontosTuristicos2;
 
     printf("Dados da primeira  carta: \n");
+
     printf("Estado: Uma letra de 'A' a 'H' (representando um dos oito estados) \n");
     scanf("%c", &estado1);
+    
 
-    printf("Escolha a cidade desejada 1 a 4 (ex: São Paulo, Rio de Janeiro): \n");
-    scanf("%c", &cidade1);
+    printf("Codigo da carta, A letra do estado seguida de um número de 01 a 04 (ex: A01, B03) \n");
+    scanf("%s", &codigo1);
 
-    /* printf("codigo 1 a 4 (ex:01,02): \n");
-    scanf("%c", &codigo1);
+
+    printf("Escolha a cidade desejada: \n");
+    scanf("%s", cidade1);
+
 
     printf("Qual a populçao da Cidade escolhida? (ex: 1510023500): \n");
     scanf("%d", &populacao1);
 
+
     printf("Area da cidade escolhida: \n");
     scanf("%f", &area1);
+
 
     printf("PIB da cidade: \n");
     scanf("%f", &pib1);
 
-    printf("Por ultimo, os Pontos Turistico da cidade: \n");
-    scanf("%d", &pontosTuristicos1);*/
 
-
-
-
-
-
-
-
-
-
+    printf("Por ultimo, quantidade de Pontos Turistico da cidade: \n");
+    scanf("%d", &pontosTuristicos1);
+    
     return 0;
 
 }
