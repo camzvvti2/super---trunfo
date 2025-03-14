@@ -89,7 +89,8 @@ int main()
 
     // cadastro feito mostro os dados na tela
 
-    printf("Carta 1\nEstado: %s\nCódigo: %s\nNome da Cidade: %s\nPopulação: %i\nÁrea: %f\nPIB: %f\nNumero de pontos turisticos: %i\n\n\nCarta 2\nEstado: %s\nCódigo: %s\nNome da Cidade: %s\nPopulação: %i\nÁrea: %f\nPIB: %f\nNumero de pontos turisticos: %i", Estado, Codigo, Nome_da_cidade, Populacao, Area, Pib, Pontosturisticos, Estado2, Codigo2, Nome_da_cidade2, Populacao2, Area2, Pib2, Pontosturisticos2);
+    printf("Carta 1\nEstado: %s\nCódigo: %s\nNome da Cidade: %s\nPopulação: %i\nÁrea: %f\nPIB: %f\nNumero de pontos turisticos: %i\n\n\nCarta 2\nEstado: %s\nCódigo: %s\nNome da Cidade: %s\nPopulação: %i\nÁrea: %f\nPIB: %f\nNumero de pontos turisticos: %i",
+           Estado, Codigo, Nome_da_cidade, Populacao, Area, Pib, Pontosturisticos, Estado2, Codigo2, Nome_da_cidade2, Populacao2, Area2, Pib2, Pontosturisticos2);
     return 0;
 }
-//novo commit
+// novo commit
