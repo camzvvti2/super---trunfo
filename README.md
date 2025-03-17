@@ -1,94 +1,66 @@
-# Desafio Super Trunfo - Países - Cadastro das Cartas - Atualizado: 21/02
+Super Trunfo Comparação - Jogo de Cidades
 
-Bem-vindo ao desafio "Super Trunfo - Países"! No jogo Super Trunfo, os jogadores comparam os atributos das cartas para determinar a mais forte. O tema deste Super Trunfo é "Países", onde você comparará os atributos das cidades.
+Bem-vindo ao Super Trunfo de Cidades! Neste jogo, você poderá comparar diferentes cidades com base em atributos como população, área, PIB e densidade demográfica. Seu objetivo é escolher dois atributos para comparar e descobrir qual cidade vence!
 
-A empresa MateCheck contratou você para desenvolver a parte inicial do jogo, que consiste no cadastro das cartas.
+Como Jogar
 
-O desafio está dividido em três níveis: Novato, Aventureiro e Mestre, com cada nível adicionando mais complexidade ao anterior.  **Você deve escolher qual desafio quer realizar.**
+Após iniciar o programa, siga as instruções para inserir os dados de duas cidades. Você precisará informar:
 
-🚨 **Atenção:** O nível Novato do desafio é focado apenas no cadastro das cartas, utilizando as funções `scanf` para ler os dados e `printf` para exibi-los.
+- Nome da cidade
+- População
+- Área (em km²)
+- PIB (em bilhões)
+- Número de pontos turísticos
 
-## 🎮 Nível Novato: Cadastro Básico
+Depois disso, você poderá escolher dois atributos diferentes para comparar.
 
-No nível Novato, você iniciará criando o sistema básico do jogo Super Trunfo com o tema "Países". As cartas serão divididas por estados, cada um com quatro cidades.  Imagine um país dividido em oito estados (A a H), e cada estado com quatro cidades (1 a 4).  A combinação forma o código da carta (ex: A01, B02).
+Atributos Disponíveis para Comparação
 
-🚩 **Objetivo:** Criar um programa em C que cadastra **duas** cartas com os seguintes atributos:
+1- População - A cidade com a maior população vence.
+2- Área - A cidade com a maior área vence.
+3- PIB - A cidade com o maior PIB vence.
+4- Pontos Turísticos - A cidade com mais pontos turísticos vence.
+5- Densidade Demográfica - Regra especial! Aqui, vence a cidade com a menor densidade (ou seja, menos pessoas por km²).
 
-*   População (`int`)
-*   Área (`float`)
-*   PIB (`float`)
-*   Número de pontos turísticos (`int`)
+Regras do Jogo
 
-⚙️ **Funcionalidades do Sistema:**
+1. Escolha dois atributos diferentes para a comparação.
+2. O programa compara os valores e exibe os resultados.
+3. A soma dos atributos define o vencedor.
+4. Se as somas forem iguais, temos um empate!
 
-*   O sistema permitirá ao usuário cadastrar os dados de **duas** cartas manualmente via terminal.
-*   Após o cadastro, o sistema exibirá os dados de cada cidade de forma organizada.
+Exemplo de Uso
 
-📥 **Entrada** e 📤 **Saída de Dados:**
+Digite os dados da Carta 1:
+Nome da Cidade: São Paulo
+População: 12300000
+Área (km²): 1521
+PIB (bilhões): 700
+Pontos Turísticos: 50
 
-*   O usuário insere os dados de cada carta interativamente via `scanf`.
-*   O programa exibe os dados cadastrados usando `printf`, com cada atributo em uma nova linha.
+Digite os dados da Carta 2:
+Nome da Cidade: Rio de Janeiro
+População: 6748000
+Área (km²): 1200
+PIB (bilhões): 400
+Pontos Turísticos: 80
 
-**Simplificações para o Nível Novato:**
+Escolha o primeiro atributo:
+1. População
+2. Área
+3. PIB
+4. Pontos Turísticos
+5. Densidade Demográfica
+> 3
 
-*   Cadastre apenas **duas** cartas.
-*   Concentre-se na leitura, armazenamento e exibição. Não implemente comparações ou outros recursos.
-*   **Não use** laços (`for`, `while`) ou condicionais (`if`, `else`).
+Escolha o segundo atributo (diferente do primeiro):
+> 4
 
+Comparando PIB:
+São Paulo: 700.00 | Rio de Janeiro: 400.00
+Comparando Pontos Turísticos:
+São Paulo: 50.00 | Rio de Janeiro: 80.00
 
-## 🛡️ Nível Aventureiro: Cálculo de Atributos
-
-No nível Aventureiro, você expandirá o sistema para incluir o cálculo de dois novos atributos: Densidade Populacional e PIB per Capita.
-
-🆕 **Diferença em relação ao Nível Novato:**
-
-*   **Novos Atributos:**
-    *   Densidade Populacional: População / Área (`float`)
-    *   PIB per Capita: PIB / População (`float`)
-
-⚙️ **Funcionalidades do Sistema:**
-
-*   O sistema calculará automaticamente a Densidade Populacional e o PIB per Capita.
-*   Os novos atributos serão exibidos junto com os demais.
-
-📥 **Entrada** e 📤 **Saída de Dados:**
-
-*   Mesma entrada do nível Novato.
-*   A saída exibirá também os atributos calculados.
-
-**Simplificações para o Nível Intermediário:**
-
-*   Continue cadastrando apenas **duas** cartas.
-*   Continue **sem usar** laços (`for`, `while`) ou condicionais (`if`, `else`).
-
-
-
-## 🏆 Nível Mestre: Comparação e Super Poder
-
-No nível Mestre, você implementará a comparação entre duas cartas e o cálculo do "Super Poder".
-
-🆕 **Diferença em relação ao Nível Aventureiro:**
-
-*   **Comparação de Cartas:** O usuário poderá comparar as duas cartas.
-*   **Super Poder:** Soma de todos os atributos (inclusive os calculados), com a densidade populacional *invertida* antes da soma (1/densidade).  Tipo: `float`.
-
-⚙️ **Funcionalidades do Sistema:**
-
-*   Comparação atributo a atributo, mostrando qual carta venceu (1 se a Carta 1 vence, 0 se a Carta 2 vence).
-*   Para Densidade Populacional, vence a carta com o *menor* valor.
-*   Para os demais atributos (e o Super Poder), vence a carta com o *maior* valor.
-
-📥 **Entrada** e 📤 **Saída de Dados:**
-
-*   Mesma entrada dos níveis anteriores, mas a População agora é `unsigned long int`.
-*   A saída mostrará o resultado da comparação para cada atributo e o Super Poder.
-
-**Observação:**  Preste atenção à conversão de tipos ao calcular o Super Poder!
-
-
-## 🏁 Conclusão
-
-Ao concluir qualquer um dos níveis, você terá dado um passo importante no desenvolvimento do Super Trunfo - Países. Boa sorte e divirta-se programando!
-
-Equipe de Ensino - MateCheck
-content_copy
+Soma dos Atributos:
+São Paulo: 750.00 | Rio de Janeiro: 480.00
+São Paulo Ganhou!
