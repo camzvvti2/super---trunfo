@@ -1,2 +1,9 @@
 #include <stdio.h>
-printf ("Bem-vindo ao Desafio Das Cartas Super Trunfo.");
+
+int main() {
+    printf ("Desafio Super Trunfo\n");
+
+
+
+    
+}
