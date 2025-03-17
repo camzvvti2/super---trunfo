@@ -1,9 +1,10 @@
 #include <stdio.h>
 
-int main() {
-    printf ("Desafio Super Trunfo\n");
-
-
-
+int main () {
+    printf ("Desafio Super Trunfo");
     
+
+
+
+
 }
