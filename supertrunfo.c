@@ -1,29 +1,27 @@
 #include <stdio.h>
 
 int main() {
-    // Declaração das variáveis para armazenar os dados das cartas
 
-    /*o sistema básico do jogo Super Trunfo com o tema "Países". As cartas serão divididas por estados, cada um com quatro cidades. 
-     Imagine um país dividido em oito estados (A a H), e cada estado com quatro cidades (1 a 4).  A combinação forma o código da carta (ex: A01, B02).*/
-
-    char estado1, estado2;
-
-    char codi1, codigo2;
-
-    char cidade1[30], cidade2[30];
-
-    int popu1, popu2;
-
-    float area1, area2;
-
-    float pib1, pib2;
-
-    int pnt1, pntc2;
+    char estado1[100];
+    char cidade1[100];
+    char codi1[100];
+    int popu1;
+    float area1;
+    float pib1;
+    int pnt1;
+    
+    char estd2[100];
+    char codigo2[100];
+    char cidade2[100];
+    int popu2;
+    float area2;
+    float pib2;
+    int pntc2;
 
     printf("Dados da primeira carta: \n");
 
     printf("Estado: Uma letra de 'A' a 'H' (representando um dos oito estados) \n");
-    scanf("%c", &estado1);
+    scanf("%s", &estado1);
     
     printf("Codigo da carta, A letra do estado seguida de um número de 01 a 04 (ex: A01, B03) \n");
     scanf("%s", &codi1);
@@ -50,13 +48,13 @@ int main() {
     printf("\n");
 
     printf("Estado: Uma letra de 'A' a 'H' (representando um dos oito estados) \n");
-    scanf("%s", &estado2);
+    scanf("%s", &estd2);
 
     printf("Codigo da carta, A letra do estado seguida de um número de 01 a 04 (ex: A01, B03) \n");
     scanf("%s", &codigo2);
 
     printf("Escolha a cidade desejada: \n");
-    scanf("%s", &cidade2);
+    scanf("%s", cidade2);
 
     printf("Qual a populçao da Cidade escolhida? (ex: 1510023500): \n");
     scanf("%d", &popu2);
@@ -71,12 +69,14 @@ int main() {
     scanf("%d", &pntc2);
 
     printf("\n");
+
 /*prineira carta*/
+
     printf("Resultados da primeira carta: \n");
     
-    printf("estado: %c \n", estado1);
+    printf("estado: %s \n", &estado1);
 
-    printf("codigo: %c \n", codi1);
+    printf("codigo: %s \n", &codi1);
 
     printf("cidade: %s \n", cidade1);
 
@@ -87,16 +87,20 @@ int main() {
     printf("pib: %.2f \n", pib1);
 
     printf("pontos turisticos: %d \n", pnt1);
+    printf("FIM");
+
 /*fim da primeira crt e inicio da sgd*/
+
     printf("\n");
+
 
     printf("resultados da segunda carta: \n");
 
-    printf("Estado: %c \n", estado2);
+    printf("Estado: %s \n", &estd2);
 
     printf("Codigo: %s \n", &codigo2);
 
-    printf("Cidade: %s \n", &cidade2);
+    printf("Cidade: %s \n", cidade2);
 
     printf("População: %d \n", popu2);
 
@@ -105,6 +109,7 @@ int main() {
     printf("Pib: %.2f \n", pib2);
 
     printf("Pontos turisticos: %d \n", pntc2);
+    
 /*fim da segunda*/
 
     printf("FIM");
