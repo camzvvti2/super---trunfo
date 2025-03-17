@@ -1,7 +1,7 @@
 #include <stdio.h>
 
 int main () {
-    
+
     char Estado [7]= 'Alagoas';
     char Cidade[5] = 'Belem';
     int População = 4.284;
@@ -27,4 +27,4 @@ int main () {
     printf ("PontosTuristicos \n");
     scanf ("%i , &PontosTuristicos");
 
-}
+} return0;
