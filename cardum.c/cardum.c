@@ -1,7 +1,7 @@
 #include <stdio.h>
 
 int main () {
-    printf ("Desafio Super Trunfo");
+    printf ("Desafio Super Trunfo\n");
     
 
 
