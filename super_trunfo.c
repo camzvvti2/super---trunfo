@@ -104,7 +104,32 @@ int main()
     printf("PIB: %f\n", Pib2);
     printf("Número de pontos turísticos: %i\n", Pontosturisticos2);
     printf("Densidade Populacional: %f\n", densidade_populacional2);
-    printf("PIB per Capita: %f\n", pib_per_capita2);
+    printf("PIB per Capita: %f\n\n\n", pib_per_capita2);
+
+
+    
+    
+    //variaveis para comparações
+    printf("Os resultados das comparações\n");
+    float superpoder=(Populacao+Area+Pib+Pontosturisticos+densidade_populacional+pib_per_capita);
+    float superpoder2=(Populacao2+Area2+Pib2+Pontosturisticos2+densidade_populacional2+pib_per_capita2);
+    float r1=Populacao>Populacao2;
+    float r2=Area>Area2;
+    float r3=Pib>Pib2;
+    float r4=Pontosturisticos>Pontosturisticos2;
+    float r5=densidade_populacional>densidade_populacional2;
+    float r6= pib_per_capita>pib_per_capita2;
+    float R7=superpoder>superpoder2;
+    //resultados na tela
+    printf("Resultado 1: %f\n",r1);
+    printf("Resultado 2: %f\n",r2);
+    printf("Resultado 3: %f\n",r3);
+    printf("Resultado 4: %f\n",r4);
+    printf("Resultado 5: %f\n",r5);
+    printf("Resultado 6: %f\n",r6);
+    printf("Resultado Super Poder: %f\n",R7);
+
+
 
     return 0;
 }
