@@ -1,6 +1,7 @@
 #include <stdio.h>
 
 int main(){
+        //Super Trunfo em C
         //variaveis para o cadastro da carta 1 e 2
         char Estado1,Estado2;
         char Codigo1[20], Codigo2[20];
