@@ -1,22 +1,86 @@
 #include <stdio.h>
 
-// Desafio Super Trunfo - Países
-// Tema 1 - Cadastro das Cartas
-// Este código inicial serve como base para o desenvolvimento do sistema de cadastro de cartas de cidades.
-// Siga os comentários para implementar cada parte do desafio.
-//Teste larissa
+//Declaração de variáveis globais
+char estado, estado2, codigo[4], codigo2[4], nomeCidade[20], nomeCidade2[20];
+int populacao, populacao2, qtdPontosTur, qtdPontosTur2;
+float area, area2, pib, pib2;
 
+void ColetarDados(){
+    printf("Digite o Estado:\n");
+    scanf(" %c", &estado);
+
+    printf("Digite o código da cidade:\n");
+    scanf(" %2s", &codigo);
+
+
+    printf("Digite o nome da cidade:\n");
+    scanf("%19s", &nomeCidade);
+    
+    printf("Digite a população da cidade:\n");
+    scanf("%i", &populacao);
+
+    printf("Digite quantos pontos turísticos exisatem na cidade:\n");
+    scanf("%i", &qtdPontosTur);
+    
+    printf("Digite pib:\n");
+    scanf("%f", &pib);
+    
+    printf("Digite a area da cidade:\n");
+    scanf("%f", &area);
+}
+
+void ColetarDados2(){
+    printf("Digite o Estado:\n");
+    scanf(" %c", &estado2);
+
+    printf("Digite o código da cidade:\n");
+    scanf("%2s", &codigo2);
+
+
+    printf("Digite o nome da cidade:\n");
+    scanf("%19s", &nomeCidade2);
+    
+    printf("Digite a população da cidade:\n");
+    scanf("%i", &populacao2);
+
+    printf("Digite quantos pontos turísticos exisatem na cidade:\n");
+    scanf("%i", &qtdPontosTur2);
+    
+    printf("Digite pib:\n");
+    scanf("%f", &pib2);
+    
+    printf("Digite a area da cidade:\n");
+    scanf("%f", &area2);
+}
+//Método responsável pela exibição dos dados
+void ExibirDados(){
+    printf("Carta 1:\n");
+    printf("Estado: %c\n",estado);
+    printf("Codigo: %c%s\n",estado,codigo);
+    printf("Nome da cidade: %s\n", nomeCidade);
+    printf("População da cidade: %i\n", populacao);
+    printf("Qtd pontos turísticos da cidade: %i\n", qtdPontosTur);
+    printf("Pib da cidade: %.2f\n", pib);
+    printf("Area da cidade: %.2f\n", area);
+
+
+    //Exibindo dados da segunda carta
+    printf("\nCarta 2:\n");
+    printf("Estado: %c \n", estado2);
+    printf("Codigo: %c%s \n",estado2, codigo2);
+    printf("Nome da cidade: %s \n", nomeCidade2);
+    printf("População da cidade: %i \n", populacao2);
+    printf("Qtd pontos turísticos da cidade: %i \n", qtdPontosTur2);
+    printf("Pib da cidade: %.2f \n", pib2);
+    printf("Area da cidade: %.2f \n", area2);
+
+}
+
+//Método main com a chamada para os demais métodos
 int main() {
-    // Sugestão: Defina variáveis separadas para cada atributo da cidade.
-    // Exemplos de atributos: código da cidade, nome, população, área, PIB, número de pontos turísticos.
-    
-    // Cadastro das Cartas:
-    // Sugestão: Utilize a função scanf para capturar as entradas do usuário para cada atributo.
-    // Solicite ao usuário que insira as informações de cada cidade, como o código, nome, população, área, etc.
-    
-    // Exibição dos Dados das Cartas:
-    // Sugestão: Utilize a função printf para exibir as informações das cartas cadastradas de forma clara e organizada.
-    // Exiba os valores inseridos para cada atributo da cidade, um por linha.
+   ColetarDados();
+   ColetarDados2();
+   ExibirDados();
 
     return 0;
 }
