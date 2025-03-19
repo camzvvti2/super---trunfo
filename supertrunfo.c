@@ -29,13 +29,13 @@ int main() {
     printf("Escolha a cidade desejada: \n");
     scanf(" %[^\n]", cidade1);
 
-    printf("Qual a populçao da Cidade escolhida? (ex: 15000000): \n");
+    printf("Qual a populaçao da Cidade escolhida? (ex: 15000000): \n");
     scanf("%d", &popu1);
 
     printf("Area da cidade escolhida em quilômetros quadrados.: \n");
     scanf("%f", &area1);
 
-    printf("PIB da cidade em bilhoes: \n");
+    printf("PIB da cidade em bilhões: \n");
     scanf("%f", &pib1);
 
     printf("Quantidade de Pontos Turistico da cidade: \n");
@@ -56,13 +56,13 @@ int main() {
     printf("Escolha a cidade desejada: \n");
     scanf(" %[^\n]", cidade2);
 
-    printf("Qual a populçao da Cidade escolhida? (ex: 15000000): \n");
+    printf("Qual a populaçao da Cidade escolhida? (ex: 15000000): \n");
     scanf("%d", &popu2);
 
     printf("Area da cidade escolhida em quilômetros quadrados.: \n");
     scanf("%f", &area2);
 
-    printf("PIB da cidade em bilhoes: \n");
+    printf("PIB da cidade em bilhões: \n");
     scanf("%f", &pib2);
 
     printf("Quantidade de Pontos Turistico da cidade: \n");
