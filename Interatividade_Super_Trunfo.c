@@ -20,11 +20,13 @@ float calcularDensidade(int populacao, float area) {
 // Função para permitir que o jogador cadastre uma carta
 void cadastrarCarta(Carta *carta) {
     printf("\nDigite o estado (ex: SP, RJ): ");
-    scanf("%s", carta->estado);
+    scanf("%2s", carta->estado);
     printf("Digite o código da carta: ");
-    scanf("%s", carta->codigo);
+    scanf("%9s", carta->codigo);
     printf("Digite o nome da cidade: ");
-    scanf(" %[^"]", carta->nome);
+    getchar(); // Limpar buffer do teclado
+    fgets(carta->nome, 50, stdin);
+    carta->nome[strcspn(carta->nome, "\n")] = 0; // Remover nova linha
     printf("Digite a população: ");
     scanf("%d", &carta->populacao);
     printf("Digite a área (km²): ");
@@ -111,8 +113,10 @@ int main() {
         printf("Digite sua escolha: ");
         scanf("%d", &opcao);
         
-        if (opcao != 0)
+        if (opcao >= 1 && opcao <= 5)
             compararCartas(carta1, carta2, opcao);
+        else if (opcao != 0)
+            printf("Opção inválida, tente novamente.\n");
 
     } while (opcao != 0);
 
