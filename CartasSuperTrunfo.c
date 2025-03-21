@@ -22,31 +22,9 @@ int main() {
     float pib2= 55247.45;
     int pontos_turisticos2= 8;
 
-    // Cadastro da primeira cidade
-    printf("Cadastro de Cidade 1:\n");
-    printf("Digite o código da cidade: ");
-    scanf("%s", codigo1);
-
-    printf("Digite o nome da cidade: ");
-    scanf(" %[^\n]", nome1);
-
-    printf("Digite o estado da cidade: ");
-    scanf(" %[^\n]", estado1);
-
-    printf("Digite a população da cidade: ");
-    scanf("%d", &populacao1);
-
-    printf("Digite a área da cidade (em km²): ");
-    scanf("%f", &area1);
-
-    printf("Digite o PIB da cidade (em bilhões): ");
-    scanf("%f", &pib1);
-
-    printf("Digite o número de pontos turísticos: ");
-    scanf("%d", &pontos_turisticos1);
-
+    
     // Exibição dos dados da primeira cidade
-    printf("\nCidade 1 cadastrada:\n");
+    printf("Cidade 1 cadastrada:\n");
     printf("Código: %s\n", codigo1);
     printf("Nome: %s\n", nome1);
     printf("Estado: %s\n", estado1);
@@ -55,28 +33,13 @@ int main() {
     printf("PIB: %.2f bilhões\n", pib1);
     printf("Pontos turísticos: %d\n", pontos_turisticos1);
 
-    // Cadastro da segunda cidade
-    printf("\nCadastro de Cidade 2:\n");
-    printf("Digite o código da cidade: ");
-    scanf("%s", codigo2);
+    // Cálculo da densidade populacional
+    float densidade1 = populacao1 / area1;
+    printf("A densidade populacional da cidade 1 é: %.2f habitantes/km²\n", densidade1);
 
-    printf("Digite o nome da cidade: ");
-    scanf(" %[^\n]", nome2);
-
-    printf("Digite o estado da cidade: ");
-    scanf(" %[^\n]", estado2);
-
-    printf("Digite a população da cidade: ");
-    scanf("%d", &populacao2);
-
-    printf("Digite a área da cidade (em km²): ");
-    scanf("%f", &area2);
-
-    printf("Digite o PIB da cidade (em bilhões): ");
-    scanf("%f", &pib2);
-
-    printf("Digite o número de pontos turísticos: ");
-    scanf("%d", &pontos_turisticos2);
+    // Cálculo do PIB per capita
+    float pib_per_capita1 = pib1 / populacao1;
+    printf("O PIB per capita da cidade 1 é: %.2f bilhões por habitante\n", pib_per_capita1);
 
     // Exibição dos dados da segunda cidade
     printf("\nCidade 2 cadastrada:\n");
@@ -88,7 +51,17 @@ int main() {
     printf("PIB: %.2f bilhões\n", pib2);
     printf("Pontos turísticos: %d\n", pontos_turisticos2);
 
+    // Cálculo da densidade populacional
+
+    float densidade2 = populacao2 / area2;
+    printf("A densidade populacional da cidade 2 é: %.2f habitantes/km²\n", densidade2);
+
+    // Cálculo do PIB per capita
+    float pib_per_capita2 = pib2 / populacao2;
+    printf("O PIB per capita da cidade 2 é: %.2f bilhões por habitante\n", pib_per_capita2);
+
+    
+
     return 0;
 }
-
 
