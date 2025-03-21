@@ -3,7 +3,16 @@
 //Declaração de variáveis globais
 char estado, estado2, codigo[4], codigo2[4], nomeCidade[20], nomeCidade2[20];
 int populacao, populacao2, qtdPontosTur, qtdPontosTur2;
-float area, area2, pib, pib2;
+float area, area2, pib, pib2,densidadePop,densidadePop2, pibCapita, pibCapita2;
+
+
+float calcularPibPerCapita(int populacao, float pib){
+    return pib/populacao;
+}
+
+float calcularDensidadePop(int populacao, float area){
+    return (float)populacao/area;
+}
 
 void ColetarDados(){
     printf("Digite o Estado:\n");
@@ -27,6 +36,9 @@ void ColetarDados(){
     
     printf("Digite a area da cidade:\n");
     scanf("%f", &area);
+
+    pibCapita = (float)calcularPibPerCapita(populacao,pib);
+    densidadePop = calcularDensidadePop(populacao,area);
 }
 
 void ColetarDados2(){
@@ -51,6 +63,10 @@ void ColetarDados2(){
     
     printf("Digite a area da cidade:\n");
     scanf("%f", &area2);
+
+    pibCapita2 = calcularPibPerCapita(populacao2,pib2);
+    densidadePop2 = calcularDensidadePop(populacao2,area2);
+
 }
 //Método responsável pela exibição dos dados
 void ExibirDados(){
@@ -62,6 +78,8 @@ void ExibirDados(){
     printf("Qtd pontos turísticos da cidade: %i\n", qtdPontosTur);
     printf("Pib da cidade: %.2f\n", pib);
     printf("Area da cidade: %.2f\n", area);
+    printf("Densidade populacional: %.2f\n", densidadePop);
+    printf("PIB per Capita: %.2f\n", pibCapita);
 
 
     //Exibindo dados da segunda carta
@@ -73,8 +91,11 @@ void ExibirDados(){
     printf("Qtd pontos turísticos da cidade: %i \n", qtdPontosTur2);
     printf("Pib da cidade: %.2f \n", pib2);
     printf("Area da cidade: %.2f \n", area2);
+    printf("Densidade populacional: %.2f\n", densidadePop2);
+    printf("PIB per Capita: %.2f\n", pibCapita2);
 
 }
+
 
 //Método main com a chamada para os demais métodos
 int main() {
