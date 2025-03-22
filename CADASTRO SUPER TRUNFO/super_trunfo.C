@@ -8,7 +8,7 @@ int main() {
     char municipio[20];
     int populacao;
     int pontos_turisticos;
-    float area_territorial, pib;
+    float area_territorial, pib, densidade_populacional, pib_percapita;
 
     char estado_1[3];
     char codigo1[5];
@@ -16,19 +16,19 @@ int main() {
     char municipio1[20];
     int populacao1;
     int pontos_turisticos1;
-    float area_territorial1, pib1;
+    float area_territorial1, pib1, densidade_populacional1, pib_percapita1;
 
     // ENTRADA DE DADOS - CARTA 01
     printf("CARTA 01\n");
 
     // CAPTURA DO ESTADO
-    printf("Digite a Inicial do seu Estado:\n");
-    scanf("%s", estado);
-    getchar(); // USADO PARA LIMPAR O BUFFER
+    printf("Digite a UF do seu Estado:\n");
+    scanf("%2s", estado);  // Limita a entrada a 2 caracteres
+    getchar(); // Limpa o buffer
 
     // CAPTURA DO CÓDIGO
     printf("Digite um Código:\n");
-    scanf("%s", codigo);
+    scanf("%4s", codigo);  // Limita a entrada a 4 caracteres
     getchar();
 
     // CAPTURAR E UNIR INICIAL DO ESTADO MAIS O CÓDIGO
@@ -37,7 +37,7 @@ int main() {
 
     // CAPTURA DO MUNICÍPIO
     printf("Informe o nome do Município:\n");
-    scanf(" %[^\n]", municipio);
+    scanf(" %19[^\n]", municipio);  // Limita a entrada a 19 caracteres
     getchar();
 
     // CAPTURA DA POPULAÇÃO
@@ -50,10 +50,14 @@ int main() {
     scanf("%f", &area_territorial);
     getchar();
 
-    // CAPTURA DO PIB
-    printf("Informe o PIB (Produto Interno Bruto):\n");
+    // CAPTURA DO PIB (em bilhões de reais)
+    printf("Informe o PIB (Produto Interno Bruto) em bilhões de reais:\n");
     scanf("%f", &pib);
     getchar();
+
+    // CÁLCULO DA DENSIDADE POPULACIONAL E DO PIB PER CAPITA (CARTA 1)
+    densidade_populacional = populacao / area_territorial;
+    pib_percapita = (pib * 1e9) / populacao;  // Converte PIB para reais
 
     // CAPTURA DA QUANTIDADE DE PONTOS TURÍSTICOS
     printf("Quantos pontos turísticos há nessa cidade?\n");
@@ -64,13 +68,13 @@ int main() {
     printf("\nCARTA 02\n");
 
     // CAPTURA DO ESTADO
-    printf("Digite a Inicial do seu Estado:\n");
-    scanf("%s", estado_1);
+    printf("Digite a UF do seu Estado:\n");
+    scanf("%2s", estado_1);  // Limita a entrada a 2 caracteres
     getchar();
 
     // CAPTURA DO CÓDIGO
     printf("Digite um Código:\n");
-    scanf("%s", codigo1);
+    scanf("%4s", codigo1);  // Limita a entrada a 4 caracteres
     getchar();
 
     // CAPTURAR E UNIR INICIAL DO ESTADO MAIS O CÓDIGO DA CARTA 2
@@ -79,7 +83,7 @@ int main() {
 
     // CAPTURA DO MUNICÍPIO
     printf("Informe o nome do Município:\n");
-    scanf(" %[^\n]", municipio1);
+    scanf(" %19[^\n]", municipio1);  // Limita a entrada a 19 caracteres
     getchar();
 
     // CAPTURA DA POPULAÇÃO
@@ -92,10 +96,14 @@ int main() {
     scanf("%f", &area_territorial1);
     getchar();
 
-    // CAPTURA DO PIB
-    printf("Informe o PIB (Produto Interno Bruto):\n");
+    // CAPTURA DO PIB (em bilhões de reais)
+    printf("Informe o PIB (Produto Interno Bruto) em bilhões de reais:\n");
     scanf("%f", &pib1);
     getchar();
+
+    // CÁLCULO DA DENSIDADE POPULACIONAL E DO PIB PER CAPITA (CARTA 2)
+    densidade_populacional1 = populacao1 / area_territorial1;
+    pib_percapita1 = (pib1 * 1e9) / populacao1;  // Converte PIB para reais
 
     // CAPTURA DA QUANTIDADE DE PONTOS TURÍSTICOS
     printf("Quantos pontos turísticos há nessa cidade?\n");
@@ -111,6 +119,8 @@ int main() {
     printf("Área: %.2f km²\n", area_territorial);
     printf("PIB: R$ %.2f bilhões de reais\n", pib);
     printf("Pontos Turísticos: %d\n", pontos_turisticos);
+    printf("Densidade Populacional: %.2f hab/km²\n", densidade_populacional);
+    printf("PIB Per Capita: R$ %.2f\n", pib_percapita);
 
     // SAÍDA DE DADOS DA CARTA 2
     printf("\nCarta 2:\n");
@@ -121,6 +131,9 @@ int main() {
     printf("Área: %.2f km²\n", area_territorial1);
     printf("PIB: R$ %.2f bilhões de reais\n", pib1);
     printf("Pontos Turísticos: %d\n", pontos_turisticos1);
+    printf("Densidade Populacional: %.2f hab/km²\n", densidade_populacional1);
+    printf("PIB Per Capita: R$ %.2f\n", pib_percapita1);
 
     return 0;
+    
 }
