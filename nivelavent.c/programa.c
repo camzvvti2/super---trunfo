@@ -98,7 +98,7 @@ int main() {
         printf("\n");
     printf("Area: %.2f km2\n", area1);
         printf("\n");
-    printf("Pib: %.2f bilhões de reais \n", pib1);
+    printf("Pib: R$ %.2f bilhões \n", pib1);
         printf("\n");
     printf("Número de Pontos Turísticos: %d \n", pnt1);
         printf("\n");
@@ -122,7 +122,7 @@ int main() {
         printf("\n");
     printf("Area: %.2f km2\n", area2);
         printf("\n");
-    printf("Pib: %.2f bilhões de reais \n", pib2);
+    printf("Pib: R$ %.2f bilhões \n", pib2);
         printf("\n");
     printf("Número de Pontos Turísticos: %d \n", pntc2);
         printf("\n");
