@@ -512,3 +512,5 @@ Número de Pontos Turísticos: 20
 ```
 
 Agora o código é mais robusto, com validação de entradas e instruções claras para o usuário.
+
+Agora o código permite cadastrar até 4 cartas por estado, exibir todas as cartas cadastradas e comparar qualquer par de cartas dentro do conjunto. Isso torna o programa mais flexível e próximo da dinâmica de um jogo Super Trunfo.
