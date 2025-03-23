@@ -1,6 +1,9 @@
+# desafio-novato
+Repositório criado para o Desafio Novato da Estácio - Análise e Desenvolvimento de Sistemas - Aluno: Vinicius Guimarães Urquiza
+
 - Meu desafio segue o modelo mas aplicando algumas funções, poucas por enquanto, que achei legal como limite de 1 a 4 cartas por Estado.  Neste relatório explicarei o processo de criação e as funcionalidades, mostrando a evolução do script após cada modificação até o beta.
 
-# Desafio Novato - Estácio ADS
+## Desafio Novato - Estácio ADS
 
 Para atender aos requisitos do desafio, o programa em C deve permitir que o usuário insira os dados de duas cartas do Super Trunfo (representando cidades), e exiba essas informações de maneira organizada. Não podemos utilizar estruturas de repetição ou decisão, então o código será uma sequência simples de instruções.
 
@@ -509,28 +512,5 @@ Número de Pontos Turísticos: 20
 ```
 
 Agora o código é mais robusto, com validação de entradas e instruções claras para o usuário.
-__________
-# Desafio Aventureiro 
 
-- Para atender aos requisitos do desafio, o programa em C deve permitir que o usuário insira os dados de duas cartas do Super Trunfo (representando cidades), e exiba essas informações de maneira organizada.  
-
-- Agora o programa permite que cada estado tenha um número variável de cartas, de 1 a 4, conforme escolhido pelo usuário. A alocação de memória é feita dinamicamente, e as cartas são exibidas corretamente ao final.
-
-- Não podemos utilizar estruturas de repetição ou decisão, então o código será uma sequência simples de instruções.
-
-### **Mudanças principais:**
-
-1. **Definir quantas cartas cada estado terá**
-    
-    - O usuário poderá escolher quantas cartas quer cadastrar por estado, respeitando o limite de 4.
-2. **Alocar dinamicamente as cartas**
-    
-    - Como o número de cartas pode variar, é melhor usar `malloc()` para armazená-las dinamicamente.
-3. **Melhorar a organização**
-    
-    - Separar os estados de forma clara e organizar a exibição das cartas corretamente.
-
-
-
-
-
+Agora o código permite cadastrar até 4 cartas por estado, exibir todas as cartas cadastradas e comparar qualquer par de cartas dentro do conjunto. Isso torna o programa mais flexível e próximo da dinâmica de um jogo Super Trunfo.
