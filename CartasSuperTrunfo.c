@@ -32,7 +32,7 @@ int main() {
     printf("PIB (em milhões): ");
     scanf("%f", &Pib);  // Lê apenas o PIB
 
-    // Exibição dos dados cadastrados
+    // Exibição dos dados cadastrados da carta super trunfo para carta 1
     printf("\n=== Informações da Carta 1 ===\n");
     printf("Estado: %c\n", estado[0]);
     printf("Código: %s\n", codigo);
@@ -72,7 +72,7 @@ int main() {
     printf("PIB (em milhões): ");
     scanf("%f", &Pib);  // Lê apenas o PIB
 
-    // Exibição dos dados cadastrados
+    // Exibição dos dados cadastrados da carta 2
     printf("\n=== Informações da Carta 2 ===\n");
     printf("Estado: %c\n", estado[1]);
     printf("Código: %s\n", codigo);
