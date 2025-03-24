@@ -1,47 +1,83 @@
 #include <stdio.h>
 
 int main() {
-    //Declarando as variaveis e seus nomes char,int,float
-    
-    char estado;
-    char codigo[4];  // 3 caracteres + '\0' para segurança
-    char nome[20];   // Nome aumentado para permitir nomes compostos
+    // Declarando variáveis
+    char estado[2];
+    char codigo[4];
+    char nome[20];
     int populacao, N_P_turistico;
     float area, Pib;
 
-    // Cadastro das duas cartas, carta 1 e carta 2
-    //imprimindo a solicitação de  informações de talhadas.
+    // Cadastro da Carta 1
+    printf("\n=== Cadastro da Carta 1 ===\n");
+    printf("Primeira letra do estado: ");
+    scanf(" %c", &estado[0]);
 
-    for (int i = 1; i <= 2; i++) {
-        printf("\n=== Cadastro da Carta %d ===\n", i);
+    printf("Código da Carta (3 caracteres): ");
+    scanf("%3s", codigo);
 
-        printf("Primeira letra do estado: ");
-        scanf(" %c", &estado);  // Espaço antes de %c evita erro de buffer
+    printf("Nome da cidade: ");
+    scanf(" %[^\n]", nome);  // Corrigido para permitir nomes compostos
 
-        printf("Código da Carta (3 caracteres): ");
-        scanf("%3s", codigo);
+    printf("População: ");
+    scanf("%d", &populacao);
 
-        printf("Nome da cidade: ");
-        scanf(" %[^\n]", nome);  // Permite nomes compostos
+    printf("Pontos turísticos: ");
+    scanf("%d", &N_P_turistico);
 
-        printf("Quantidade da população: ");
-        scanf("%d", &populacao);
+    // Pedido da Área total e PIB em linhas separadas
+    printf("Área total (km²): ");
+    scanf("%f", &area);  // Lê apenas a área
 
-        printf("Quantidade de pontos turísticos: ");
-        scanf("%d", &N_P_turistico);
+    printf("PIB (em milhões): ");
+    scanf("%f", &Pib);  // Lê apenas o PIB
 
-        printf("Área total da cidade (km²): ");
-        scanf("%f", &area);
+    // Exibição dos dados cadastrados
+    printf("\n=== Informações da Carta 1 ===\n");
+    printf("Estado: %c\n", estado[0]);
+    printf("Código: %s\n", codigo);
+    printf("Nome: %s\n", nome);
+    printf("População: %d\n", populacao);
+    printf("Pontos turísticos: %d\n", N_P_turistico);
+    printf("Área: %.2f km²\n", area);
+    printf("PIB: %.2f milhões\n", Pib);
 
-        printf("PIB da cidade (em milhões): ");
-        scanf("%f", &Pib);
+    // Limpeza do buffer de entrada antes de começar a carta 2
+    getchar(); // Limpa o buffer de entrada (o '\n' remanescente)
 
-        // Exibição dos dados cadastrados das cartas 1 e 2 respectivamente
-        printf("\n=== Dados da Carta %d ===\n", i);
-        printf("Estado: %c | Código: %s | Nome: %s\n", estado, codigo, nome);
-        printf("População: %d | Pontos turísticos: %d\n", populacao, N_P_turistico);
-        printf("Área: %.2f km² | PIB: %.2f milhões de reais\n", area, Pib);
-    }
+    // Cadastro da Carta 2
+    printf("\n=== Cadastro da Carta 2 ===\n");
+    printf("Primeira letra do estado: ");
+    scanf(" %c", &estado[1]);
+
+    printf("Código da Carta (3 caracteres): ");
+    scanf("%3s", codigo);
+
+    printf("Nome da cidade: ");
+    scanf(" %[^\n]", nome);  // Corrigido para permitir nomes compostos
+
+    printf("População: ");
+    scanf("%d", &populacao);
+
+    printf("Pontos turísticos: ");
+    scanf("%d", &N_P_turistico);
+
+    // Pedido da Área total e PIB em linhas separadas para a segunda carta
+    printf("Área total (km²): ");
+    scanf("%f", &area);  // Lê apenas a área
+
+    printf("PIB (em milhões): ");
+    scanf("%f", &Pib);  // Lê apenas o PIB
+
+    // Exibição dos dados cadastrados
+    printf("\n=== Informações da Carta 2 ===\n");
+    printf("Estado: %c\n", estado[1]);
+    printf("Código: %s\n", codigo);
+    printf("Nome: %s\n", nome);
+    printf("População: %d\n", populacao);
+    printf("Pontos turísticos: %d\n", N_P_turistico);
+    printf("Área: %.2f km²\n", area);
+    printf("PIB: %.2f milhões\n", Pib);
 
     return 0;
 }
