@@ -4,7 +4,7 @@ int main() {
 
     int codigodacidade, pontosturisticos;
     float populacao, area, pib;
-    float densidade populacional, PIB per capita;
+    float densidadepopulacional, PIBpercapita;
     char nomedacidade[50];
 
     printf("Digite o Código da cidade: \n");
