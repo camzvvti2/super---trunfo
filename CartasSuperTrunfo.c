@@ -1,23 +1,23 @@
 #include <stdio.h>
 
 int main() {
-    // Declarando variáveis
-    char estado[2];
+    // Declarando variáveis a ser utilizadas
+    char estado[2];      //botando mais um caractere para evitar erro
     char codigo[4];
     char nome[20];
-    int populacao, N_P_turistico;
+    int populacao, N_P_turistico;    //botando as variáveis na mesma linha para faciliar
     float area, Pib;
 
     // Cadastro da Carta 1
     printf("\n=== Cadastro da Carta 1 ===\n");
-    printf("Primeira letra do estado: ");
-    scanf(" %c", &estado[0]);
+    printf("Primeira letra do estado: ");        // impressão padrão em printf
+    scanf(" %c", &estado[0]);                    //estamos armazenando o caractere lido na posição 0do array estado.
 
-    printf("Código da Carta (3 caracteres): ");
+    printf("Código da Carta (3 caracteres): ");  //informando corretamente o usuário quantos caracteres são permitidos
     scanf("%3s", codigo);
 
     printf("Nome da cidade: ");
-    scanf(" %[^\n]", nome);  // Corrigido para permitir nomes compostos
+    scanf(" %[^\n]", nome);                     // Corrigido para permitir nomes compostos
 
     printf("População: ");
     scanf("%d", &populacao);
