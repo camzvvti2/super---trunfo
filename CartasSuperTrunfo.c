@@ -1,7 +1,7 @@
 #include <stdio.h>
 #include <string.h>
 
-void inputData(char *state, char *cardCode, char *cityName, unsigned long int *populationCity, float *kilometersAreaCity, double *PIBCity, int *turistsPointCity) {
+void inputData(char *state, char *cardCode, char *cityName, int *populationCity, float *kilometersAreaCity, double *PIBCity, int *turistsPointCity) {
     printf("Digite a letra do estado (A-H): \n");
     scanf(" %c", state);
     getchar();
@@ -15,7 +15,7 @@ void inputData(char *state, char *cardCode, char *cityName, unsigned long int *p
     cityName[strcspn(cityName, "\n")] = '\0'; // Remove o '\n'
 
     printf("Digite a população da cidade: \n");
-    scanf("%lu", populationCity);
+    scanf("%d", populationCity);
 
     printf("Digite a area (em km²) da cidade: \n");
     scanf("%f", kilometersAreaCity);
@@ -39,11 +39,19 @@ float calculateSuperPower(unsigned long int populationCity, float kilometersArea
     return (float)populationCity + kilometersAreaCity + (float)PIBCity + turistsPointCity + PIBCity + (1 / populationDensityCity);
 }
 
+
+void compairCityProperty(int *cityProperty1, int *cityProperty2, char *cityName1, char *cityName2) {
+    if (cityProperty1 > cityProperty2) {
+        printf("Resultado: Carta 1 (%s) venceu!", cityName1);
+    } else {
+        printf("Resultado: Carta 2 (%s) venceu!", cityName2);
+    }
+}
+
 int main(){
     // declarando variaveis para a primeira cidade
     char state1, cardCode1[5], cityName1[30];
-    unsigned long int populationCity1;
-    int turistsPointCity1;
+    int turistsPointCity1, populationCity1;
     float kilometersAreaCity1, populationDensityCity1, PIBperCapitaCity1, superPowerCity1;
     double PIBCity1;
 
@@ -53,8 +61,7 @@ int main(){
 
     // declarando variáveis para a segunda cidade
     char state2, cardCode2[5], cityName2[30];
-    unsigned long int populationCity2;
-    int turistsPointCity2;
+    int turistsPointCity2, populationCity2;
     float kilometersAreaCity2, populationDensityCity2, PIBperCapitaCity2;
     double PIBCity2;
 
@@ -70,14 +77,10 @@ int main(){
 
     
     // retornando a comparação entre duas cartas
-    printf("Comparação de Cartas:\n");
-    printf("População: Carta %d venceu (%d)\n", (populationCity1 > populationCity2) ? 1 : 2, populationCity1 > populationCity2);
-    printf("Área: Carta %d venceu (%d)\n", (kilometersAreaCity1 > kilometersAreaCity2) ? 1 : 2, kilometersAreaCity1 > kilometersAreaCity2);
-    printf("PIB: Carta %d venceu (%d)\n", (PIBCity1 > PIBCity2) ? 1 : 2, PIBCity1 > PIBCity2);
-    printf("Pontos Turisticos: Carta %d venceu (%d)\n", (turistsPointCity1 > turistsPointCity2) ? 1 : 2, turistsPointCity1 > turistsPointCity2);
-    printf("Densidade Populacional: Carta %d venceu (%d)\n", (densityCity1 < densityCity2) ? 1 : 2, densityCity1 < densityCity2);
-    printf("PIB per Capita: Carta %d venceu (%d)\n", (calculatePIBPerCapitaCity1 > calculatePIBPerCapitaCity2) ? 1 : 2, calculatePIBPerCapitaCity1 > calculatePIBPerCapitaCity2);
-    printf("Super Poder: Carta %d venceu (%d)\n", (calculateSuperPowerCity1 > calculateSuperPowerCity2) ? 1 : 2, calculateSuperPowerCity1 > calculateSuperPowerCity2);
+    printf("Comparação de cartas (Atributo: População):\n");
+    printf("Carta 1 - %s: %i\n", cityName1, populationCity1);
+    printf("Carta 2 - %s: %i\n", cityName2, populationCity2);
+    compairCityProperty(&populationCity1, &populationCity2, cityName1, cityName2);
 
     return 0;
 }
