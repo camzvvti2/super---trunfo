@@ -119,6 +119,6 @@ int main() {
     printf("O pib per capita2 é: %.2f\n", pibcapita2);
 
 
-    printf("novo commit\n");
+   printf("novo commit");
     return 0;
 }
