@@ -53,6 +53,9 @@ int main() {
     printf("Código da Carta (3 caracteres): ");
     scanf("%3s", codigo);
 
+    // Limpar o buffer antes de ler o nome
+    getchar(); // Limpa o '\n' que ficou no buffer após a leitura anterior
+
     printf("Nome da cidade: ");
     scanf(" %[^\n]", nome);  // Corrigido para permitir nomes compostos
 
