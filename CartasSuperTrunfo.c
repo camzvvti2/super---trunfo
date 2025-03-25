@@ -116,7 +116,7 @@ int main() {
     int opcao;
     scanf(" %d", &opcao);
 
-    switch (opcao) {
+     switch (opcao) {
         case 1:
             printf("\nAtributo utilizado para comparação: População\n\n");
 
