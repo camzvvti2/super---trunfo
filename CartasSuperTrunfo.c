@@ -2,19 +2,19 @@
 
 int main() {
 
-    int codigodacidade, pontosturisticos;
-    float populacao, area, pib, densidadepopulacional, PIBpercapita;
-    char nomedacidade[50];
+    int pontosturisticos, populacao;
+    float area, pib, densidadepopulacional, PIBpercapita;
+    char nomedacidade[50], codigodacidade[50];
 
     printf("Digite o Código da cidade: \n");
 
-    scanf("%d", &codigodacidade);
+    scanf("%s", &codigodacidade);
 
     printf("Digite o nome da cidade: \n");
     scanf("%s", &nomedacidade);
 
     printf("Digite a população da cidade sem ponto ou vírgulas: \n");
-    scanf("%f", &populacao);
+    scanf("%d", &populacao);
 
     printf("Digite a área da cidade: \n");
     scanf("%f", &area);
@@ -28,9 +28,9 @@ int main() {
     densidadepopulacional = (populacao / area);
     PIBpercapita = (pib / populacao);
 
-    printf("Código da cidade: %d \n", codigodacidade);
+    printf("Código da cidade: %s \n", codigodacidade);
     printf("Nome da cidade: %s \n", nomedacidade);
-    printf("População da cidade: %.2f \n", populacao);
+    printf("População da cidade: %.d \n", populacao);
     printf("Área da cidade: %.2fkm2 \n", area);
     printf("PIB da cidade: R$ %.4f \n", pib);
     printf("Pontos turísticos da cidade: %d \n", pontosturisticos);
@@ -39,13 +39,13 @@ int main() {
     
 
     printf("Digite o Código da cidade: \n");
-    scanf("%d", &codigodacidade);
+    scanf("%s", &codigodacidade);
 
     printf("Digite o nome da cidade: \n");
     scanf("%s", &nomedacidade);
 
     printf("Digite a população da cidade: \n");
-    scanf("%f", &populacao);
+    scanf("%d", &populacao);
 
     printf("Digite a área da cidade: \n");
     scanf("%f", &area);
@@ -56,9 +56,9 @@ int main() {
     printf("Digite quantos pontos turísticos há na cidade: \n");
     scanf("%d", &pontosturisticos);
 
-    printf("Código da cidade: %d \n", codigodacidade);
+    printf("Código da cidade: %s \n", codigodacidade);
     printf("Nome da cidade: %s \n", nomedacidade);
-    printf("População da cidade: %f \n", populacao);
+    printf("População da cidade: %d \n", populacao);
     printf("Área da cidade: %f \n", area);
     printf("PIB da cidade: %f\n", pib);
     printf("Pontos turísticos da cidade: %d\n", pontosturisticos);
