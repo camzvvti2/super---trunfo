@@ -7,7 +7,7 @@ int main() {
     char nome[20];        // Para armazenar o nome da cidade
     int populacao, N_P_turistico;    // Para armazenar a população e os pontos turísticos
     float area, Pib;              // Para armazenar a área e o PIB
-    float densidade, pib_per_capita; // Para armazenar a densidade populacional e o PIB per capita
+    
 
     // Cadastro da Carta 1
     printf("\n=== Cadastro da Carta 1 ===\n");
@@ -33,9 +33,7 @@ int main() {
     printf("PIB (em milhões): ");
     scanf("%f", &Pib);  // Lê o PIB da cidade
 
-    // Cálculo da Densidade Populacional e PIB per Capita
-    densidade = populacao / area;
-    pib_per_capita = Pib / populacao;
+    
 
     // Exibição dos dados cadastrados da Carta 1
     printf("\n=== Informações da Carta 1 ===\n");
@@ -47,7 +45,7 @@ int main() {
     printf("Área: %.2f km²\n", area);  // Imprime a área com 2 casas decimais
     printf("PIB: %.2f milhões\n", Pib);  // Imprime o PIB com 2 casas decimais
     printf("Densidade Populacional: %.2f hab/km²\n", densidade);  // Imprime a densidade populacional
-    printf("PIB per Capita: %.2f milhões\n", pib_per_capita);  // Imprime o PIB per capita
+    
 
     // Limpeza do buffer antes de começar a Carta 2
     getchar(); // Limpa o '\n' que ficou no buffer após a leitura anterior
@@ -79,9 +77,7 @@ int main() {
     printf("PIB (em milhões): ");
     scanf("%f", &Pib); // Lê o PIB da cidade
 
-    // Cálculo da Densidade Populacional e PIB per Capita
-    densidade = populacao / area;
-    pib_per_capita = Pib / populacao;
+    
 
     // Exibição dos dados cadastrados da Carta 2
     printf("\n=== Informações da Carta 2 ===\n");
@@ -93,7 +89,7 @@ int main() {
     printf("Área: %.2f km²\n", area);  // Imprime a área com 2 casas decimais
     printf("PIB: %.2f milhões\n", Pib);  // Imprime o PIB com 2 casas decimais
     printf("Densidade Populacional: %.2f hab/km²\n", densidade);  // Imprime a densidade populacional
-    printf("PIB per Capita: %.2f milhões\n", pib_per_capita);  // Imprime o PIB per capita
+   
 
     return 0;
 }
