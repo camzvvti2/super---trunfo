@@ -1,7 +1,7 @@
 #include <stdio.h>
 
 int main() {
-    // Declarando variáveis a serem utilizadas para cadastro das cartas
+    // Declarando variáveis a serem utilizadas para cadastro das cartas 1 e 2
     // por: Rodolfo Assunçao
     char estado[2];       // Para armazenar a letra do estado
     char codigo1[4], codigo2[4]; // Para armazenar os códigos das cartas
