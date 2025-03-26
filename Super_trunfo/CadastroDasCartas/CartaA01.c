@@ -17,7 +17,7 @@ int main() {
     scanf("%s", Estado);
     printf("Digite o Codigo da Carta: ");
     scanf("%s", CodigodaCarta);
-    printf("Digite o Nome: ");
+    printf("Digite o Nome da cidade: ");
     scanf("%s", Cidade);
     printf("Digite a Populacao: ");
     scanf("%d", &Populacao);
@@ -38,5 +38,5 @@ int main() {
     printf("Numero de Pontos Turisticos: %d\n", PontosTuristicos);  
 
     return 0;
-    
+
 }
