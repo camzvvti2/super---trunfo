@@ -1,7 +1,7 @@
 #include <stdio.h>
 
 int main() {
-    // Declarando variáveis a serem utilizadas
+    // Declarando variáveis a serem utilizadas para cadastro das cartas
     char estado[2];       // Para armazenar a letra do estado
     char codigo1[4], codigo2[4]; // Para armazenar os códigos das cartas
     char nome[20];        // Para armazenar o nome da cidade
@@ -9,6 +9,7 @@ int main() {
     float area, Pib, densidade;              // Para armazenar a área, o PIB e a densidade populacional
     
     // Cadastro da Carta 1
+    printf("\n==Bem Vindo ao Super Trunfo, Vamos cadastrar as Cartas\n");
     printf("\n=== Cadastro da Carta 1 ===\n");
     printf("Primeira letra do estado: ");
     scanf(" %c", &estado[0]); // Lê a primeira letra do estado
@@ -47,7 +48,7 @@ int main() {
     printf("Densidade Populacional: %.2f hab/km²\n", densidade);  // Imprime a densidade populacional
     
     // Limpeza do buffer antes de começar a Carta 2
-    getchar(); // Limpa o '\n' que ficou no buffer após a leitura anterior
+    getchar();
 
     // Cadastro da Carta 2
     printf("\n=== Cadastro da Carta 2 ===\n");
@@ -58,7 +59,7 @@ int main() {
     scanf("%3s", codigo2); // Lê o código da carta
 
     // Limpar o buffer antes de ler o nome
-    getchar(); // Limpa o '\n' que ficou no buffer após a leitura anterior
+    getchar();
 
     printf("Nome da cidade: ");
     scanf(" %[^\n]", nome); // Lê o nome da cidade, permitindo espaços
