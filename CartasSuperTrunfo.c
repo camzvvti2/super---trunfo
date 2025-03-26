@@ -49,7 +49,7 @@ int main() {
     printf("Densidade Populacional: %.2f hab/km²\n", densidade);  // Imprime a densidade populacional
     
     // Limpeza do buffer antes de começar a Carta 2
-    getchar();
+    getchar(); // Limpa o buffer
 
     // Cadastro da Carta 2
     printf("\n=== Cadastro da Carta 2 ===\n");
@@ -60,7 +60,7 @@ int main() {
     scanf("%3s", codigo2); // Lê o código da carta
 
     // Limpar o buffer antes de ler o nome
-    getchar();
+    getchar(); // Limpa o buffer
 
     printf("Nome da cidade: ");
     scanf(" %[^\n]", nome); // Lê o nome da cidade, permitindo espaços
