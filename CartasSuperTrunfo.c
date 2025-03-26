@@ -2,6 +2,7 @@
 
 int main() {
     // Declarando variáveis a serem utilizadas para cadastro das cartas
+    // por: Rodolfo Assunçao
     char estado[2];       // Para armazenar a letra do estado
     char codigo1[4], codigo2[4]; // Para armazenar os códigos das cartas
     char nome[20];        // Para armazenar o nome da cidade
