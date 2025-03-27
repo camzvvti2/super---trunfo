@@ -9,18 +9,18 @@
 int main() 
 {
 
-   int pontos1, pontos2, populacao1, populacao2, codigo1, codigo2;
+   int pontos1, pontos2, populacao1, populacao2;
    float  area1, area2, pib1, pib2;
-   char nome1[30], nome2[30], estado1[50], estado2[50]; 
+   char nome1[30], nome2[30], estado1[50], estado2[50],codigo1[10], codigo2[10];
 
    printf("Digite o nome da cidade da Carta1: \n"); 
    scanf("%s", nome1);
 
-   printf("Digite o estado da Carta1: \n");
+   printf("Digite a inicial do estado da Carta1: \n");
    scanf("%s", estado1);
 
    printf("Digite o código da Carta1: \n");
-   scanf("%d", &codigo1);
+   scanf("%s", &codigo1);
 
    printf("Digite a Area(km²) da cidade da Carta1: \n");
    scanf("%f", &area1);
@@ -36,12 +36,12 @@ int main()
 
    //Exibindo o resultado
    
-   printf("As informações da Carta1 é: \n");
+   printf("Carta1 : \n");
    printf("Nome: %s\n",nome1);
 
    printf("Estado: %s\n",estado1);
 
-   printf("Codigo: %d\n",codigo1);
+   printf("Codigo: %s\n",codigo1);
 
    printf("Area(km²): %f\n",area1);
 
