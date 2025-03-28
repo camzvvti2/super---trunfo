@@ -68,8 +68,14 @@ int main() {
     Card card1, card2;
     // Sugestão: Utilize a função scanf para capturar as entradas do usuário para cada atributo.
     // Solicite ao usuário que insira as informações de cada cidade, como o código, nome, população, área, etc
-    
-    // Receber os valores de card 1
+    receive_card(&card1, 1);
+    // Receber os valores de card 2
+    receive_card(&card2, 2);
+    // Exibição dos Dados das Cartas:
+    // Sugestão: Utilize a função printf para exibir as informações das cartas cadastradas de forma clara e organizada.
+    // Exiba os valores inseridos para cada atributo da cidade, um por linha.
+    print_card(&card1);
+    print_card(&card2);
     
 
     return 0;
