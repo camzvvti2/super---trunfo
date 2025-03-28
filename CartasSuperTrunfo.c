@@ -79,7 +79,7 @@ int main(){
         printf("Nome da Cidade: %s\n", nome_cidade1);
         printf("População: %d\n", populacao1);
         printf("Área: %.2f km²\n", area1);
-        printf("PIB: %.2f Milhões de reais\n",pib1);
+        printf("PIB: %.2f Bilhões de reais\n",pib1);
         printf("Quantidade de Pontos Turísticos: %d\n", ponto_turistico1);
 
        //Retorno carta 2
@@ -91,7 +91,7 @@ int main(){
         printf("Nome da Cidade: %s\n",nome_cidade2);
         printf("População: %d \n", populacao2);
         printf("Área: %.2f km²\n", area2);
-        printf("PIB: %.2f Milhões de reais\n",pib2);
+        printf("PIB: %.2f Bilhões de reais\n",pib2);
         printf("Quantidade de Pontos Turísticos: %d\n", ponto_turistico2);
 
 return 0;
