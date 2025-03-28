@@ -87,7 +87,7 @@ int main()
 
    printf("PIB: %f\n",pib2);
 
-   printf("Numero de pontos turisticos: %d\n",pontos2)
+   printf("Numero de pontos turisticos: %d\n",pontos2);
 
 
     return 0;
