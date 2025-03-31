@@ -2,7 +2,7 @@
 
      int main() {
     char Estado, Estado2;
-    char Codigo[4], Codigo2[4];
+    char Codigo[5], Codigo2[5];
     char Cidade[50], Cidade2[50];
     int Populacao, NumTuristicos, Populacao2, NumTuristicos2;
     float Area, Area2, PIB, PIB2;
