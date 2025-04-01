@@ -1,5 +1,5 @@
 #include <stdio.h>
-
+// incluindo variantes
 // Função para remover o caractere de nova linha ('\n') gerado pelo fgets()
 //Por: Rodolfo Assunçao :)
 void limpar_nova_linha(char *str) {
