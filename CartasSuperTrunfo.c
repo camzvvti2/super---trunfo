@@ -139,7 +139,7 @@ int main() {
     printf("a carta1 e maior que carta2? %d\n", resultado3);
     printf("a carta1 e maior que carta2? %d\n", resultado4);
     printf("a carta1 e maior que carta2? %d\n", resultado5);
-    printf("a carta1 e maior que carta2? %d\n", resultado6);
+    printf("a carta1 e menor que carta2? %d\n", resultado6);
     printf("a carta1 e maior que carta2? %d\n", resultado7);
 
     printf("novo commit");
