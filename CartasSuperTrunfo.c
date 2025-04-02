@@ -21,7 +21,7 @@ int main() {
     //carta 1
 
     char estado1[20];
-    char codigo1[8];
+    char codigo1[20];
     char cidade1[50];
     int populacao1;
     float area1;
@@ -37,7 +37,7 @@ int main() {
 
     printf("digite o codigo1 da carta: \n");
     scanf("%s", &codigo1);
-
+   
     printf("digite o nome da cidade1: \n");
     scanf("%s", &cidade1);
 
@@ -124,21 +124,27 @@ int main() {
 
     printf("superpoder2: %.2f\n", superpoder2);
 
-    int resultado;
+    int resultado1, resultado2, resultado3, resultado4, resultado5, resultado6, resultado7;
 
-    resultado = populacao1 > populacao2;
-    resultado = area1 > area2;
-    resultado = pib1 > pib2;
-    resultado = turistico1 > turistico2;
-    resultado = pibcapita1 > pibcapita2;
-    resultado = densidade1 < densidade2;
-    resultado = superpoder1 >superpoder2;
+    resultado1 = populacao1 > populacao2;
+    resultado2 = area1 > area2;
+    resultado3 = pib1 > pib2;
+    resultado4 = turistico1 > turistico2;
+    resultado5 = pibcapita1 > pibcapita2;
+    resultado6 = densidade1 < densidade2;
+    resultado7 = superpoder1 >superpoder2;
 
-    printf("a carta1 e maior que carta2? %d\n", (populacao1 > populacao2), resultado);
-    printf("a carta1 e maior que carta2? %d\n", (area1 > area2), resultado);
-    printf("a carta1 e maior que carta2? %d\n", (pib1 > pib2), resultado);
-    printf("a carta1 e maior que carta2? %d\n", (turistico1 > turistico2), resultado);
-    printf("a carta1 e maior que carta2? %d\n", (pibcapita1 > pibcapita2), resultado);
-    printf("a carta1 e maior que carta2? %d\n", (densidade1 < densidade2), resultado);
-    printf("a carta1 e maior que carta2? %d\n", (superpoder1 >superpoder2), resultado);
+    printf("a carta1 e maior que carta2? %d\n", resultado1);
+    printf("a carta1 e maior que carta2? %d\n", resultado2);
+    printf("a carta1 e maior que carta2? %d\n", resultado3);
+    printf("a carta1 e maior que carta2? %d\n", resultado4);
+    printf("a carta1 e maior que carta2? %d\n", resultado5);
+    printf("a carta1 e maior que carta2? %d\n", resultado6);
+    printf("a carta1 e maior que carta2? %d\n", resultado7);
+
+    printf("novo commit");
+
+    return 0;
+
+    
 }
