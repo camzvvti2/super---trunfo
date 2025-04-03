@@ -3,7 +3,7 @@
 int main() {
     // Definindo estrutura da carta
     struct Carta {
-        char codigo[4];           // Exemplo: A01
+        char codigo[6];           // Exemplo: A01 ou ABC12
         int populacao;
         float area;
         float pib;
@@ -16,7 +16,7 @@ int main() {
 
     // Entrada de dados da carta 1
     printf("Digite o código da carta 1 (ex: A01): ");
-    scanf("%s", carta1.codigo);
+    scanf(" %s", carta1.codigo);
     printf("Digite a população da carta 1: ");
     scanf("%d", &carta1.populacao);
     printf("Digite a área da carta 1: ");
@@ -28,7 +28,7 @@ int main() {
 
     // Entrada de dados da carta 2
     printf("\nDigite o código da carta 2 (ex: B03): ");
-    scanf("%s", carta2.codigo);
+    scanf(" %s", carta2.codigo);
     printf("Digite a população da carta 2: ");
     scanf("%d", &carta2.populacao);
     printf("Digite a área da carta 2: ");
