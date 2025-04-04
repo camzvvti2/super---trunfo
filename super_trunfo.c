@@ -1,55 +1,86 @@
 #include <stdio.h>
 
-// Desafio Super Trunfo - Países
-// Tema 1 - Cadastro das Cartas
-// Este código inicial serve como base para o desenvolvimento do sistema de cadastro de cartas de cidades.
-// Siga os comentários para implementar cada parte do desafio.
-//Teste larissa
-
 int main() {
-    // Sugestão: Defina variáveis separadas para cada atributo da cidade.
-    // Exemplos de atributos: código da cidade, nome, população, área, PIB, número de pontos turísticos.
-    
-    // Cadastro das Cartas:
-    // Sugestão: Utilize a função scanf para capturar as entradas do usuário para cada atributo.
-    // Solicite ao usuário que insira as informações de cada cidade, como o código, nome, população, área, etc.
-    
-    // Exibição dos Dados das Cartas:
-    // Sugestão: Utilize a função printf para exibir as informações das cartas cadastradas de forma clara e organizada.
-    // Exiba os valores inseridos para cada atributo da cidade, um por linha.
-
-    //Uma letra de 'A' a 'H' (representando um dos oito estados)
     char estado;
-    
-    // A letra do estado seguida de um número de 01 a 04 (ex: A01, B03)
-    char codigoCarta[4];
-    char nomeCidade[20];
+    char codigoCarta[3]; 
+    char nomeCidade[20];  
     int populacao;
-    
-    // A área da cidade em quilômetros quadrados.
     float area;
- 
-    // Produto Interno Bruto
-    float pib; 
+    float pib;
     int qtdPontosTuristicos;
+    char codigoFinal[4]; 
 
+    char estado2;
+    char codigoCarta2[3];  
+    char nomeCidade2[20];  
+    int populacao2;
+    float area2;
+    float pib2;
+    int qtdPontosTuristicos2;
+    char codigoFinal2[4];  
+
+    /* Carta 1*/
     printf("Carta 1\n");
-    printf("Digite o código do Estado (Entre 'A' e 'H')\n");
-    scanf("%c", &estado);
+
+    printf("Digite o código do Estado (Entre 'A' e 'H'):\n");
+    scanf(" %c", &estado);  
+
     printf("Digite o código da carta (De 01 a 04):\n");
-    scanf("%c", &codigoCarta);
+    scanf("%s", codigoCarta);
+
     printf("Digite o nome da cidade:\n");
-    scanf("%c", &nomeCidade);
+    scanf(" %[^\n]", nomeCidade);  
+
     printf("Digite a quantidade de pessoas:\n");
     scanf("%d", &populacao);
+
     printf("Digite a área em km²:\n");
     scanf("%f", &area);
-    printf("Digite o PIB:\n");
+
+    printf("Digite o PIB (em bilhões):\n");
     scanf("%f", &pib);
-    printf("Digite a quantidade de pessoas:\n");
+
+    printf("Digite o número de pontos turísticos:\n");
     scanf("%d", &qtdPontosTuristicos);
 
-    printf("Carta 1:\n\n"
+    // Junta estado e códigoCarta em codigoFinal
+    sprintf(codigoFinal, "%c%s", estado, codigoCarta);
+
+    printf("\nFim do cadastro da Primeira Carta!\n\n");
+
+    /* Carta 2*/
+    printf("Carta 2\n");
+
+    printf("Digite o código do Estado (Entre 'A' e 'H'):\n");
+    scanf(" %c", &estado2);  
+
+    printf("Digite o código da carta (De 01 a 04):\n");
+    scanf("%s", codigoCarta2);
+
+    printf("Digite o nome da cidade:\n");
+    scanf(" %[^\n]", nomeCidade2);  
+
+    printf("Digite a quantidade de pessoas:\n");
+    scanf("%d", &populacao2);
+
+    printf("Digite a área em km²:\n");
+    scanf("%f", &area2);
+
+    printf("Digite o PIB (em bilhões):\n");
+    scanf("%f", &pib2);
+
+    printf("Digite o número de pontos turísticos:\n");
+    scanf("%d", &qtdPontosTuristicos2);
+
+    // Junta estado2 e códigoCarta2 em codigoFinal2
+    sprintf(codigoFinal2, "%c%s", estado2, codigoCarta2);
+
+    printf("\nFim do cadastro da Segunda Carta!\n\n");
+
+
+    /* Impressão */
+
+    printf("\nCarta 1:\n\n"
         "Estado: %c\n"
         "Código: %s\n"
         "Nome da Cidade: %s\n"
@@ -57,7 +88,16 @@ int main() {
         "Área: %.2f km²\n"
         "PIB: %.2f bilhões de reais\n"
         "Número de Pontos Turísticos: %d\n",
-        estado, codigoCarta, nomeCidade, populacao, area, pib, qtdPontosTuristicos);
+        estado, codigoFinal, nomeCidade, populacao, area, pib, qtdPontosTuristicos);
 
+    printf("\nCarta 2:\n\n"
+           "Estado: %c\n"
+           "Código: %s\n"
+           "Nome da Cidade: %s\n"
+           "População: %d\n"
+           "Área: %.2f km²\n"
+           "PIB: %.2f bilhões de reais\n"
+           "Número de Pontos Turísticos: %d\n",
+           estado2, codigoFinal2, nomeCidade2, populacao2, area2, pib2, qtdPontosTuristicos2);
     return 0;
 }
