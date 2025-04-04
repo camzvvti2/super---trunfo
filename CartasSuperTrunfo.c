@@ -124,25 +124,14 @@ int main() {
 
     printf("superpoder2: %.2f\n", superpoder2);
 
-    int resultado1, resultado2, resultado3, resultado4, resultado5, resultado6, resultado7;
+    if(populacao1 > populacao2){
+        printf("carta 1 venceu!!\n");
+    } else{
+        printf("carta 2 venceu!\n");
+    }
 
-    resultado1 = populacao1 > populacao2;
-    resultado2 = area1 > area2;
-    resultado3 = pib1 > pib2;
-    resultado4 = turistico1 > turistico2;
-    resultado5 = pibcapita1 > pibcapita2;
-    resultado6 = densidade1 < densidade2;
-    resultado7 = superpoder1 >superpoder2;
-
-    printf("a carta1 e maior que carta2? %d\n", resultado1);
-    printf("a carta1 e maior que carta2? %d\n", resultado2);
-    printf("a carta1 e maior que carta2? %d\n", resultado3);
-    printf("a carta1 e maior que carta2? %d\n", resultado4);
-    printf("a carta1 e maior que carta2? %d\n", resultado5);
-    printf("a carta1 e menor que carta2? %d\n", resultado6);
-    printf("a carta1 e maior que carta2? %d\n", resultado7);
-
-    printf("novo commit");
+    printf("carta 1 tem populacao: %d\n", populacao1);
+    printf("carta 2 tem populacao: %d\n", populacao2);
 
     return 0;
 
