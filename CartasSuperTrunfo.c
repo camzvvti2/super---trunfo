@@ -1,5 +1,7 @@
 #include <stdio.h>
 
+//nível básico
+
 int main() {
     char Estado, Estado2;
     char Codigo[6], Codigo2[6], Cidade[50], Cidade2[50];
@@ -71,5 +73,23 @@ int main() {
     printf("PIB: R$ %.2f bilhões\n", PIB2);
     printf("Número de Pontos Turísticos: %d\n", NumTuristicos2);
 
+    //Nível aventureiro
+
+     DP1 = Populacao / Area;
+    PIB_per_capita1 = PIB / Populacao;
+
+    DP2 = Populacao2 / Area2;
+    PIB_per_capita2 = PIB2 / Populacao2;
+
+    printf("A densidade populacional é de: %f \n", DP2);
+
+    printf("O PIB per capita é de: %f \n", PIB_per_capital2);
+    
+    printf("A densidade populacional é de: %f \n", DP2);
+
+    printf("O PIB per capita é de: %f \n", PIB_per_capital2);
+
+
+    
     return 0;
 }
