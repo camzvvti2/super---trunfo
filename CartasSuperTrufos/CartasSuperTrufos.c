@@ -3,7 +3,7 @@
 int main() {
     // Definindo variáveis para armazenar os dados das duas cartas
     char estado1, estado2;
-    char codigo1[5], codigo2[5];
+    char codigo1[50], codigo2[50];
     char cidade1[50], cidade2[50];
     int populacao1, populacao2;
     float area1, area2, pib1, pib2, desin1, desin2, capita1, capita2, super1, super2;
@@ -77,7 +77,7 @@ int main() {
     printf("PIB: %.2f bilhoes de reais\n", pib1);
     printf("Numero de Pontos Turisticos: %d\n", pontos1);
     printf("Densidade Populacional (hab/km²): %.2f\n", desin1);
-    printf("(PIB per Capita (reais): %.2f\n", capita1);
+    printf("PIB per Capita (reais): %.2f\n", capita1);
 
     // Exibindo os dados da Carta 2
     printf("\nCarta 2:\n");
@@ -90,6 +90,38 @@ int main() {
     printf("Numero de Pontos Turisticos: %d\n", pontos2);
     printf("Densidade Populacional (hab/km²): %.2f\n", desin2);
     printf("(PIB per Capita (reais): %.2f\n", capita2);
+
+    //Determinando os atributos das cartas vencedoras:
+    printf("\nAtributos vencedores:\n");
+    if(populacao1 > populacao2){
+        printf("Populaçao da Carta 1 Venceu.\n");
+    } else {
+        printf("Populaçao da Carta 2 Venceu.\n");
+    }
+    
+    if(area1 > area2){
+        printf("Area da Carta 1 Venceu.\n");
+    } else {
+        printf("Area da Carta 2 Venceu.\n");
+    }
+
+    if(pib1 > pib2){
+        printf("PIB da Carta 1 Venceu.\n");
+    } else {
+        printf("PIB da Carta 2 Venceu.\n");
+    }
+
+    if(desin1 < desin2){
+        printf("Densidade Populacional da Carta 1 Venceu.\n");
+    } else {
+        printf("Densidade populacional da Carta 2 Venceu.\n");
+    }
+
+    if(capita1 > capita2){
+        printf("PIB de Capital da Carta 1 Venceu.\n");
+    } else {
+        printf("PIB de Capital da Carta 2 Venceu.\n");
+    }
     
     //Comparaçoes das cartas 1 e 2.
     printf("\nComparação de Cartas:\n");
@@ -100,5 +132,6 @@ int main() {
     printf("Densidade Populacional: %.2f Carta 1 venceu %d\n", desin1 < desin2);
     printf("PIB per Capita: %.2f Carta 1 venceu %d\n", capita1 > capita2);
     printf("Super Poder: %.2f Carta 1 venceu %d\n", super1 < super2);
-    
+
+    return 0;
 }
