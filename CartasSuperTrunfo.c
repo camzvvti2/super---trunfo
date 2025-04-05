@@ -1,80 +1,107 @@
 #include <stdio.h>
 
-// Desafio Super Trunfo - Países
-// Tema 1 - Cadastro das Cartas
-// Este código inicial serve como base para o desenvolvimento do sistema de cadastro de cartas de cidades.
-// Siga os comentários para implementar cada parte do desafio.
-// Execução de exercicio Jonathan Mota de Carvalho
+// Desafio Super Trunfo - Nível Avançado
+// Execução de exercicio por Jonathan Mota de Carvalho
+
+#define VERDE "\033[1;32m"
+#define VERMELHO "\033[1;31m"
+#define RESET "\033[0m"
 
 typedef struct {
-    char codigo[4];  // Código da cidade.
-    int populacao;    // população da cidade.
-    float area;       // Área da cidade em km²
-    float pib;        // PIB da cidade em milhões
-    int pontos_turisticos;   // Número de pontos turísticos.
-    float densidade_populacional; // Densidade populacional
-    float pib_per_capita; // PIB per capita
+    char codigo[4];  
+    unsigned long int populacao;    
+    float area;       
+    float pib;        
+    int pontos_turisticos;   
+    float densidade_populacional; 
+    float pib_per_capita; 
+    float super_poder;
 } Cidade;
 
-#define NUM_ESTADOS 8
-#define NUM_CIDADES 4
-
 // Função para calcular a densidade populacional
-double calcular_densidade_populacional(int populacao, float area) {
-    return (area > 0) ? (populacao / area) : 0;
+double calcular_densidade_populacional(unsigned long int populacao, float area) {
+    return (area > 0) ? ((double)populacao / area) : 0;
 }
 
 // Função para calcular o PIB per capita
-double calcular_pib_per_capita(float pib, int populacao) {
-    return (populacao > 0) ? (pib * 1000000 / populacao) : 0;
+double calcular_pib_per_capita(float pib, unsigned long int populacao) {
+    return (populacao > 0) ? ((pib * 1000000) / populacao) : 0; 
+}
+
+// Função para calcular o Super Poder
+double calcular_super_poder(Cidade c) {
+    return (float)(c.populacao + c.area + c.pib + c.pontos_turisticos + c.pib_per_capita + (1.0 / c.densidade_populacional));
+}
+
+void comparar_atributo(char* nome, float valor1, float valor2, int menor_vence) {
+    int resultado;
+    if (menor_vence) {
+        resultado = valor1 < valor2;
+    } else {
+        resultado = valor1 > valor2;
+    }
+    printf("%s: %sCarta 1 venceu (%d)%s\n", nome, resultado ? VERDE : VERMELHO, resultado, RESET);
 }
 
 int main() {
-    Cidade cidades[NUM_ESTADOS * NUM_CIDADES];
-    char estados[NUM_ESTADOS] = {'A', 'B', 'C', 'D', 'E', 'F', 'G', 'H'};
-    int i;
+    Cidade carta1, carta2;
 
-    printf("Cadastro de cidades:\n");
+    // Leitura dos dados da Carta 1
+    printf("Cadastro da Carta 1:\n");
 
-    // Loop para cadastrar todas as cidades
-    for (i = 0; i < NUM_ESTADOS * NUM_CIDADES; i++) {
-        int estadoIndex = i / NUM_CIDADES;
-        int cidadeNumero = (i % NUM_CIDADES) + 1;
+    printf("Código: ");
+    scanf("%s", carta1.codigo);
 
-        // Gerando código da cidade
-        snprintf(cidades[i].codigo, sizeof(cidades[i].codigo), "%c%02d", estados[estadoIndex], cidadeNumero);
+    printf("População: ");
+    scanf("%lu", &carta1.populacao);
 
-        printf("\nCadastro da cidade %s:\n", cidades[i].codigo);
+    printf("Área (km²): ");
+    scanf("%f", &carta1.area);
 
-        // Entrada de dados pelo usuário
-        printf("População: ");
-        scanf("%d", &cidades[i].populacao);
+    printf("PIB (milhões): ");
+    scanf("%f", &carta1.pib);
 
-        printf("Área (km²): ");
-        scanf("%f", &cidades[i].area);
+    printf("Número de pontos turísticos: ");
+    scanf("%d", &carta1.pontos_turisticos);
 
-        printf("PIB (milhões): ");
-        scanf("%f", &cidades[i].pib);
+    carta1.densidade_populacional = calcular_densidade_populacional(carta1.populacao, carta1.area);
+    carta1.pib_per_capita = calcular_pib_per_capita(carta1.pib, carta1.populacao);
+    carta1.super_poder = calcular_super_poder(carta1);
 
-        printf("Número de pontos turísticos: ");
-        scanf("%d", &cidades[i].pontos_turisticos);
+    // Leitura dos dados da Carta 2
+    printf("\nCadastro da Carta 2:\n");
 
-        // Cálculo da densidade populacional e PIB per capita
-        cidades[i].densidade_populacional = calcular_densidade_populacional(cidades[i].populacao, cidades[i].area);
-        cidades[i].pib_per_capita = calcular_pib_per_capita(cidades[i].pib, cidades[i].populacao);  // Corrigido
-    }
+    printf("Código: ");
+    scanf("%s", carta2.codigo);
 
-    // Exibindo os dados cadastrados
-    printf("\nLista de Cidades Cadastradas:\n");
-    for (i = 0; i < NUM_ESTADOS * NUM_CIDADES; i++) {
-        printf("\nCidade: %s\n", cidades[i].codigo);
-        printf("População: %d habitantes\n", cidades[i].populacao);
-        printf("Área: %.2f km²\n", cidades[i].area);
-        printf("PIB: %.2f milhões\n", cidades[i].pib);
-        printf("Pontos turísticos: %d\n", cidades[i].pontos_turisticos);
-        printf("Densidade populacional: %.2f hab/km²\n", cidades[i].densidade_populacional);  // Corrigido
-        printf("PIB per capita: %.2f\n", cidades[i].pib_per_capita);
-    }    
+    printf("População: ");
+    scanf("%lu", &carta2.populacao);
+
+    printf("Área (km²): ");
+    scanf("%f", &carta2.area);
+
+    printf("PIB (milhões): ");
+    scanf("%f", &carta2.pib);
+
+    printf("Número de pontos turísticos: ");
+    scanf("%d", &carta2.pontos_turisticos);
+
+    carta2.densidade_populacional = calcular_densidade_populacional(carta2.populacao, carta2.area);
+    carta2.pib_per_capita = calcular_pib_per_capita(carta2.pib, carta2.populacao);
+    carta2.super_poder = calcular_super_poder(carta2);
+
+    // Comparações
+    printf("\n==============================\n");
+    printf("Comparação de Cartas:\n");
+    printf("==============================\n\n");
+
+    comparar_atributo("População", carta1.populacao, carta2.populacao, 0);
+    comparar_atributo("Área", carta1.area, carta2.area, 0);
+    comparar_atributo("PIB", carta1.pib, carta2.pib, 0);
+    comparar_atributo("Pontos Turísticos", carta1.pontos_turisticos, carta2.pontos_turisticos, 0);
+    comparar_atributo("Densidade Populacional", carta1.densidade_populacional, carta2.densidade_populacional, 1);
+    comparar_atributo("PIB per Capita", carta1.pib_per_capita, carta2.pib_per_capita, 0);
+    comparar_atributo("Super Poder", carta1.super_poder, carta2.super_poder, 0);
 
     return 0;
 }
