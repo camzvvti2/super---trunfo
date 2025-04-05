@@ -12,43 +12,43 @@ int turisticos, turisticos2;
 
 printf("Cadastre sua primeira carta\n");
 
-printf("Digite o nome do estado: \n");
+printf("Digite o nome do estado:\n");
 scanf("%s", &nome);
 
-printf("Código da cidade: \n");
+printf("Código da cidade:\n");
 scanf("%s", &codigo);
 
-printf("Nome da cidade: \n");
+printf("Nome da cidade:\n");
 scanf("%s", &cidade);
 
-printf("PIB da cidade: \n");
+printf("PIB da cidade:\n");
 scanf("%f", &pib);
 
-printf("Área da cidade: \n");
+printf("Área da cidade:\n");
 scanf("%f", &area);
 
-printf("Pontos turísticos da cidade: \n");
+printf("Pontos turísticos da cidade:\n");
 scanf("%d", &turisticos);
 
 printf("\n");
 
 printf("Cadastre sua segunda carta\n");
-printf("Nome do estado: \n");
+printf("Nome do estado:\n");
 scanf("%s", &nome2);
 
-printf("Código da cidade: \n");
+printf("Código da cidade:\n");
 scanf("%s", &codigo2);
 
-printf("Nome da cidade: \n");
+printf("Nome da cidade:\n");
 scanf("%s", &cidade2);
 
-printf("Área da cidade: \n");
+printf("Área da cidade:\n");
 scanf("%f", &area2);
 
-printf("PIB da cidade: \n");
+printf("PIB da cidade:\n");
 scanf("%f", &pib2);
 
-printf("Pontos turísticos: \n");
+printf("Pontos turísticos:\n");
 scanf("%d", &turisticos2);
 
 printf("Cartas cadrastadas com sucesso! \n");
@@ -56,11 +56,11 @@ printf("Aqui estão suas cartas:\n)");
 printf("\n");
 
 printf("Carta 1\n");
-printf("Estado: %s \n", nome);
-printf("Código: %s \n", codigo);
-printf("Cidade: %s \n", cidade);
-printf("Área: %f \n", area);
-printf("PIB: %f \n", pib);
+printf("Estado: %s\n", nome);
+printf("Código: %s\n", codigo);
+printf("Cidade: %s\n", cidade);
+printf("Área: %f\n", area);
+printf("PIB: %f\n", pib);
 printf("Pontos turísticos: %d", turisticos);
 
 printf("\n");
