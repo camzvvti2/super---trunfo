@@ -4,7 +4,7 @@
 // Tema 1 - Cadastro das Cartas
 // Este código inicial serve como base para o desenvolvimento do sistema de cadastro de cartas de cidades.
 // Siga os comentários para implementar cada parte do desafio.
-//Teste larissa
+
 
 int main() {
     char estado[50];
@@ -13,6 +13,8 @@ int main() {
     int populacao, pontosturistico;
     float area;
     float PIB;
+    float Densidadepopulacional;
+    float Pibpercapita;
 
     printf ("CARTA 01 \n");
 
@@ -37,6 +39,10 @@ int main() {
     printf ("Qual o numero de pontos turistico? \n");
     scanf ("%d", &pontosturistico);
 
+    Densidadepopulacional = populacao / area;
+    
+    Pibpercapita = PIB / populacao;
+
     printf ("CARTA 01 \n");
     printf ("estado: %S \n", estado);
     printf ("Codigo da carta: %s \n", carta);
@@ -45,6 +51,11 @@ int main() {
     printf ("Area em KM²: %f \n", area);
     printf ("PIB: %f \n", PIB);
     printf ("pontos turisticos: %d \n", pontosturistico);
+    printf ("Densidade populacional é: %.2f \n", Densidadepopulacional);
+    printf ("Pib per capita é: %.2f \n", Pibpercapita);
+
+    printf ("__________________________ \n");
+
 
     printf ("CARTA 02 \n");
 
@@ -69,6 +80,10 @@ int main() {
     printf ("Qual o numero de pontos turistico? \n");
     scanf ("%d", &pontosturistico);
 
+    Densidadepopulacional = populacao / area;
+    
+    Pibpercapita = PIB / populacao;
+
     printf ("CARTA 02 \n");
     printf ("estado: %S \n", estado);
     printf ("Codigo da carta: %s \n", carta);
@@ -77,6 +92,8 @@ int main() {
     printf ("Area em KM²: %f \n", area);
     printf ("PIB: %f \n", PIB);
     printf ("pontos turisticos: %d \n", pontosturistico);
+    printf ("Densidade populacional é: %.2f \n", Densidadepopulacional);
+    printf ("Pib per capita é: %.2f \n", Pibpercapita);
 
 
 
