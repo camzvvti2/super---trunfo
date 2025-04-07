@@ -75,15 +75,17 @@ int main() {
 
     //Nível Aventureiro
 
-     DP1 = Populacao / Area;
-    PIB_per_capita1 = PIB / Populacao;
+    printf("\n");
 
-    DP2 = Populacao2 / Area2;
-    PIB_per_capita2 = PIB2 / Populacao2;
+    float DP1 = (Populacao / Area);
+    float PIB_per_capital1 = PIB / Populacao;
+
+    float DP2 = Populacao2 / Area2;
+    float PIB_per_capital2 = PIB2 / Populacao2;
 
     printf("A densidade populacional é de: %f \n", DP2);
 
-    printf("O PIB per capita é de: %f \n", PIB_per_capital2);
+    printf("O PIB per capital é de: %f \n", PIB_per_capital2);
     
     printf("A densidade populacional é de: %f \n", DP2);
 
@@ -91,6 +93,37 @@ int main() {
 
     //Nível Mestre
 
+    float super_poder;
+    
+    printf("\n");
+    
+    int Resultado_Popu = (Populacao > Populacao2);
+    int Resultado_Area = (Area > Area2);
+    int Resultado_PIB = (PIB > PIB2);
+    int Resultado_Num = (NumTuristicos > NumTuristicos2);
+    printf("Se 0 segunda carta ganha, se 1 primeira ganha \n");
+    printf("População: %d \n", Resultado_Popu);
+    printf("Àrea: %d \n", Resultado_Area);
+    printf("PIB: %d \n", Resultado_PIB);
+    printf("Número de Pontos Turísticos: %d \n", Resultado_Num);
+
     
     return 0;
 }
+
+
+A
+A01
+São paulo
+123
+123
+123
+12
+    
+B
+B01
+São paulo
+1234
+1234
+1234
+123
