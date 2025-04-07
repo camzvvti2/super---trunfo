@@ -100,23 +100,22 @@ int main() {
     int Resultado_Popu = (Populacao > Populacao2);
     int Resultado_Area = (Area > Area2);
     int Resultado_PIB = (PIB > PIB2);
-    int Resultado_DP = (DP1 > DP2);
+    int Resultado_DP = (DP1 < DP2);
     int Resultado_PIB_per = (PIB_per_capital1 > PIB_per_capital2);
     int Resultado_Num = (NumTuristicos > NumTuristicos2);
     printf("Se 0 segunda carta ganha, se 1 primeira ganha \n");
-    printf("População: %d \n", Resultado_Popu);
-    printf("Àrea: %d \n", Resultado_Area);
-    printf("PIB: %d \n", Resultado_PIB);
-    printf("densidade populacional: %d \n", Resultado_DP);
-    printf("PIB per capita: %d \n",  Resultado_PIB_per);
-    printf("Número de Pontos Turísticos: %d \n", Resultado_Num);
+    printf("População: %d \n", &Resultado_Popu);
+    printf("Àrea: %d \n", &Resultado_Area);
+    printf("PIB: %d \n", &Resultado_PIB);
+    printf("densidade populacional: %d \n", &Resultado_DP);
+    printf("PIB per capita: %d \n",  &Resultado_PIB_per);
+    printf("Número de Pontos Turísticos: %d \n", &Resultado_Num);
 
     
     return 0;
 }
 
-
-A
+*/A
 A01
 São paulo
 123
@@ -131,3 +130,4 @@ São paulo
 1234
 1234
 123
+/*
