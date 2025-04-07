@@ -8,7 +8,7 @@ int main() {
     int Populacao, NumTuristicos, Populacao2, NumTuristicos2;
     float Area, Area2, PIB, PIB2;
 
-    printf("Primeira carta: \n");
+    printf("Primeira carta 1: \n");
     printf("Digite o Estado (EX: A ou B): \n");
     scanf(" %c", &Estado);
     getchar();
@@ -32,7 +32,7 @@ int main() {
     scanf("%d", &NumTuristicos);
     getchar(); 
 
-    printf("\nSegunda carta: \n");
+    printf("\nSegunda carta 0: \n");
     printf("Digite o Estado da segunda carta (EX: A ou B): \n");
     scanf(" %c", &Estado2);
     getchar(); 
@@ -93,7 +93,8 @@ int main() {
 
     //Nível Mestre
 
-    float super_poder;
+    float super_poder = (float) Populacao + Area + PIB + DP1 + PIB_per_capital1 + NumTuristicos;
+    float super_poder1 = (float) Populacao2 + Area2 + PIB2 + DP2 + PIB_per_capital2 + NumTuristicos2;
     
     printf("\n");
     
@@ -104,13 +105,19 @@ int main() {
     int Resultado_PIB_per = (PIB_per_capital1 > PIB_per_capital2);
     int Resultado_Num = (NumTuristicos > NumTuristicos2);
     printf("Se 0 segunda carta ganha, se 1 primeira ganha \n");
-    printf("População: %d \n", &Resultado_Popu);
-    printf("Àrea: %d \n", &Resultado_Area);
-    printf("PIB: %d \n", &Resultado_PIB);
-    printf("densidade populacional: %d \n", &Resultado_DP);
-    printf("PIB per capita: %d \n",  &Resultado_PIB_per);
-    printf("Número de Pontos Turísticos: %d \n", &Resultado_Num);
+    printf("População: %d \n", Resultado_Popu);
+    printf("Àrea: %d \n", Resultado_Area);
+    printf("PIB: %d \n", Resultado_PIB);
+    printf("densidade populacional: %d \n", Resultado_DP);
+    printf("PIB per capita: %d \n",  Resultado_PIB_per);
+    printf("Número de Pontos Turísticos: %d \n", Resultado_Num);
 
+    printf("Número super poder da primeira:%f \n", super_poder);
+    printf("Número super poder da primeira:%f \n", super_poder1);
+
+    int Resultado_poder = super_poder > super_poder1;
+    printf("Se 0 segunda carta ganha, se 1 primeira ganha \n");
+    printf("super poder vencedor:%d \n", Resultado_poder);
     
     return 0;
 }
@@ -122,7 +129,6 @@ São paulo
 123
 123
 12
-    
 B
 B01
 São paulo
