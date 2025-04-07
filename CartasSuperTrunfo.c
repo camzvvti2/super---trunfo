@@ -13,10 +13,10 @@ int main() {
     scanf(" %c", &Estado);
     getchar();
 
-    printf("Digite o Código (EX: A01): ");
+    printf("Digite o Código (EX: A01): \n");
     fgets(Codigo, 6, stdin);
 
-    printf("Digite a Cidade: ");
+    printf("Digite a Cidade: \n");
     fgets(Cidade, 50, stdin);
 
     printf("Digite a População (EX: 673000): \n");
@@ -37,10 +37,10 @@ int main() {
     scanf(" %c", &Estado2);
     getchar(); 
 
-    printf("Digite o Código da segunda carta (EX: A01): ");
+    printf("Digite o Código da segunda carta (EX: A01): \n");
     fgets(Codigo2, 6, stdin); 
 
-    printf("Digite a Cidade da segunda carta: ");
+    printf("Digite a Cidade da segunda carta: \n");
     fgets(Cidade2, 50, stdin);
 
     printf("Digite a População da segunda carta (EX: 673000): \n");
@@ -83,9 +83,9 @@ int main() {
     float DP2 = Populacao2 / Area2;
     float PIB_per_capital2 = PIB2 / Populacao2;
 
-    printf("A densidade populacional é de: %f \n", DP2);
+    printf("A densidade populacional é de: %f \n", DP1);
 
-    printf("O PIB per capital é de: %f \n", PIB_per_capital2);
+    printf("O PIB per capital é de: %f \n", PIB_per_capital1);
     
     printf("A densidade populacional é de: %f \n", DP2);
 
@@ -100,11 +100,15 @@ int main() {
     int Resultado_Popu = (Populacao > Populacao2);
     int Resultado_Area = (Area > Area2);
     int Resultado_PIB = (PIB > PIB2);
+    int Resultado_DP = (DP1 > DP2);
+    int Resultado_PIB_per = (PIB_per_capital1 > PIB_per_capital2);
     int Resultado_Num = (NumTuristicos > NumTuristicos2);
     printf("Se 0 segunda carta ganha, se 1 primeira ganha \n");
     printf("População: %d \n", Resultado_Popu);
     printf("Àrea: %d \n", Resultado_Area);
     printf("PIB: %d \n", Resultado_PIB);
+    printf("densidade populacional: %d \n", Resultado_DP);
+    printf("PIB per capita: %d \n",  Resultado_PIB_per);
     printf("Número de Pontos Turísticos: %d \n", Resultado_Num);
 
     
