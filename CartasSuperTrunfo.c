@@ -1,27 +1,15 @@
 #include <stdio.h>
+#include <stdlib.h>
 
-// Desafio Super Trunfo - Países
-// Tema 1 - Cadastro das Cartas
-// Este código inicial serve como base para o desenvolvimento do sistema de cadastro de cartas de cidades.
-// Siga os comentários para implementar cada parte do desafio.
-//Teste larissa
+
 
 int main() {
-    // Sugestão: Defina variáveis separadas para cada atributo da cidade.
-    // Exemplos de atributos: código da cidade, nome, população, área, PIB, número de pontos turísticos.
+   
     
-    // Cadastro das Cartas:
-    // Sugestão: Utilize a função scanf para capturar as entradas do usuário para cada atributo.
-    // Solicite ao usuário que insira as informações de cada cidade, como o código, nome, população, área, etc.
-    
-    // Exibição dos Dados das Cartas:
-    // Sugestão: Utilize a função printf para exibir as informações das cartas cadastradas de forma clara e organizada.
-    // Exiba os valores inseridos para cada atributo da cidade, um por linha.
-    
-    //carta 1
+    int carta1 = estado1, populacao1, area1, pib1, turistico1, densidade1;
 
     char estado1[20];
-    char codigo1[20];
+    char codigo1[15];
     char cidade1[50];
     int populacao1;
     float area1;
@@ -36,7 +24,7 @@ int main() {
     scanf("%s", estado1);
 
     printf("digite o codigo1 da carta: \n");
-    scanf("%s", &codigo1);
+   scanf("%s", &codigo1);
    
     printf("digite o nome da cidade1: \n");
     scanf("%s", &cidade1);
@@ -72,7 +60,7 @@ int main() {
     printf("superpoder1: %.2f\n", superpoder1);
 
 
-    //carta 2
+    int carta2 = estado2, populacao2, area2, pib2, turistiro2, densidade2;
 
     char estado2[15];
     char codigo2[8];
@@ -124,16 +112,73 @@ int main() {
 
     printf("superpoder2: %.2f\n", superpoder2);
 
-    if(populacao1 > populacao2){
-        printf("carta 1 venceu!!\n");
-    } else{
-        printf("carta 2 venceu!\n");
+
+    printf("***super trunfo***\n");
+    printf("escolha uma opcao: \n");
+    printf("1. estado.\n");
+    printf("2. populacao.\n");
+    printf("3. area.\n");
+    printf("4. pib.\n");
+    printf("5. turisticos.\n");
+    printf("6. densidade.\n");
+    printf("escolha: \n");
+    scanf("%d", &carta1, &carta2);
+    
+
+    switch (carta1)
+    {
+    case 1:
+       printf("estado:  -");
+        break;
+    case 2:
+       printf("populacao: -");
+        break;
+    case 3:
+        printf("area:  -");
+         break;
+    case 4:
+       printf("pib:  -");
+        break;
+    case 5:
+       printf("turistico: -");
+        break;
+    case 6:
+        printf("densidade: -");
+         break;    
+    
     }
 
-    printf("carta 1 tem populacao: %d\n", populacao1);
-    printf("carta 2 tem populacao: %d\n", populacao2);
 
-    return 0;
+    if(carta1 == carta2)
+    {
+        printf("empate\n");
+    } else if(estado1 > estado2)
+    {  
+        printf("carta 1 venceu");
+    } else if(populacao1 > populacao2)
+    {
+        printf("carta 1 venceu");
+    } else if (area1 > area2)
+    {
+        printf("carta 1 venceu");
+    } else if (pib1 > pib2)
+    {
+        printf("carta 1 venceu");
+    } else if(turistico1 > turistico2)
+    {
+        printf("carta 1 venceu");
+    } else if(densidade1 < densidade2)
+    {
+        printf("carta 1 venceu");
+    } else
+    {
+       printf("carta 2 venceu");
+    }
+    
+    
+            
+
+   
 
     
 }
