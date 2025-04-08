@@ -1,14 +1,26 @@
 #include <stdio.h>
-
+#include <stdlib.h>
+#include <time.h>
 int main() {
     // Definindo variáveis para armazenar os dados das duas cartas
     char estado1, estado2;
     char codigo1[50], codigo2[50];
     char cidade1[50], cidade2[50];
-    int populacao1, populacao2;
+    int populacao1, populacao2, escolha;
     float area1, area2, pib1, pib2, desin1, desin2, capita1, capita2, super1, super2;
     int pontos1, pontos2;
     int densidade_invertida1, densidade_invertida2;
+    // Definindo as opcoes de escolhas
+    printf("\nEscolha um atributo para comparaçao:\n");
+    printf("1. População\n");
+    printf("2. Área\n");
+    printf("3. PIB\n");
+    printf("4. Densidade Populacional (menor vence)\n");
+    printf("5. PIB per Capita\n");
+    printf("6. Pontos Turísticos\n");
+    printf("7. Super Poder (maior vence)\n");
+    printf("Sua escolha: ");
+    scanf("%d", &escolha);
     // Coletando dados para a Carta 1
     printf("Digite os dados da Carta 1:\n");
 
@@ -91,36 +103,79 @@ int main() {
     printf("Densidade Populacional (hab/km²): %.2f\n", desin2);
     printf("(PIB per Capita (reais): %.2f\n", capita2);
 
-    //Determinando os atributos das cartas vencedoras:
-    printf("\nAtributos vencedores:\n");
-    if(populacao1 > populacao2){
-        printf("Populaçao da Carta 1 Venceu.\n");
+    switch (escolha) {
+    case 1:
+    if (populacao1 > populacao2) {
+    printf("População: Carta 1 venceu com %d habitantes.\n", populacao1);
+    } else if (populacao1 < populacao2) {
+    printf("População: Carta 2 venceu com %d habitantes.\n", populacao2);
     } else {
-        printf("Populaçao da Carta 2 Venceu.\n");
+    printf("População: Empate!\n");
     }
-    
-    if(area1 > area2){
-        printf("Area da Carta 1 Venceu.\n");
-    } else {
-        printf("Area da Carta 2 Venceu.\n");
-    }
+    break;
 
-    if(pib1 > pib2){
-        printf("PIB da Carta 1 Venceu.\n");
+    case 2:
+    if (area1 > area2) {
+    printf("Área: Carta 1 venceu com %.2f km².\n", area1);
+    } else if (area1 < area2) {
+    printf("Área: Carta 2 venceu com %.2f km².\n", area2);
     } else {
-        printf("PIB da Carta 2 Venceu.\n");
+    printf("Área: Empate!\n");
     }
+    break;
 
-    if(desin1 < desin2){
-        printf("Densidade Populacional da Carta 1 Venceu.\n");
+    case 3:
+    if (pib1 > pib2) {
+    printf("PIB: Carta 1 venceu com %.2f bilhões.\n", pib1);
+    } else if (pib1 < pib2) {
+    printf("PIB: Carta 2 venceu com %.2f bilhões.\n", pib2);
     } else {
-        printf("Densidade populacional da Carta 2 Venceu.\n");
+    printf("PIB: Empate!\n");
     }
+    break;
 
-    if(capita1 > capita2){
-        printf("PIB de Capital da Carta 1 Venceu.\n");
+    case 4:
+    if (desin1 < desin2) {
+    printf("Densidade Populacional: Carta 1 venceu com %.2f hab/km².\n", desin1);
+    } else if (desin1 > desin2) {
+    printf("Densidade Populacional: Carta 2 venceu com %.2f hab/km².\n", desin2);
     } else {
-        printf("PIB de Capital da Carta 2 Venceu.\n");
+    printf("Densidade Populacional: Empate!\n");
+    }
+    break;
+
+    case 5:
+    if (capita1 > capita2) {
+    printf("PIB per Capita: Carta 1 venceu com R$%.2f.\n", capita1);
+    } else if (capita1 < capita2) {
+    printf("PIB per Capita: Carta 2 venceu com R$%.2f.\n", capita2);
+    } else {
+    printf("PIB per Capita: Empate!\n");
+    }
+    break;
+
+    case 6:
+    if (pontos1 > pontos2) {
+    printf("Pontos Turísticos: Carta 1 venceu com %d pontos.\n", pontos1);
+    } else if (pontos1 < pontos2) {
+    printf("Pontos Turísticos: Carta 2 venceu com %d pontos.\n", pontos2);
+    } else {
+    printf("Pontos Turísticos: Empate!\n");
+    }
+    break;
+
+    case 7:
+    if (super1 > super2) {
+    printf("Super Poder: Carta 1 venceu com %.2f pontos.\n", super1);
+    } else if (super1 < super2) {
+    printf("Super Poder: Carta 2 venceu com %.2f pontos.\n", super2);
+    } else {
+    printf("Super Poder: Empate!\n");
+    }
+    break;
+    default:
+    printf("Opção inválida. Tente novamente.\n");
+    break;
     }
     
     //Comparaçoes das cartas 1 e 2.
