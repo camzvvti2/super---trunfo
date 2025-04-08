@@ -72,137 +72,128 @@ int main()
     float calculateSuperPowerCountry1 = calculateSuperPower(populationCountry1, kilometersAreaCountry1, turistsPointCountry1, PIBCountry1, densityCountry1);
     float calculateSuperPowerCountry2 = calculateSuperPower(populationCountry2, kilometersAreaCountry2, turistsPointCountry2, PIBCountry2, densityCountry2);
 
-    printf("Escolha uma opção para comparar:\n");
+    int atributo1, atributo2;
+
+    // Primeiro menu de escolha
+    printf("\nEscolha o primeiro atributo:\n");
     printf("1. População\n");
     printf("2. Área\n");
     printf("3. PIB\n");
     printf("4. Número de pontos turísticos\n");
     printf("5. Densidade demográfica\n");
+    scanf("%d", &atributo1);
+
+    // Segundo menu de escolha com opções restantes
+    printf("\nEscolha o segundo atributo (diferente do primeiro):\n");
+    if (atributo1 != 1)
+        printf("1. População\n");
+    if (atributo1 != 2)
+        printf("2. Área\n");
+    if (atributo1 != 3)
+        printf("3. PIB\n");
+    if (atributo1 != 4)
+        printf("4. Número de pontos turísticos\n");
+    if (atributo1 != 5)
+        printf("5. Densidade demográfica\n");
+
+    scanf("%d", &atributo2);
+
+    // Verificação para garantir que são diferentes
+    if (atributo1 == atributo2)
+    {
+        printf("Erro: Os atributos escolhidos devem ser diferentes.\n");
+        return 1;
+    }
+
+    float value1_attr1 = 0, value2_attr1 = 0;
+    float value1_attr2 = 0, value2_attr2 = 0;
 
     // variavel para armazenar a escolha do jogador
     int escolhaJogador;
     scanf("%d", &escolhaJogador);
 
-    switch (escolhaJogador)
+    // Comparação do primeiro atributo
+    switch (atributo1)
     {
     case 1:
-        // O nome dos dois países.
-        printf("Comparação entre: %s e %s\n", countryName1, countryName2);
-        // O atributo usado na comparação.
-        printf("O atributo usado na comparação foi: População\n");
-        // Os valores do atributo para cada carta.
-        printf("O valor de cada atributo é: (%d) para a carta 1,  e (%d) para a carta 2\n", populationCountry1, populationCountry2);
-
-        // Qual carta venceu.
-        if (populationCountry1 > populationCountry2)
-        {
-            printf("Resultado: Carta 1 (%s) venceu!", countryName1);
-        }
-        else if (populationCountry1 < populationCountry2)
-        {
-            printf("Resultado: Carta 2 (%s) venceu!", countryName2);
-        }
-        else
-        {
-            printf("Empate!");
-        }
+        value1_attr1 = populationCountry1;
+        value2_attr1 = populationCountry2;
         break;
-
     case 2:
-        // O nome dos dois países.
-        printf("Comparação entre: %s e %s\n", countryName1, countryName2);
-        // O atributo usado na comparação.
-        printf("O atributo usado na comparação foi: Área\n");
-        // Os valores do atributo para cada carta.
-        printf("O valor de cada atributo é: (%.2f) para a carta 1,  e (%.2f) para a carta 2\n", kilometersAreaCountry1, kilometersAreaCountry2);
-
-        // Qual carta venceu.
-        if (kilometersAreaCountry1 > kilometersAreaCountry2)
-        {
-            printf("Resultado: Carta 1 (%s) venceu!", countryName1);
-        }
-        else if (kilometersAreaCountry1 < kilometersAreaCountry2)
-        {
-            printf("Resultado: Carta 2 (%s) venceu!", countryName2);
-        }
-        else
-        {
-            printf("Empate!");
-        }
+        value1_attr1 = kilometersAreaCountry1;
+        value2_attr1 = kilometersAreaCountry2;
         break;
-
-        case 3:
-            // O nome dos dois países.
-            printf("Comparação entre: %s e %s\n", countryName1, countryName2);
-            // O atributo usado na comparação.
-            printf("O atributo usado na comparação foi: PIB\n");
-            // Os valores do atributo para cada carta.
-            printf("O valor de cada atributo é: (%lf) para a carta 1,  e (%lf) para a carta 2\n", PIBCountry1, PIBCountry2);
-    
-            // Qual carta venceu.
-            if (PIBCountry1 > PIBCountry2)
-            {
-                printf("Resultado: Carta 1 (%s) venceu!", countryName1);
-            }
-            else if (PIBCountry1 < PIBCountry2)
-            {
-                printf("Resultado: Carta 2 (%s) venceu!", countryName2);
-            }
-            else
-            {
-                printf("Empate!");
-            }
-            break;
-
-            case 4:
-                // O nome dos dois países.
-                printf("Comparação entre: %s e %s\n", countryName1, countryName2);
-                // O atributo usado na comparação.
-                printf("O atributo usado na comparação foi: Número de pontos turísticos\n");
-                // Os valores do atributo para cada carta.
-                printf("O valor de cada atributo é: (%d) para a carta 1,  e (%d) para a carta 2\n", turistsPointCountry1, turistsPointCountry2);
-        
-                // Qual carta venceu.
-                if (PIBCountry1 > PIBCountry2)
-                {
-                    printf("Resultado: Carta 1 (%s) venceu!", countryName1);
-                }
-                else if (PIBCountry1 < PIBCountry2)
-                {
-                    printf("Resultado: Carta 2 (%s) venceu!", countryName2);
-                }
-                else
-                {
-                    printf("Empate!");
-                }
-                break;
-
-                case 5:
-                // O nome dos dois países.
-                printf("Comparação entre: %s e %s\n", countryName1, countryName2);
-                // O atributo usado na comparação.
-                printf("O atributo usado na comparação foi: Densidade demografia\n");
-                // Os valores do atributo para cada carta.
-                printf("O valor de cada atributo é: (%.2f) para a carta 1,  e (%.2f) para a carta 2\n", densityCountry1, densityCountry2);
-        
-                // Qual carta venceu.
-                if (densityCountry1 < densityCountry2)
-                {
-                    printf("Resultado: Carta 1 (%s) venceu!", countryName1);
-                }
-                else if (densityCountry1 > densityCountry2)
-                {
-                    printf("Resultado: Carta 2 (%s) venceu!", countryName2);
-                }
-                else
-                {
-                    printf("Empate!");
-                }
-                break;
-
-       default:
+    case 3:
+        value1_attr1 = PIBCountry1;
+        value2_attr1 = PIBCountry2;
+        break;
+    case 4:
+        value1_attr1 = turistsPointCountry1;
+        value2_attr1 = turistsPointCountry2;
+        break;
+    case 5:
+        value1_attr1 = densityCountry1;
+        value2_attr1 = densityCountry2;
         break;
     }
+
+    // Comparação do segundo atributo
+    switch (atributo2)
+    {
+    case 1:
+        value1_attr2 = populationCountry1;
+        value2_attr2 = populationCountry2;
+        break;
+    case 2:
+        value1_attr2 = kilometersAreaCountry1;
+        value2_attr2 = kilometersAreaCountry2;
+        break;
+    case 3:
+        value1_attr2 = PIBCountry1;
+        value2_attr2 = PIBCountry2;
+        break;
+    case 4:
+        value1_attr2 = turistsPointCountry1;
+        value2_attr2 = turistsPointCountry2;
+        break;
+    case 5:
+        value1_attr2 = densityCountry1;
+        value2_attr2 = densityCountry2;
+        break;
+    }
+
+    // Definir vencedor por atributo
+    int vencedorAttr1 = (atributo1 == 5) ? (value1_attr1 < value2_attr1 ? 1 : (value1_attr1 > value2_attr1 ? 2 : 0))
+                                         : (value1_attr1 > value2_attr1 ? 1 : (value1_attr1 < value2_attr1 ? 2 : 0));
+
+    int vencedorAttr2 = (atributo2 == 5) ? (value1_attr2 < value2_attr2 ? 1 : (value1_attr2 > value2_attr2 ? 2 : 0))
+                                         : (value1_attr2 > value2_attr2 ? 1 : (value1_attr2 < value2_attr2 ? 2 : 0));
+
+    // Soma dos valores
+    float sum1 = value1_attr1 + value1_attr2;
+    float sum2 = value2_attr1 + value2_attr2;
+
+    // Exibição dos resultados
+    printf("\n--- RESULTADO DA COMPARAÇÃO ---\n");
+    printf("Carta 1: %s\n", countryName1);
+    printf("Carta 2: %s\n", countryName2);
+
+    printf("Atributo 1 (opção %d)\n", atributo1);
+    printf("Atributo 2 (opção %d)\n", atributo2);
+
+    printf("Valor atributo 1: %.2f\n", value1_attr1);
+    printf("Valor atributo 2: %.2f\n", value2_attr2);
+
+    printf("\nSoma dos atributos:\n");
+    printf("%s: %.2f\n", countryName1, sum1);
+    printf("%s: %.2f\n", countryName2, sum2);
+
+    if (sum1 > sum2)
+        printf("Resultado final: Carta 1 (%s) venceu!\n", countryName1);
+    else if (sum2 > sum1)
+        printf("Resultado final: Carta 2 (%s) venceu!\n", countryName2);
+    else
+        printf("Resultado final: Empate!\n");
 
     return 0;
 }
