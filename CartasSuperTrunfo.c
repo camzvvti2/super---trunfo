@@ -160,7 +160,7 @@ int main()
                 // O atributo usado na comparação.
                 printf("O atributo usado na comparação foi: Número de pontos turísticos\n");
                 // Os valores do atributo para cada carta.
-                printf("O valor de cada atributo é: (%d) para a carta 1,  e (%d) para a carta 2\n", PIBCountry1, PIBCountry2);
+                printf("O valor de cada atributo é: (%d) para a carta 1,  e (%d) para a carta 2\n", turistsPointCountry1, turistsPointCountry2);
         
                 // Qual carta venceu.
                 if (PIBCountry1 > PIBCountry2)
@@ -168,6 +168,29 @@ int main()
                     printf("Resultado: Carta 1 (%s) venceu!", countryName1);
                 }
                 else if (PIBCountry1 < PIBCountry2)
+                {
+                    printf("Resultado: Carta 2 (%s) venceu!", countryName2);
+                }
+                else
+                {
+                    printf("Empate!");
+                }
+                break;
+
+                case 5:
+                // O nome dos dois países.
+                printf("Comparação entre: %s e %s\n", countryName1, countryName2);
+                // O atributo usado na comparação.
+                printf("O atributo usado na comparação foi: Densidade demografia\n");
+                // Os valores do atributo para cada carta.
+                printf("O valor de cada atributo é: (%.2f) para a carta 1,  e (%.2f) para a carta 2\n", densityCountry1, densityCountry2);
+        
+                // Qual carta venceu.
+                if (densityCountry1 < densityCountry2)
+                {
+                    printf("Resultado: Carta 1 (%s) venceu!", countryName1);
+                }
+                else if (densityCountry1 > densityCountry2)
                 {
                     printf("Resultado: Carta 2 (%s) venceu!", countryName2);
                 }
