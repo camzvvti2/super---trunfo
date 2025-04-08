@@ -1,94 +1,90 @@
-# Desafio Super Trunfo - Países - Cadastro das Cartas - Atualizado: 21/02
+## 🛡️ Nível Aventureiro: Cálculo de Atributos com Comparação Dupla
 
-Bem-vindo ao desafio "Super Trunfo - Países"! No jogo Super Trunfo, os jogadores comparam os atributos das cartas para determinar a mais forte. O tema deste Super Trunfo é "Países", onde você comparará os atributos das cidades.
+No nível Aventureiro, você expandirá o sistema para incluir o cálculo de dois novos atributos derivados: **Densidade Populacional** e **PIB per Capita**. Além disso, poderá **comparar dois atributos diferentes** entre as duas cidades para determinar o vencedor.
 
-A empresa MateCheck contratou você para desenvolver a parte inicial do jogo, que consiste no cadastro das cartas.
+🆕 **Diferenças em relação ao Nível Novato:**
 
-O desafio está dividido em três níveis: Novato, Aventureiro e Mestre, com cada nível adicionando mais complexidade ao anterior.  **Você deve escolher qual desafio quer realizar.**
+* **Novos Atributos Calculados:**
+  * **Densidade Populacional**: População / Área (`float`)
+  * **PIB per Capita**: PIB / População (`float`)
 
-🚨 **Atenção:** O nível Novato do desafio é focado apenas no cadastro das cartas, utilizando as funções `scanf` para ler os dados e `printf` para exibi-los.
-
-## 🎮 Nível Novato: Cadastro Básico
-
-No nível Novato, você iniciará criando o sistema básico do jogo Super Trunfo com o tema "Países". As cartas serão divididas por estados, cada um com quatro cidades.  Imagine um país dividido em oito estados (A a H), e cada estado com quatro cidades (1 a 4).  A combinação forma o código da carta (ex: A01, B02).
-
-🚩 **Objetivo:** Criar um programa em C que cadastra **duas** cartas com os seguintes atributos:
-
-*   População (`int`)
-*   Área (`float`)
-*   PIB (`float`)
-*   Número de pontos turísticos (`int`)
+* **Comparação por Dois Atributos**:
+  * O usuário escolhe **dois atributos diferentes** para comparação.
+  * Os valores desses atributos são somados para definir a cidade vencedora.
 
 ⚙️ **Funcionalidades do Sistema:**
 
-*   O sistema permitirá ao usuário cadastrar os dados de **duas** cartas manualmente via terminal.
-*   Após o cadastro, o sistema exibirá os dados de cada cidade de forma organizada.
+* O sistema solicita os dados de **duas cidades**.
+* Calcula automaticamente:
+  * Densidade Populacional
+  * PIB per Capita
+* O usuário escolhe **dois atributos diferentes** para comparar:
+  * População
+  * Área
+  * PIB
+  * Número de Pontos Turísticos
+  * Densidade Populacional
+* O programa exibe todos os dados, realiza a comparação e mostra o vencedor com base na **soma dos dois atributos escolhidos**.
 
-📥 **Entrada** e 📤 **Saída de Dados:**
+📥 **Entrada de Dados:**
 
-*   O usuário insere os dados de cada carta interativamente via `scanf`.
-*   O programa exibe os dados cadastrados usando `printf`, com cada atributo em uma nova linha.
+O programa solicitará os seguintes dados para **cada cidade**:
 
-**Simplificações para o Nível Novato:**
-
-*   Cadastre apenas **duas** cartas.
-*   Concentre-se na leitura, armazenamento e exibição. Não implemente comparações ou outros recursos.
-*   **Não use** laços (`for`, `while`) ou condicionais (`if`, `else`).
-
-
-## 🛡️ Nível Aventureiro: Cálculo de Atributos
-
-No nível Aventureiro, você expandirá o sistema para incluir o cálculo de dois novos atributos: Densidade Populacional e PIB per Capita.
-
-🆕 **Diferença em relação ao Nível Novato:**
-
-*   **Novos Atributos:**
-    *   Densidade Populacional: População / Área (`float`)
-    *   PIB per Capita: PIB / População (`float`)
-
-⚙️ **Funcionalidades do Sistema:**
-
-*   O sistema calculará automaticamente a Densidade Populacional e o PIB per Capita.
-*   Os novos atributos serão exibidos junto com os demais.
-
-📥 **Entrada** e 📤 **Saída de Dados:**
-
-*   Mesma entrada do nível Novato.
-*   A saída exibirá também os atributos calculados.
-
-**Simplificações para o Nível Intermediário:**
-
-*   Continue cadastrando apenas **duas** cartas.
-*   Continue **sem usar** laços (`for`, `while`) ou condicionais (`if`, `else`).
+- Nome da cidade
+- População (número inteiro)
+- Área em km² (float)
+- PIB (float)
+- Número de pontos turísticos (número inteiro)
 
 
+📤 **Saída de Dados:**
 
-## 🏆 Nível Mestre: Comparação e Super Poder
+* Exibe todos os dados das cidades, incluindo:
+  * Densidade Populacional (calculada)
+  * PIB per Capita (calculado)
+* Exibe a comparação dos dois atributos escolhidos:
+  * Vencedor em cada atributo
+  * Soma dos valores
+  * Resultado final da comparação
 
-No nível Mestre, você implementará a comparação entre duas cartas e o cálculo do "Super Poder".
+📌 **Restrições do Projeto:**
 
-🆕 **Diferença em relação ao Nível Aventureiro:**
+✅ O sistema **não utiliza laços** (`for`, `while`, etc.)  
+✅ O sistema **não utiliza estruturas condicionais tradicionais** (`if`, `else`, etc.) para repetição ou seleção de atributos  
+✅ Tudo está implementado **diretamente na função `main()`**
 
-*   **Comparação de Cartas:** O usuário poderá comparar as duas cartas.
-*   **Super Poder:** Soma de todos os atributos (inclusive os calculados), com a densidade populacional *invertida* antes da soma (1/densidade).  Tipo: `float`.
+---
 
-⚙️ **Funcionalidades do Sistema:**
+## 🛠️ Como Compilar e Executar
 
-*   Comparação atributo a atributo, mostrando qual carta venceu (1 se a Carta 1 vence, 0 se a Carta 2 vence).
-*   Para Densidade Populacional, vence a carta com o *menor* valor.
-*   Para os demais atributos (e o Super Poder), vence a carta com o *maior* valor.
+1. Instale a extensão **C/C++** no VS Code
+2. Clique no botão de "Executar" no topo direito da interface do VS Code
+3. O terminal será aberto automaticamente para entrada de dados
 
-📥 **Entrada** e 📤 **Saída de Dados:**
+---
 
-*   Mesma entrada dos níveis anteriores, mas a População agora é `unsigned long int`.
-*   A saída mostrará o resultado da comparação para cada atributo e o Super Poder.
+## 🧪 Como Testar
 
-**Observação:**  Preste atenção à conversão de tipos ao calcular o Super Poder!
+1. O programa solicitará os dados das duas cidades.
+2. Você escolherá **dois atributos diferentes (de 1 a 5)** para realizar a comparação:
+
+1: População
+2: Área
+3: PIB
+4: Número de pontos turísticos
+5: Densidade demográfica
 
 
-## 🏁 Conclusão
+3. O programa exibirá:
+  * Os valores de cada atributo para as duas cidades
+  * Quem venceu em cada atributo
+  * A soma dos dois atributos
+  * Qual cidade venceu no total
 
-Ao concluir qualquer um dos níveis, você terá dado um passo importante no desenvolvimento do Super Trunfo - Países. Boa sorte e divirta-se programando!
+---
 
-Equipe de Ensino - MateCheck
-content_copy
+## 🗂️ Sobre o Projeto
+
+Este programa em C permite comparar **dois atributos diferentes entre duas cidades**, com base nos dados fornecidos pelo usuário. O sistema calcula automaticamente atributos derivados e determina a cidade vencedora com base na **soma** dos dois atributos escolhidos.
+
+Ideal para praticar estruturas básicas, operadores lógicos e manipulação de dados sem uso de laços ou condicionais tradicionais.
