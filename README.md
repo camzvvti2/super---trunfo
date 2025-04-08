@@ -1,85 +1,90 @@
-## 🛡️ Nível Aventureiro: Cálculo de Atributos
+## 🛡️ Nível Aventureiro: Cálculo de Atributos com Comparação Dupla
 
-No nível Aventureiro, você expandirá o sistema para incluir o cálculo de dois novos atributos: Densidade Populacional e PIB per Capita.
+No nível Aventureiro, você expandirá o sistema para incluir o cálculo de dois novos atributos derivados: **Densidade Populacional** e **PIB per Capita**. Além disso, poderá **comparar dois atributos diferentes** entre as duas cidades para determinar o vencedor.
 
-🆕 **Diferença em relação ao Nível Novato:**
+🆕 **Diferenças em relação ao Nível Novato:**
 
-*   **Novos Atributos:**
-    *   Densidade Populacional: População / Área (`float`)
-    *   PIB per Capita: PIB / População (`float`)
+* **Novos Atributos Calculados:**
+  * **Densidade Populacional**: População / Área (`float`)
+  * **PIB per Capita**: PIB / População (`float`)
+
+* **Comparação por Dois Atributos**:
+  * O usuário escolhe **dois atributos diferentes** para comparação.
+  * Os valores desses atributos são somados para definir a cidade vencedora.
 
 ⚙️ **Funcionalidades do Sistema:**
 
-*   O sistema calculará automaticamente a Densidade Populacional e o PIB per Capita.
-*   Os novos atributos serão exibidos junto com os demais.
+* O sistema solicita os dados de **duas cidades**.
+* Calcula automaticamente:
+  * Densidade Populacional
+  * PIB per Capita
+* O usuário escolhe **dois atributos diferentes** para comparar:
+  * População
+  * Área
+  * PIB
+  * Número de Pontos Turísticos
+  * Densidade Populacional
+* O programa exibe todos os dados, realiza a comparação e mostra o vencedor com base na **soma dos dois atributos escolhidos**.
 
-📥 **Entrada** e 📤 **Saída de Dados:**
+📥 **Entrada de Dados:**
 
-*   Mesma entrada do nível Novato.
-*   A saída exibirá também os atributos calculados.
+O programa solicitará os seguintes dados para **cada cidade**:
 
-**Simplificações para o Nível Intermediário:**
-
-*   Continue cadastrando apenas **duas** cartas.
-*   Continue **sem usar** laços (`for`, `while`) ou condicionais (`if`, `else`).
-
-
-# Sobre o Projeto
-
-Este programa em C permite comparar atributos de duas cidades com base em dados fornecidos pelo usuário. O usuário insere informações sobre as cidades, como população, área, PIB e número de pontos turísticos. Em seguida, pode escolher um critério para comparar e determinar qual cidade tem a melhor pontuação nesse atributo.
-
-## Pré-requisitos
-
-Para compilar e executar este código, você precisa de um compilador C, como:
-
-- GCC (GNU Compiler Collection)
-
-- Clang
-
-- MinGW (para Windows)
-
-## Como Compilar e Executar
-
-Passo 1: Compilar o código
-
-1. Tenha a extensão `C/C++` instalada no seu vscode
-2. A extensão ira te gerar um botão na parte superior direita
-3. Ao clicar, vai se abrir o terminal do vscode.
+- Nome da cidade
+- População (número inteiro)
+- Área em km² (float)
+- PIB (float)
+- Número de pontos turísticos (número inteiro)
 
 
-## Como Testar
+📤 **Saída de Dados:**
 
-1. O programa solicitará que você insira informações sobre duas cidades.
+* Exibe todos os dados das cidades, incluindo:
+  * Densidade Populacional (calculada)
+  * PIB per Capita (calculado)
+* Exibe a comparação dos dois atributos escolhidos:
+  * Vencedor em cada atributo
+  * Soma dos valores
+  * Resultado final da comparação
 
-```
-Insira os seguintes dados para cada cidade:
-Letra do estado (A-H)
+📌 **Restrições do Projeto:**
 
-Código da carta (exemplo: A01)
+✅ O sistema **não utiliza laços** (`for`, `while`, etc.)  
+✅ O sistema **não utiliza estruturas condicionais tradicionais** (`if`, `else`, etc.) para repetição ou seleção de atributos  
+✅ Tudo está implementado **diretamente na função `main()`**
 
-Nome da cidade
+---
 
-População
+## 🛠️ Como Compilar e Executar
 
-Área em km²
+1. Instale a extensão **C/C++** no VS Code
+2. Clique no botão de "Executar" no topo direito da interface do VS Code
+3. O terminal será aberto automaticamente para entrada de dados
 
-PIB da cidade
+---
 
-Número de pontos turísticos
-```
-2. Após inserir os dados, escolha um critério para comparar as cidades:
+## 🧪 Como Testar
 
-```
+1. O programa solicitará os dados das duas cidades.
+2. Você escolherá **dois atributos diferentes (de 1 a 5)** para realizar a comparação:
+
 1: População
-
 2: Área
-
 3: PIB
-
 4: Número de pontos turísticos
-
 5: Densidade demográfica
-```
 
-3. O programa mostrará os dados inseridos e indicará qual cidade tem o melhor valor para o critério escolhido.
 
+3. O programa exibirá:
+  * Os valores de cada atributo para as duas cidades
+  * Quem venceu em cada atributo
+  * A soma dos dois atributos
+  * Qual cidade venceu no total
+
+---
+
+## 🗂️ Sobre o Projeto
+
+Este programa em C permite comparar **dois atributos diferentes entre duas cidades**, com base nos dados fornecidos pelo usuário. O sistema calcula automaticamente atributos derivados e determina a cidade vencedora com base na **soma** dos dois atributos escolhidos.
+
+Ideal para praticar estruturas básicas, operadores lógicos e manipulação de dados sem uso de laços ou condicionais tradicionais.
