@@ -1,34 +1,34 @@
 #include <stdio.h>
 #include <stdlib.h>
+#include <time.h>
 
 
 
 int main() {
    
-    
-    char estado1[20];
-    char codigo1[15];
-    char cidade1[50];
-    int populacao1;
+    char estado1;
+    char codigo1;
+    char cidade1;
+    int populacao1 = 1;
     float area1;
     float pib1;
-    int turistico1;
+    int turistico1 = 0;
     float densidade1;
     float pibcapita1;
     float superpoder1;
 
 
     printf("digite o nome do estado1: \n");
-    scanf("%s", estado1);
+    scanf("%c", &estado1);
 
-    printf("digite o codigo1 da carta: \n");
-   scanf("%s", &codigo1);
-   
+    printf("digite o codigo1: \n");
+    scanf("%c", &codigo1);
+
     printf("digite o nome da cidade1: \n");
     scanf("%s", &cidade1);
 
-    printf("digite a populacao1: \n");
-    scanf("%d", &populacao1);
+    printf("digite populacao1: \n");
+    scanf("%d",&populacao1);
 
     printf("digite a area1: \n");
     scanf("%f", &area1);
@@ -36,16 +36,16 @@ int main() {
     printf("digite o pib1: \n");
     scanf("%f", &pib1);
 
-    printf("digite pontos turistico1: \n");
+    printf("digite ponto turistico1: \n");
     scanf("%d", &turistico1);
-     
-    printf("nome do estado1: %s\n", estado1);
-    printf("codigo1: %s\n", codigo1);
-    printf("cidade1: %s\n", cidade1);
+
+    printf("estado1: %c\n", estado1);
+    printf("codigo1: %c\n", codigo1);
+    printf("cidade1: %c\n", cidade1);
     printf("populacao1: %d\n", populacao1);
     printf("area1: %f\n", area1);
     printf("pib1: %f\n", pib1);
-    printf("ponto turistico1: %d\n",turistico1);
+    printf("turistico1: %d\n", turistico1);
 
     densidade1 = (float) populacao1 / area1;
     pibcapita1 = (float) populacao1 / pib1;
@@ -58,25 +58,26 @@ int main() {
     printf("superpoder1: %.2f\n", superpoder1);
 
 
-    char estado2[15];
-    char codigo2[8];
-    char cidade2[50];
-    int populacao2;
+
+    char estado2;
+    char codigo2;
+    char cidade2;
+    int populacao2 = 0;
     float area2;
     float pib2;
-    int turistico2;
+    int turistico2 = 1;
     float densidade2;
     float pibcapita2;
     float superpoder2;
 
     printf("digite o nome do estado2: \n");
-    scanf("%s", &estado2);
+    scanf("%c", &estado2);
 
     printf("digite o codigo2: \n");
-    scanf("%s", &codigo2);
+    scanf("%c", &codigo2);
 
     printf("digite o nome da cidade: \n");
-    scanf("%s", &cidade2);
+    scanf("%c", &cidade2);
 
     printf("digite populacao2: \n");
     scanf("%d",&populacao2);
@@ -90,9 +91,9 @@ int main() {
     printf("digite ponto turistico2: \n");
     scanf("%d", &turistico2);
 
-    printf("estado2: %s\n", estado2);
-    printf("codigo2: %s\n", codigo2);
-    printf("cidade2: %s\n", cidade2);
+    printf("estado2: %c\n", estado2);
+    printf("codigo2: %c\n", codigo2);
+    printf("cidade2: %c\n", cidade2);
     printf("populacao2: %d\n", populacao2);
     printf("area2: %f\n", area2);
     printf("pib2: %f\n", pib2);
@@ -109,113 +110,107 @@ int main() {
     printf("superpoder2: %.2f\n", superpoder2);
 
 // Exibição do menu
-printf("**super trunfo**\n");
-printf("1.estado\n");
-printf("2. populacao\n");
-printf("3.area\n");
-printf("1.pib\n");
-printf("2. turistico\n");
-printf("3.densidade\n");
-printf("Escolha uma opção: \n");
-scanf("%d", &opcao);
 
-switch (opcao) {
-  case 1:
-    // Entrada de notas
-    printf("Digite o estado1: \n");
-    scanf("%s", &estado1);
-    printf("Digite o estado2: \n");
-    scanf("%s", &estado2);
- // Cálculo da média
-   if(estado1 >= 10 ) 
-  {
-    printf("carta 1 venceu\n");
-   } else if(estado2 >= 10){
-    printf("carta 2 venceu\n");
-   } else{
-    printf("empate\n");
-   }
-    break;
-  case 2:
-    // Determinação do status com base na média
-    printf("Digite opopulacao1: \n");
-    scanf("%d", &populacao1);
-    printf("Digite o populacao2: \n");
-    scanf("%d", &populacao2);
+    int resultado1, resultado2;
+    char atributo1, atributo2;
+    int carta1, carta2;
 
-    if (populacao1 > populacao2) {
-      printf("carta 1 venceu\n");
-    } else if(populacao1 == populacao2){
-      printf("empate\n");
-    } else{
-        printf("carta 2 venceu\n");
-    }
-    break;
-  case 3:
-  printf("Digite area1: \n");
-  scanf("%f", &area1);
-  printf("Digite o area2: \n");
-  scanf("%f", &area2);
-
-  if (area1 > area2) {
-    printf("carta 1 venceu\n");
-  } else if(area1 == area2){
-    printf("empate\n");
-  } else{
-      printf("carta 2 venceu\n");
-  }
-    break;
-   case 4:
-    printf("Digite pib1: \n");
-    scanf("%f", &pib1);
-    printf("Digite o pib2: \n");
-    scanf("%f", &pib2);
-  
-    if (pib1 > pib2) {
-      printf("carta 1 venceu\n");
-    } else if(pib1 == pib2){
-      printf("empate\n");
-    } else{
-        printf("carta 2 venceu\n");
-    }
-      break;
-   case 5:
-      printf("Digite turistico1: ");
-      scanf("%f", &turistico1);
-      printf("Digite o turistico2: ");
-      scanf("%f", &turistico2);
+    srand(time(0));
+    carta1 = 1;
+    carta2 = 0;
     
-      if (turistico1 > turistico2) {
-        printf("carta 1 venceu\n");
-      } else if(turistico1 == turistico2){
-        printf("empate\n");
-      } else{
-          printf("carta 2 venceu\n");
-      }
-        break;
-   case 6:
-        printf("Digite densidade1: ");
-        scanf("%f", &densidade1);
-        printf("Digite o densidade2: ");
-        scanf("%f", &densidade2);
-      
-        if (densidade1 < densidade2) {
-          printf("carta 1 venceu\n");
-        } else if(densidade1 == densidade2){
-          printf("empate\n");
-        } else{
-            printf("carta 2 venceu\n");
-        }
-          break;
-  default:
-    printf("Opção inválida. Tente novamente.\n");
+
+     printf("**super trunfo**\n");
+     printf("Escolha uma primeira opção: \n");
+     printf("C.carta\n");
+     printf("P. populacao\n");
+     printf("t. turistico\n");
+
+     printf("escolha a comparacao.\n");
+     scanf("%c", &atributo1);
+
+     switch (atributo1)
+     {
+     case 'C':
+     case 'c':
+     printf("voce escolheu a opcao carta!\n");
+        resultado1 = carta1 > carta2 ? 1 : 0;
+         break;
+         
+     case 'P':
+     case 'p':
+     printf("voce escolheu a opcao populacao!\n");
+        resultado1 = populacao1 > populacao2 ? 1 : 0;
+         break;
+         
+     case 'T':
+     case 't':
+     printf("voce escolheu a opcao turistico!\n");
+        resultado1 = turistico1 > turistico2 ? 1 : 0;
+         break;
+     
+     default:
+     printf("opcao invalida");
+         break;
+     }
+
+
+     printf("escolha a segunda opcao\n");
+     printf(" atencao: nao pode ser a mesma opcao da primeira\n");
+     printf("C.carta\n");
+     printf("P. populacao\n");
+     printf("t. turistico\n"); 
+
+     printf("escolha a comparacao.\n");
+     scanf("%c", &atributo2);
+
+
+     if(atributo1 == atributo2)
+     {
+        printf("voce escolheu o mesmo atributo.\n");
+     } else{
+        switch (atributo2)
+     {
+     case 'C':
+     case 'c':
+     printf("voce escolheu a opcao carta!\n");
+        resultado1 = carta1 > carta2 ? 1 : 0;
+         break;
+         
+     case 'P':
+     case 'p':
+     printf("voce escolheu a opcao populacao!\n");
+        resultado1 = populacao1 > populacao2 ? 1 : 0;
+         break;
+         
+     case 'T':
+     case 't':
+     printf("voce escolheu a opcao turistico!\n");
+        resultado1 = turistico1 > turistico2 ? 1 : 0;
+         break;
+     
+     default:
+     printf("opcao invalida");
+         break;    
 }
 
-return 0;
-}
-            
 
-   
+if (resultado1 && resultado2)
+{
+   printf("parabens, voce ganhou!\n");
+} else if(resultado1 != resultado2)
+{
+    printf("empate!\n");
+} else{
+    printf("voce perdeu.\n");
+}
+
+
+
+
+}          
+
+} 
 
     
 
