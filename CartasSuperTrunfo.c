@@ -1,7 +1,7 @@
 #include <stdio.h>
 
 int main() {
-    // Dados da primeira carta
+    // Dados da primeira carta.
     char estado1[3]; 
     char cidade1[11];
     int populacao1;
