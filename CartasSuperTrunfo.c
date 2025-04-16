@@ -15,6 +15,9 @@ int main() {
     float PIB;
     float Densidadepopulacional;
     float Pibpercapita;
+    float SuperPodercarta01, SuperPodercarta02;
+    int resultadoCarta01, resultadoCarta02;
+    int resultado;
 
     printf ("CARTA 01 \n");
 
@@ -43,6 +46,8 @@ int main() {
     
     Pibpercapita = PIB / populacao;
 
+    SuperPodercarta01 = populacao + area + PIB + pontosturistico + Pibpercapita + (1/Densidadepopulacional);
+
     printf ("CARTA 01 \n");
     printf ("estado: %S \n", estado);
     printf ("Codigo da carta: %s \n", carta);
@@ -53,6 +58,10 @@ int main() {
     printf ("pontos turisticos: %d \n", pontosturistico);
     printf ("Densidade populacional é: %.2f \n", Densidadepopulacional);
     printf ("Pib per capita é: %.2f \n", Pibpercapita);
+    printf ("Super poder = %f\n", SuperPodercarta01);
+
+    resultadoCarta01 = SuperPodercarta01
+
 
     printf ("__________________________ \n");
 
@@ -84,6 +93,9 @@ int main() {
     
     Pibpercapita = PIB / populacao;
 
+    SuperPodercarta02 = populacao + area + PIB + pontosturistico + Pibpercapita + (1/Densidadepopulacional);
+
+
     printf ("CARTA 02 \n");
     printf ("estado: %S \n", estado);
     printf ("Codigo da carta: %s \n", carta);
@@ -94,10 +106,13 @@ int main() {
     printf ("pontos turisticos: %d \n", pontosturistico);
     printf ("Densidade populacional é: %.2f \n", Densidadepopulacional);
     printf ("Pib per capita é: %.2f \n", Pibpercapita);
+    printf ("Super poder = %f\n", SuperPodercarta02);
+    
+    resultadoCarta02 = SuperPodercarta02
 
+    printf("O resultado carta 01 é maior que o resultado carta 02?\n", resultadoCarta01 > resultadoCarta02);
 
-
-
+  
 
 
 
