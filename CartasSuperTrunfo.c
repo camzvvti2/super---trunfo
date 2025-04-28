@@ -467,11 +467,11 @@ int main()
     printf("Carta 2 (%s) - Soma dos atributos: %.2f\n", c1_estado, soma_carta2);
 
     if (soma_carta1 > soma_carta2)
-        printf("\nCarta 1 - Venceu!\n");
+        printf("\nResultado: Carta 1 - Venceu!\n");
     else if (soma_carta1 < soma_carta2)
-        printf("\nCarta 2 - Venceu!\n");
+        printf("\nResultado: Carta 2 - Venceu!\n");
     else
-        printf("\nEmpate!\n");
+        printf("\nResultado: Empate!\n");
 
     printf("\nPressione Enter para sair...");
     getchar();
