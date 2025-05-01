@@ -26,6 +26,8 @@ int main() {
     float area1;
     float pib1;
     int pontosTuristicos1;
+    float densidadePopulacional1;
+    float pibPerCapita1;
 
     printf("Dados da Carta 1:\n");
     printf("Estado (A-H): ");
@@ -43,6 +45,11 @@ int main() {
     printf("Número de Pontos Turísticos: ");
     scanf("%d", &pontosTuristicos1);
 
+    // Lógica para calcular duas novas propriedades para cada cidade: a densidade populacional e o PIB per capita.
+    densidadePopulacional1 = populacao1 / area1;
+    pibPerCapita1 = (pib1 * 1000000000.0) / populacao1; // PIB em reais
+
+
     // Carta 2
     char estado2;
     char codigo2[5];
@@ -51,6 +58,8 @@ int main() {
     float area2;
     float pib2;
     int pontosTuristicos2;
+    float densidadePopulacional2;
+    float pibPerCapita2;
 
     printf("\nDados da Carta 2:\n");
     printf("Estado (A-H): ");
@@ -68,6 +77,11 @@ int main() {
     printf("Número de Pontos Turísticos: ");
     scanf("%d", &pontosTuristicos2);
 
+    // Lógica para calcular duas novas propriedades para cada cidade: a densidade populacional e o PIB per capita.
+    densidadePopulacional2 = populacao2 / area2;
+    pibPerCapita2 = (pib2 * 1000000000.0) / populacao2; 
+
+
      // Exibição dos dados
      printf("\nCarta 1:\n");
      printf("Estado: %c\n", estado1);
@@ -77,6 +91,8 @@ int main() {
      printf("Área: %.2f km²\n", area1);
      printf("PIB: %.2f bilhões de reais\n", pib1);
      printf("Número de Pontos Turísticos: %d\n", pontosTuristicos1);
+     printf("Densidade Populacional: %.2f hab/km²\n", densidadePopulacional1);
+     printf("PIB per Capita: %.2f reais\n", pibPerCapita1);
  
      printf("\nCarta 2:\n");
      printf("Estado: %c\n", estado2);
@@ -86,6 +102,8 @@ int main() {
      printf("Área: %.2f km²\n", area2);
      printf("PIB: %.2f bilhões de reais\n", pib2);
      printf("Número de Pontos Turísticos: %d\n", pontosTuristicos2);
+     printf("Densidade Populacional: %.2f hab/km²\n", densidadePopulacional2);
+     printf("PIB per Capita: %.2f reais\n", pibPerCapita2);
 
     return 0;
 }
