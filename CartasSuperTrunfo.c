@@ -1,4 +1,4 @@
-// Desafio: nível novato
+// Desafio: nível aventureiro
 
 #include <stdio.h>
 
@@ -69,6 +69,16 @@ int main() {
     printf("Digite o número de pontos turísticos: ");
     scanf("%d", &pontostur2);
 
+    // Calcular densidade populacional
+    float densidade1 = populacao1 / area1;  // Densidade populacional da carta 1
+    float densidade2 = populacao2 / area2;  // Densidade populacional da carta 2
+
+    // Calcular PIB per capita
+    // o PIB está em bilhões de reais. A notação 1e9 significa 1 × 10⁹ (ou seja, 1 bilhão)
+
+    float pibPerCapita1 = pib1 * 1e9 / populacao1;  // PIB per capita da carta 1
+    float pibPerCapita2 = pib2 * 1e9 / populacao2;  // PIB per capita da carta 2
+
     // Mostrando as cartas
 
     printf("\nCarta 1:\n");
@@ -79,6 +89,8 @@ int main() {
     printf("Área: %.2f km²\n", area1);
     printf("PIB: %.2f bilhões de reais\n", pib1);
     printf("Número de Pontos Turísticos: %d\n", pontostur1);
+    printf("Densidade Populacional: %.2f habitantes/km²\n", densidade1);
+    printf("PIB per Capita: R$ %.2f\n", pibPerCapita1);
 
     printf("\nCarta 2:\n");
     printf("Estado: %c\n", estado2);
@@ -88,6 +100,8 @@ int main() {
     printf("Área: %.2f km²\n", area2);
     printf("PIB: %.2f bilhões de reais\n", pib2);
     printf("Número de Pontos Turísticos: %d\n", pontostur2);
+    printf("Densidade Populacional: %.2f habitantes/km²\n", densidade2);
+    printf("PIB per Capita: R$ %.2f\n", pibPerCapita2);
 
     return 0;
 }
