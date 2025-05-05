@@ -1,4 +1,5 @@
-// Desafio: nível mestre
+// TEMA 2 - Super Trunfo em C: desenvolvendo a lógica do jogo
+// Desafio: nível novato
 
 #include <stdio.h>
 
@@ -11,6 +12,7 @@ int main() {
     float area1;
     float pib1;
     int pontostur1;
+    
 
     // Declaração de variáveis 2
     char estado2;
@@ -20,6 +22,10 @@ int main() {
     float area2;
     float pib2;
     int pontostur2;
+
+    // Declaração de variáveis para contagem de vitórias
+    int vitorias1 = 0; // Contador de vitórias da carta 1
+    int vitorias2 = 0; // Contador de vitórias da carta 2
 
     // Dados 1
     printf("Cadastro da 1ª carta\n");
@@ -81,11 +87,27 @@ int main() {
     float pibPerCapita1 = pib1 * 1e9 / populacao1;  // PIB per capita da carta 1
     float pibPerCapita2 = pib2 * 1e9 / populacao2;  // PIB per capita da carta 2
 
+    // Normalizar os valores para evitar overflow
+    // O PIB per capita é calculado em reais, enquanto o PIB é em bilhões de reais. Para evitar overflow, convertemos o PIB para reais.
+    float popNorm1 = populacao1 / 1000000.0;         // normaliza por milhão
+    float areaNorm1 = area1 / 1000.0;                // normaliza por mil km²
+    float pibNorm1 = pib1;                           // já está em bilhões
+    float pontosTurNorm1 = pontostur1 / 10.0;        // normaliza por 10
+    float pibPerCapitaNorm1 = pibPerCapita1 / 50000.0; // normaliza por 50 mil
+    float densidadeInvNorm1 = 1.0f / densidade1 * 100; // dá peso ao inverso
+
+    float popNorm2 = populacao2 / 1000000.0;         // normaliza por milhão
+    float areaNorm2 = area2 / 1000.0;                // normaliza por mil km²
+    float pibNorm2 = pib2;                           // já está em bilhões
+    float pontosTurNorm2 = pontostur2 / 10.0;        // normaliza por 10
+    float pibPerCapitaNorm2 = pibPerCapita2 / 50000.0; // normaliza por 50 mil
+    float densidadeInvNorm2 = 1.0f / densidade2 * 100; // dá peso ao inverso
+
     // Calcular super poder
     // O super poder é calculado com todos os valores números da carta, e o inverso da densidade populacional(Quanto menor a densidade, maior o poder.).
     // Armazenando o maior valor em uma variável chamada superPoder1 e o menor em superPoder2.
-    float superPoder1 = (float)populacao1 + area1 + pib1 + pontostur1 + pibPerCapita1 + (1.0f / densidade1);
-    float superPoder2 = (float)populacao2 + area2 + pib2 + pontostur2 + pibPerCapita2 + (1.0f / densidade2);
+    float superPoder1 = popNorm1 + areaNorm1 + pibNorm1 + pontosTurNorm1 + pibPerCapitaNorm1 + densidadeInvNorm1;
+    float superPoder2 = popNorm2 + areaNorm2 + pibNorm2 + pontosTurNorm2 + pibPerCapitaNorm2 + densidadeInvNorm2;
 
     // Mostrando as cartas
 
@@ -114,28 +136,98 @@ int main() {
     printf("Super Poder: %.2f\n", superPoder2);
 
     // Comparações
-    printf("\nComparações (1 = Carta 1 vence | 0 = Carta 2 vence ou empata):\n");
-    printf("População: %d\n", (populacao1 > populacao2) ? 1 : 0);
-    printf("Área: %d\n", (area1 > area2) ? 1 : 0);
-    printf("PIB: %d\n", (pib1 > pib2) ? 1 : 0);
-    printf("Pontos Turísticos: %d\n", (pontostur1 > pontostur2) ? 1 : 0);
-    printf("PIB per capita: %d\n", (pibPerCapita1 > pibPerCapita2) ? 1 : 0);
-    printf("Densidade Populacional (menor vence): %d\n", (densidade1 < densidade2) ? 1 : 0);
-    printf("Super Poder: %d\n", (superPoder1 > superPoder2) ? 1 : 0);
+    printf("\nComparações:\n");
 
-    // Placar final
-    // O placar final é calculado somando os pontos da carta 1 e subtraindo de 7 para a carta 2.
-    // O placar final é exibido com a quantidade de pontos de cada carta.
-    int pontos1 = 0;
-    pontos1 += (populacao1 > populacao2);
-    pontos1 += (area1 > area2);
-    pontos1 += (pib1 > pib2);
-    pontos1 += (pontostur1 > pontostur2);
-    pontos1 += (pibPerCapita1 > pibPerCapita2);
-    pontos1 += (densidade1 < densidade2); // menor vence
-    pontos1 += (superPoder1 > superPoder2);
+    // Comparando População
+    if (populacao1 > populacao2) {
+        printf("A carta 1 vence!\n");
+        vitorias1++;
+    } else if (populacao1 < populacao2) {
+        printf("A carta 2 vence!\n");
+        vitorias2++;
+    } else {
+        printf("Empate na população!\n");
+    }
 
-    printf("\nPlacar final:\nCarta 1: %d pontos\nCarta 2: %d pontos\n", pontos1, 7 - pontos1);
+    // Comparando Área
+    if (area1 > area2) {
+        printf("A carta 1 vence!\n");
+        vitorias1++;
+    } else if (area1 < area2) {
+        printf("A carta 2 vence!\n");
+        vitorias2++;
+    } else {
+        printf("Empate na área!\n");
+    }
+    
+    // Comparando PIB
+    if (pib1 > pib2) {
+        printf("A carta 1 vence!\n");
+        vitorias1++;
+    } else if (pib1 < pib2) {
+        printf("A carta 2 vence!\n");
+        vitorias2++;
+    } else {
+        printf("Empate no PIB!\n");
+    }
+    
+    // Comparando Número de Pontos Turísticos
+    if (pontostur1 > pontostur2) {
+        printf("A carta 1 vence!\n");
+        vitorias1++;
+    } else if (pontostur1 < pontostur2) {
+        printf("A carta 2 vence!\n");
+        vitorias2++;
+    } else {
+        printf("Empate nos pontos turísticos!\n");
+    }
+
+    // Comparando  pib per capita
+    if (pibPerCapita1 > pibPerCapita2) {
+        printf("A carta 1 vence!\n");
+        vitorias1++;
+    } else if (pibPerCapita1 < pibPerCapita2) {
+        printf("A carta 2 vence!\n");
+        vitorias2++;
+    } else {
+        printf("Empate no PIB per capita!\n");
+    }
+
+    // Comparando Densidade Populacional
+    if (densidade1 < densidade2) {
+        printf("A carta 1 vence!\n");
+        vitorias1++;
+    } else if (densidade1 > densidade2) {
+        printf("A carta 2 vence!\n");
+        vitorias2++;
+    } else {
+        printf("Empate na densidade populacional!\n");
+    }
+
+    // Comparando Super Poder
+    if (superPoder1 > superPoder2) {
+        printf("A carta 1 vence!\n");
+        vitorias1++;
+    } else if (superPoder1 < superPoder2) {
+        printf("A carta 2 vence!\n");
+        vitorias2++;
+    } else {
+        printf("Empate no super poder!\n");
+    }
+
+
+    // Exibindo o placar final
+    printf("\nPLACAR FINAL:\n");
+    printf("Carta 1: %d vitórias\n", vitorias1);
+    printf("Carta 2: %d vitórias\n", vitorias2);
+
+    if (vitorias1 > vitorias2) {
+        printf(">>> A Carta 1 é a vencedora!\n");
+    } else if (vitorias2 > vitorias1) {
+        printf(">>> A Carta 2 é a vencedora!\n");
+    } else {
+        printf(">>> EMPATE!\n");
+    }
 
     return 0;
 }
