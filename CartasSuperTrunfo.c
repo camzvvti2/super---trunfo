@@ -233,7 +233,7 @@ int main()
 
         case 2:
             printf("\nAtributo utilizado para comparação: Área\n\n");
-            printf("Carta 2 (%s) - Área: %.2f\n", c1_estado, c1_area);
+            printf("Carta 1 (%s) - Área: %.2f\n", c1_estado, c1_area);
             printf("Carta 2 (%s) - Área: %.2f\n\n", c2_estado, c2_area);
 
             if (c1_area > c2_area)
@@ -250,7 +250,7 @@ int main()
 
         case 3:
             printf("\nAtributo utilizado para comparação: PIB\n\n");
-            printf("Carta 2 (%s) - PIB: %.2f\n", c1_estado, c1_PIB);
+            printf("Carta 1 (%s) - PIB: %.2f\n", c1_estado, c1_PIB);
             printf("Carta 2 (%s) - PIB: %.2f\n\n", c2_estado, c2_PIB);
 
             if (c1_PIB > c2_PIB)
@@ -267,7 +267,7 @@ int main()
 
         case 4:
             printf("\nAtributo utilizado para comparação: Número de Pontos Turísticos\n\n");
-            printf("Carta 2 (%s) - Pontos turísticos: %d\n", c1_estado, c1_pontos_turisticos);
+            printf("Carta 1 (%s) - Pontos turísticos: %d\n", c1_estado, c1_pontos_turisticos);
             printf("Carta 2 (%s) - Pontos turísticos: %d\n\n", c2_estado, c2_pontos_turisticos);
 
             if (c1_pontos_turisticos > c2_pontos_turisticos)
@@ -284,7 +284,7 @@ int main()
 
         case 5:
             printf("\nAtributo utilizado para comparação: Densidade populacional\n\n");
-            printf("Carta 2 (%s) - Densidade populacional: %.2f\n", c1_estado, c1_densidade_populacional);
+            printf("Carta 1 (%s) - Densidade populacional: %.2f\n", c1_estado, c1_densidade_populacional);
             printf("Carta 2 (%s) - Densidade populacional: %.2f\n\n", c2_estado, c2_densidade_populacional);
 
             if (c1_densidade_populacional > c2_densidade_populacional)
@@ -301,7 +301,7 @@ int main()
 
         case 6:
             printf("\nAtributo utilizado para comparação: PIB per capita\n\n");
-            printf("Carta 2 (%s) - PIB per capita: %.2f\n", c1_estado, c1_pib_per_capita);
+            printf("Carta 1 (%s) - PIB per capita: %.2f\n", c1_estado, c1_pib_per_capita);
             printf("Carta 2 (%s) - PIB per capita: %.2f\n\n", c2_estado, c2_pib_per_capita);
 
             if (c1_pib_per_capita > c2_pib_per_capita)
@@ -318,7 +318,7 @@ int main()
 
         case 7:
             printf("\nAtributo utilizado para comparação: Super poder\n\n");
-            printf("Carta 2 (%s) - Super poder: %.2f\n", c1_estado, c1_super_poder);
+            printf("Carta 1 (%s) - Super poder: %.2f\n", c1_estado, c1_super_poder);
             printf("Carta 2 (%s) - Super poder: %.2f\n\n", c2_estado, c2_super_poder);
 
             if (c1_super_poder > c2_super_poder)
@@ -358,7 +358,7 @@ int main()
 
         case 2:
             printf("\nAtributo utilizado para comparação: Área\n\n");
-            printf("Carta 2 (%s) - Área: %.2f\n", c1_estado, c1_area);
+            printf("Carta 1 (%s) - Área: %.2f\n", c1_estado, c1_area);
             printf("Carta 2 (%s) - Área: %.2f\n\n", c2_estado, c2_area);
 
             if (c1_area > c2_area)
@@ -375,7 +375,7 @@ int main()
 
         case 3:
             printf("\nAtributo utilizado para comparação: PIB\n\n");
-            printf("Carta 2 (%s) - PIB: %.2f\n", c1_estado, c1_PIB);
+            printf("Carta 1 (%s) - PIB: %.2f\n", c1_estado, c1_PIB);
             printf("Carta 2 (%s) - PIB: %.2f\n\n", c2_estado, c2_PIB);
 
             if (c1_PIB > c2_PIB)
@@ -392,7 +392,7 @@ int main()
 
         case 4:
             printf("\nAtributo utilizado para comparação: Número de Pontos Turísticos\n\n");
-            printf("Carta 2 (%s) - Pontos turísticos: %d\n", c1_estado, c1_pontos_turisticos);
+            printf("Carta 1 (%s) - Pontos turísticos: %d\n", c1_estado, c1_pontos_turisticos);
             printf("Carta 2 (%s) - Pontos turísticos: %d\n\n", c2_estado, c2_pontos_turisticos);
 
             if (c1_pontos_turisticos > c2_pontos_turisticos)
@@ -409,7 +409,7 @@ int main()
 
         case 5:
             printf("\nAtributo utilizado para comparação: Densidade populacional\n\n");
-            printf("Carta 2 (%s) - Densidade populacional: %.2f\n", c1_estado, c1_densidade_populacional);
+            printf("Carta 1 (%s) - Densidade populacional: %.2f\n", c1_estado, c1_densidade_populacional);
             printf("Carta 2 (%s) - Densidade populacional: %.2f\n\n", c2_estado, c2_densidade_populacional);
 
             if (c1_densidade_populacional > c2_densidade_populacional)
@@ -426,7 +426,7 @@ int main()
 
         case 6:
             printf("\nAtributo utilizado para comparação: PIB per capita\n\n");
-            printf("Carta 2 (%s) - PIB per capita: %.2f\n", c1_estado, c1_pib_per_capita);
+            printf("Carta 1 (%s) - PIB per capita: %.2f\n", c1_estado, c1_pib_per_capita);
             printf("Carta 2 (%s) - PIB per capita: %.2f\n\n", c2_estado, c2_pib_per_capita);
 
             if (c1_pib_per_capita > c2_pib_per_capita)
@@ -443,7 +443,7 @@ int main()
 
         case 7:
             printf("\nAtributo utilizado para comparação: Super poder\n\n");
-            printf("Carta 2 (%s) - Super poder: %.2f\n", c1_estado, c1_super_poder);
+            printf("Carta 1 (%s) - Super poder: %.2f\n", c1_estado, c1_super_poder);
             printf("Carta 2 (%s) - Super poder: %.2f\n\n", c2_estado, c2_super_poder);
 
             if (c1_super_poder > c2_super_poder)
@@ -464,7 +464,7 @@ int main()
     }
 
     printf("\nCarta 1 (%s) - Soma dos atributos: %.2f\n", c1_estado, soma_carta1);
-    printf("Carta 2 (%s) - Soma dos atributos: %.2f\n", c1_estado, soma_carta2);
+    printf("Carta 2 (%s) - Soma dos atributos: %.2f\n", c2_estado, soma_carta2);
 
     if (soma_carta1 > soma_carta2)
         printf("\nResultado: Carta 1 - Venceu!\n");
