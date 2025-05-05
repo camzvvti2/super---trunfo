@@ -1,4 +1,4 @@
-// Desafio: nível aventureiro
+// Desafio: nível mestre
 
 #include <stdio.h>
 
@@ -69,6 +69,8 @@ int main() {
     printf("Digite o número de pontos turísticos: ");
     scanf("%d", &pontostur2);
 
+    // Cálculos
+
     // Calcular densidade populacional
     float densidade1 = populacao1 / area1;  // Densidade populacional da carta 1
     float densidade2 = populacao2 / area2;  // Densidade populacional da carta 2
@@ -78,6 +80,12 @@ int main() {
 
     float pibPerCapita1 = pib1 * 1e9 / populacao1;  // PIB per capita da carta 1
     float pibPerCapita2 = pib2 * 1e9 / populacao2;  // PIB per capita da carta 2
+
+    // Calcular super poder
+    // O super poder é calculado com todos os valores números da carta, e o inverso da densidade populacional(Quanto menor a densidade, maior o poder.).
+    // Armazenando o maior valor em uma variável chamada superPoder1 e o menor em superPoder2.
+    float superPoder1 = (float)populacao1 + area1 + pib1 + pontostur1 + pibPerCapita1 + (1.0f / densidade1);
+    float superPoder2 = (float)populacao2 + area2 + pib2 + pontostur2 + pibPerCapita2 + (1.0f / densidade2);
 
     // Mostrando as cartas
 
@@ -91,6 +99,7 @@ int main() {
     printf("Número de Pontos Turísticos: %d\n", pontostur1);
     printf("Densidade Populacional: %.2f habitantes/km²\n", densidade1);
     printf("PIB per Capita: R$ %.2f\n", pibPerCapita1);
+    printf("Super Poder: %.2f\n", superPoder1);
 
     printf("\nCarta 2:\n");
     printf("Estado: %c\n", estado2);
@@ -102,6 +111,31 @@ int main() {
     printf("Número de Pontos Turísticos: %d\n", pontostur2);
     printf("Densidade Populacional: %.2f habitantes/km²\n", densidade2);
     printf("PIB per Capita: R$ %.2f\n", pibPerCapita2);
+    printf("Super Poder: %.2f\n", superPoder2);
+
+    // Comparações
+    printf("\nComparações (1 = Carta 1 vence | 0 = Carta 2 vence ou empata):\n");
+    printf("População: %d\n", (populacao1 > populacao2) ? 1 : 0);
+    printf("Área: %d\n", (area1 > area2) ? 1 : 0);
+    printf("PIB: %d\n", (pib1 > pib2) ? 1 : 0);
+    printf("Pontos Turísticos: %d\n", (pontostur1 > pontostur2) ? 1 : 0);
+    printf("PIB per capita: %d\n", (pibPerCapita1 > pibPerCapita2) ? 1 : 0);
+    printf("Densidade Populacional (menor vence): %d\n", (densidade1 < densidade2) ? 1 : 0);
+    printf("Super Poder: %d\n", (superPoder1 > superPoder2) ? 1 : 0);
+
+    // Placar final
+    // O placar final é calculado somando os pontos da carta 1 e subtraindo de 7 para a carta 2.
+    // O placar final é exibido com a quantidade de pontos de cada carta.
+    int pontos1 = 0;
+    pontos1 += (populacao1 > populacao2);
+    pontos1 += (area1 > area2);
+    pontos1 += (pib1 > pib2);
+    pontos1 += (pontostur1 > pontostur2);
+    pontos1 += (pibPerCapita1 > pibPerCapita2);
+    pontos1 += (densidade1 < densidade2); // menor vence
+    pontos1 += (superPoder1 > superPoder2);
+
+    printf("\nPlacar final:\nCarta 1: %d pontos\nCarta 2: %d pontos\n", pontos1, 7 - pontos1);
 
     return 0;
 }
