@@ -67,14 +67,14 @@ superpoder1 = populacao + area + pib + turisticos + pibp1 + inverso;
  
  printf("Pontos turísticos: \n");
  scanf("%d", &turisticos2);
-
+//calculando a densidade, pib percapita e o super poder
  densidade1 = populacao2 / area2;
 pibp1 = pib2 / populacao2;
 inverso1 = densidade1 / densidade1;
 superpoder2 = populacao2 + area2 + pib2 + turisticos2 + pibp2 +  inverso1;
 
  printf("Cartas cadrastadas com sucesso! \n");
- printf("Aqui estão suas cartas:\n)");
+ printf("Aqui estão suas cartas:\n");
  printf("\n");
  
  printf("Carta 1\n");
@@ -101,49 +101,30 @@ superpoder2 = populacao2 + area2 + pib2 + turisticos2 + pibp2 +  inverso1;
  printf("Densidade populacional: %f \n", densidade1);
  printf("Pib percapita: %f \n", pibp1);
  
+ printf("\n");
+ // Aqui vamos comparar os atributos das cartas
+printf("Comparação das Cartas (População)\n");
 
-printf("***Comparação das Cartas***\n");
-printf("Se o resultado for 1 a carta ganhou!\n");
-printf("Se o Resultado for 0 a carta perdeu!\n");
-printf("Se os dois Resultados forem 0, houve um empate!");
+printf("Carta 1: %.2f \n", populacao);
+printf("Carta 2: %.2f \n", populacao2);
 
+if (populacao > populacao2) {
+    printf("Carta 1 ganhou!\n");
+} else {
+    printf("Carta 2 ganhou!\n");
+}
+printf("\n");
 
-printf("**População**\n");
+printf("Comparação das Cartas (Area)\n");
 
-printf("Carta 1: %d \n", populacao > populacao2);
-printf("Carta 2: %d \n", populacao < populacao2);
+printf("Carta 1: %.2f \n", area);
+printf("Carta 2: %.2f \n", area2);
 
-printf("**Area**\n");
-
-printf("Carta 1: %d \n", area > area2);
-printf("Carta 2: %d \n", area < area2);
-
-printf("**Pib**\n");
-
-printf("Carta 1 %d \n", pib > pib2);
-printf("Carta 2 %d \n", pib < pib2);
-
-printf("**Pontos Turísticos**\n");
-
-printf("Carta 1: %d \n", turisticos > turisticos2);
-printf("Carta 2: %d \n", turisticos < turisticos2);
-
-
-printf("**Pib Percapita**\n");
-
-printf("Carta 1: %d \n", pibp1 > pibp2);
-printf("Carta 2: %d \n", pibp1 < pibp2);
-
-printf("**Densidade Populacional**\n");
-
-printf("Carta 1: %d \n", densidade1 > densidade2);
-printf("Carta 2: %d \n", densidade1 < densidade2);
-
-printf("**Super Poder**\n");
-
-printf("Carta 1: %d \n", superpoder1 > superpoder2);
-printf("Carta 2: %d \n", superpoder1 < superpoder2);
-
-
+if (area > area2) {
+    printf("Carta 1 ganhou!\n");
+} else {
+    printf("Carta 2 ganhou!\n");
+}
+printf("\n");
  return 0;
 }
