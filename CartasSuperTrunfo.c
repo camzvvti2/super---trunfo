@@ -10,7 +10,6 @@ int main(){
     float pib1 = 49907.02;
     int pontosturisticos1 = 25;
 
-     // printf("Estado: %c\n", estado1);
      printf("Carta: %d\n", carta1);
      printf("Estado: %c\n", estado1);
      printf("Código: %s\n", codigo1);
@@ -29,7 +28,6 @@ int main(){
      float pib2 = 32977.35;
      int pontosturisticos2 = 21;
 
-     // printf("Estado: %c\n", estado1);
     printf("Carta: %d\n", carta2);
     printf("Estado: %c\n", estado2);
     printf("Código: %s\n", codigo2);
@@ -41,9 +39,6 @@ int main(){
 
 
     return 0;
-
-
-
 
 
 }
