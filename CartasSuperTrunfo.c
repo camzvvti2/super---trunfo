@@ -1,6 +1,7 @@
 #include <stdio.h>
 
 int main(){
+    printf ("Desafio das Cartas!\n");
     int carta1 = 1;
     char estado1 = 'P';
     char codigo1[20] = "P01";
