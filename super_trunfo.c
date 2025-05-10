@@ -19,6 +19,7 @@ int main() {
     float PIB_1;
     int num_pontos_turisticos_1;
     
+    //SEGUNDA CIDADE
     char nome_2[30];
 
     char estado_2[2];
@@ -29,7 +30,7 @@ int main() {
     float PIB_2;
     int num_pontos_turisticos_2;
 
-    //INPUT DA PRIMEIRA CIDADE!!!
+    //INPUT DA PRIMEIRA CIDADE
     printf("Insira o estádo da cidade com uma letra: ");
     scanf("%s", estado_1);
 
@@ -54,7 +55,7 @@ int main() {
     printf("\n");
 
 
-    //INPUT DA SEGUNDA CIDADE!!!
+    //INPUT DA SEGUNDA CIDADE
     printf("Agora vamos para a segunda cidade.\n");
 
     printf("Insira o estádo da cidade com uma letra: ");
