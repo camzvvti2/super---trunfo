@@ -26,7 +26,7 @@ int main(){
 
     printf("Informe de quanto é a ÁREA em M² (metros quadrados) do País: ");
     scanf("%f", &area1);
-    printf("Área de %.2f m² registrada para %s. \n\n", area1, pais1);
+    printf("Área de %.2f km² registrada para %s. \n\n", area1, pais1);
 
     //PIB CARTA 1
 
@@ -62,7 +62,7 @@ int main(){
 
     printf("Informe de quanto é a ÁREA em M² (metros quadrados) do País: ");
     scanf("%f", &area2);
-    printf("Área de %.2f m² registrada para %s. \n\n", area2, pais2);
+    printf("Área de %.2f km² registrada para %s. \n\n", area2, pais2);
 
     //PIB CARTA 2
 
@@ -78,7 +78,25 @@ int main(){
 
     printf("Com isso concluimos a SEGUNDA CARTA. Muito obrigado!\n\n");
 
-    
+    // RESUMO DAS CARTAS CRIADAS
+
+    printf("Agora vejamos as cartas %s e %s criadas por vc.\n\n", pais1, pais2);
+
+    // CARTA 1
+
+    printf("CARTA 1 - %s.\n", pais1);
+    printf("Tem um área de %.2f km²\n", area1);
+    printf("Possue uma população de %d\n", populacao1);
+    printf("Com um número de %d pontos turísticos\n", ptTuristico1);
+    printf("Faz um PIB de R$%.2f\n\n", pib1);
+
+    // CARTA 2
+
+    printf("CARTA 2 - %s.\n", pais2);
+    printf("Tem um área de %.2f km²\n", area2);
+    printf("Possue uma população de %d\n", populacao2);
+    printf("Com um número de %d pontos turísticos\n", ptTuristico2);
+    printf("Faz um PIB de R$%.2f\n\n", pib2);
 
     return 0;
 }
