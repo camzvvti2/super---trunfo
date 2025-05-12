@@ -1,28 +1,80 @@
 #include <stdio.h>
 
-    int populacao, ptTuristico;
-    float area, pib;
-    char cidade[50];
+    int populacao1, ptTuristico1, populacao2, ptTuristico2;
+    float area1, pib1, area2, pib2;
+    char cidade1[50], cidade2[50];
 
 int main() {
 
+    //CADASTRO DA PRIMEIRA CARTA
+
     printf("Cadastre sua Primeira carta! \n\n");
 
+    //CIDADE CARTA 1
+
     printf("A primeira carta terá o nome de qual cidade: ");
-    scanf("%[^\n]", cidade);
-    printf("Nome %s para carta 1 registrado.\n\n", cidade);
+    scanf("%[^\n]", cidade1);
+    printf("Nome %s para carta 1 registrado.\n\n", cidade1);
+
+    //POPULÇÃO CARTA 1
 
     printf("Agora informa de quanto é a POPULAÇÃO dessa cidade: ");
-    scanf("%d", &populacao);
-    printf("População de %d pessoas registrada para %s.\n\n", populacao, cidade);
+    scanf("%d", &populacao1);
+    printf("População de %d pessoas registrada para %s.\n\n", populacao1, cidade1);
+
+    //ÁREA CARTA 1
 
     printf("Informe de quanto é a ÁREA em M² (metros quadrados) dessa cidade: ");
-    scanf("%f", &area);
-    printf("Área de %.2f m² registrada para %s. \n\n", area, cidade);
+    scanf("%f", &area1);
+    printf("Área de %.2f m² registrada para %s. \n\n", area1, cidade1);
 
-    printf("Qual o PIB da cidade %s: ", cidade);
-    scanf("%f", &pib);
-    printf("PIB de %.2f registrado para a cidade de %s. \n\n", pib, cidade);
+    //PIB CARTA 1
+
+    printf("Qual o PIB da cidade %s: ", cidade1);
+    scanf("%f", &pib1);
+    printf("PIB de %.2f registrado a cidade de %s. \n\n", pib1, cidade1);
+
+    //PONTOS TURÍSTICOS CARTA 1
+
+    printf("Por último informe quantos PONTOS TURÍSTICOS possue a cidade %s: ", cidade1);
+    scanf("%d", &ptTuristico1);
+    printf("%d pontos Turísticos reistrados na cidade de %s. \n\n", ptTuristico1, cidade1);
+
+    //FINALIZAÇÃO CARTA 1
+
+    printf("Com isso concluimos nossa primeira carta. \n Vamos fazer nossa segunda e última carta agora. \n\n");
+
+    /* AQUI AGORA JÁ COMEÇA O CADASTRO DA SEGUNDA CARTA
+
+    CIDADE CARTA 2 */
+
+    printf("A primeira carta terá o nome de qual cidade: ");
+    scanf("%[^\n]", cidade1);
+    printf("Nome %s para carta 1 registrado.\n\n", cidade1);
+
+    //POPULÇÃO CARTA 2
+
+    printf("Agora informa de quanto é a POPULAÇÃO dessa cidade: ");
+    scanf("%d", &populacao1);
+    printf("População de %d pessoas registrada para %s.\n\n", populacao1, cidade1);
+
+    //ÁREA CARTA 2
+
+    printf("Informe de quanto é a ÁREA em M² (metros quadrados) dessa cidade: ");
+    scanf("%f", &area1);
+    printf("Área de %.2f m² registrada para %s. \n\n", area1, cidade1);
+
+    //PIB CARTA 2
+
+    printf("Qual o PIB da cidade %s: ", cidade1);
+    scanf("%f", &pib1);
+    printf("PIB de %.2f registrado a cidade de %s. \n\n", pib1, cidade1);
+
+    //PONTOS TURÍSTICOS CARTA 2
+
+    printf("Por último informe quantos PONTOS TURÍSTICOS possue a cidade %s: ", cidade1);
+    scanf("%d", &ptTuristico1);
+    printf("%d pontos Turísticos reistrados na cidade de %s. \n\n", ptTuristico1, cidade1);
 
 
     return 0;
