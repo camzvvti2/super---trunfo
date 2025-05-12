@@ -20,7 +20,6 @@ int main(){
      printf("PIB: %.1fbilhoes\n", pib1);
      printf("Pontos Turísticos: %d\n", pontosturisticos1);
      
-
      int carta2 = 2;
      char estado2 = 'T';
      char codigo2[20] = "T02";
