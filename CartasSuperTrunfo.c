@@ -49,32 +49,32 @@ int main() {
     CIDADE CARTA 2 */
 
     printf("A primeira carta terá o nome de qual cidade: ");
-    scanf("%[^\n]", cidade1);
-    printf("Nome %s para carta 1 registrado.\n\n", cidade1);
+    scanf("%[^\n]", cidade2);
+    printf("Nome %s para carta 1 registrado.\n\n", cidade2);
 
     //POPULÇÃO CARTA 2
 
     printf("Agora informa de quanto é a POPULAÇÃO dessa cidade: ");
-    scanf("%d", &populacao1);
-    printf("População de %d pessoas registrada para %s.\n\n", populacao1, cidade1);
+    scanf("%d", &populacao2);
+    printf("População de %d pessoas registrada para %s.\n\n", populacao2, cidade2);
 
     //ÁREA CARTA 2
 
     printf("Informe de quanto é a ÁREA em M² (metros quadrados) dessa cidade: ");
-    scanf("%f", &area1);
-    printf("Área de %.2f m² registrada para %s. \n\n", area1, cidade1);
+    scanf("%f", &area2);
+    printf("Área de %.2f m² registrada para %s. \n\n", area2, cidade2);
 
     //PIB CARTA 2
 
-    printf("Qual o PIB da cidade %s: ", cidade1);
-    scanf("%f", &pib1);
-    printf("PIB de %.2f registrado a cidade de %s. \n\n", pib1, cidade1);
+    printf("Qual o PIB da cidade %s: ", cidade2);
+    scanf("%f", &pib2);
+    printf("PIB de %.2f registrado a cidade de %s. \n\n", pib2, cidade2);
 
     //PONTOS TURÍSTICOS CARTA 2
 
-    printf("Por último informe quantos PONTOS TURÍSTICOS possue a cidade %s: ", cidade1);
-    scanf("%d", &ptTuristico1);
-    printf("%d pontos Turísticos reistrados na cidade de %s. \n\n", ptTuristico1, cidade1);
+    printf("Por último informe quantos PONTOS TURÍSTICOS possue a cidade %s: ", cidade2);
+    scanf("%d", &ptTuristico2);
+    printf("%d pontos Turísticos reistrados na cidade de %s. \n\n", ptTuristico2, cidade2);
 
 
     return 0;
