@@ -10,15 +10,19 @@ int main() {
 
     printf("A primeira carta terá o nome de qual cidade: ");
     scanf("%[^\n]", cidade);
-    printf("Nome %s para carta 1 - registrado.\n\n", cidade);
+    printf("Nome %s para carta 1 registrado.\n\n", cidade);
 
     printf("Agora informa de quanto é a POPULAÇÃO dessa cidade: ");
     scanf("%d", &populacao);
-    printf("População de %.2d registrada para %s.\n\n", populacao, cidade);
+    printf("População de %d pessoas registrada para %s.\n\n", populacao, cidade);
 
     printf("Informe de quanto é a ÁREA em M² (metros quadrados) dessa cidade: ");
     scanf("%f", &area);
     printf("Área de %.2f m² registrada para %s. \n\n", area, cidade);
+
+    printf("Qual o PIB da cidade %s: ", cidade);
+    scanf("%f", &pib);
+    printf("PIB de %.2f registrado para a cidade de %s. \n\n", pib, cidade);
 
 
     return 0;
