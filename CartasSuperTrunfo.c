@@ -6,71 +6,71 @@
 
 int main(){
 
-    //CADASTRO DA PRIMEIRA CARTA
+    // CADASTRO DA PRIMEIRA CARTA
 
     printf("Cadastre sua Primeira carta! \n\n");
 
-    //CIDADE CARTA 1
+    // CIDADE CARTA 1
 
     printf("A PRIMEIRA CARTA terá o nome de qual País: ");
     scanf(" %[^\n]", pais1);
     printf("Nome %s para carta 1 registrado.\n\n", pais1);
 
-    //POPULÇÃO CARTA 1
+    // POPULÇÃO CARTA 1
 
     printf("Agora informa de quanto é a POPULAÇÃO do País: ");
     scanf("%d", &populacao1);
     printf("População de %d registrada para %s.\n\n", populacao1, pais1);
 
-    //ÁREA CARTA 1
+    // ÁREA CARTA 1
 
     printf("Informe de quanto é a ÁREA em M² (metros quadrados) do País: ");
     scanf("%f", &area1);
     printf("Área de %.2f km² registrada para %s. \n\n", area1, pais1);
 
-    //PIB CARTA 1
+    // PIB CARTA 1
 
     printf("Qual o PIB do País %s: ", pais1);
     scanf("%f", &pib1);
     printf("PIB de %.2f registrado para o País %s. \n\n", pib1, pais1);
 
-    //PONTOS TURÍSTICOS CARTA 1
+    // PONTOS TURÍSTICOS CARTA 1
 
     printf("Por último informe quantos PONTOS TURÍSTICOS possue o País %s: ", pais1);
     scanf("%d", &ptTuristico1);
     printf("%d pontos Turísticos reistrados no País %s. \n\n", ptTuristico1, pais1);
 
-    //FINALIZAÇÃO CARTA 1
+    // FINALIZAÇÃO CARTA 1
 
     printf("Com isso concluimos nossa primeira carta. \nVamos fazer nossa segunda e última carta agora. \n\n");
 
     // AQUI AGORA JÁ COMEÇA O CADASTRO DA SEGUNDA CARTA
 
-    //CIDADE CARTA 2
+    // CIDADE CARTA 2
 
     printf("A SEGUNDA CARTA terá o nome de qual País: ");
     scanf(" %[^\n]", pais2);
     printf("Nome %s para carta 2 registrado.\n\n", pais2);
 
-    //POPULÇÃO CARTA 2
+    // POPULÇÃO CARTA 2
 
     printf("Agora informa de quanto é a POPULAÇÃO do País: ");
     scanf("%d", &populacao2);
     printf("População de %d registrada para %s.\n\n", populacao2, pais2);
 
-    //ÁREA CARTA 2
+    // ÁREA CARTA 2
 
     printf("Informe de quanto é a ÁREA em M² (metros quadrados) do País: ");
     scanf("%f", &area2);
     printf("Área de %.2f km² registrada para %s. \n\n", area2, pais2);
 
-    //PIB CARTA 2
+    // PIB CARTA 2
 
     printf("Qual o PIB do País %s: ", pais2);
     scanf("%f", &pib2);
     printf("PIB de %.2f registrado no País %s. \n\n", pib2, pais2);
 
-    //PONTOS TURÍSTICOS CARTA 2
+    // PONTOS TURÍSTICOS CARTA 2
 
     printf("Por último informe quantos PONTOS TURÍSTICOS possue o País %s: ", pais2);
     scanf("%d", &ptTuristico2);
