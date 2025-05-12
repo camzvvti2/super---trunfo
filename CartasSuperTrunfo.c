@@ -19,6 +19,7 @@ int main(){
      printf("Área: %.3fkm²\n", area1);
      printf("PIB: %.1fbilhoes\n", pib1);
      printf("Pontos Turísticos: %d\n", pontosturisticos1);
+     
 
      int carta2 = 2;
      char estado2 = 'T';
