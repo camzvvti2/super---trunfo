@@ -1,10 +1,10 @@
 #include <stdio.h>
 
     int populacao1, ptTuristico1, populacao2, ptTuristico2;
-    float area1, pib1, area2, pib2;
+    float area1, pib1, area2, pib2, densidadePopulacao1, densidadePopulacao2, percaptaPIB1, percaptaPIB2;
     char pais1[50], pais2[50];
 
-int main(){
+int main() {
 
     // CADASTRO DA PRIMEIRA CARTA
 
