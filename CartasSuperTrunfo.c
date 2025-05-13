@@ -5,7 +5,7 @@
     long double densidadePopulacao1, densidadePopulacao2, percaptaPIB1, percaptaPIB2;
     float area1, pib1, area2, pib2;
     char pais1[50], pais2[50];
-    //unsigned long int superPoder;
+    unsigned long int superPoder1, superPoder2;
 
 int main() {
 
@@ -101,6 +101,11 @@ int main() {
     printf("Com isso a DENSIDADE POPULACIONAL é de %lf pessoas por km²\n", densidadePopulacao1);
     printf("E um PIB per capta de R$%lf \n\n", percaptaPIB1);
 
+    // SUPER PODER da CARTA 1
+    
+    superPoder1 = area1 + populacao1 + ptTuristico1 + pib1 + densidadePopulacao1 + percaptaPIB1;
+    printf("O Super Poder dessa carta é de %ld.\n", superPoder1);
+
     // CARTA 2
 
     printf("CARTA 2 - %s.\n\n", pais2);
@@ -116,6 +121,15 @@ int main() {
 
     printf("Com isso a DENSIDADE POPULACIONAL é de %lf pessoas por km²\n", densidadePopulacao2);
     printf("E um PIB per capta de R$%lf \n\n", percaptaPIB2);
+    
+    // SUPER PODER da CARTA 2
+    
+    superPoder2 = area2 + populacao2 + ptTuristico2 + pib2 + densidadePopulacao2 + percaptaPIB2;
+    printf("O Super Poder dessa carta é de %ld.\n", superPoder2);
+
+    // COMPARAÇÃO ENTRE CARTAS
+
+    
 
     return 0;
 }
