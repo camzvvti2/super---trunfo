@@ -8,8 +8,11 @@ int main(){
     char cidade1[20] = "Curitiba";
     int populacao1 = 1773718;
     float area1 = 435.277;
-    float pib1 = 49907.02;
+    float pib1 = 98.00;
+    float pib3 = 98000000000;
     int pontosturisticos1 = 25;
+    float densidadepopulacional1 = populacao1 / area1;
+    float pibpercapita1 = (float) pib3 / populacao1;
 
      printf("Carta: %d\n", carta1);
      printf("Estado: %c\n", estado1);
@@ -17,8 +20,11 @@ int main(){
      printf("Nome da Cidade: %s\n", cidade1);
      printf("População: %d\n", populacao1);
      printf("Área: %.3fkm²\n", area1);
-     printf("PIB: %.2fR$\n", pib1);
+     printf("PIB: %.2fbilhoes de reais\n", pib1);
      printf("Pontos Turísticos: %d\n", pontosturisticos1);
+     printf("Densidade populacional: %.2fhab/km²\n", densidadepopulacional1);
+     printf("PIB Per Capita: %.2freais\n", pibpercapita1);
+
 
      int carta2 = 2;
      char estado2 = 'T';
@@ -26,8 +32,12 @@ int main(){
      char cidade2[20] = "Palmas";
      int populacao2 = 302692;
      float area2 = 2227.329;
-     float pib2 = 32977.35;
+     float pib2 = 9.40;
+     float pib4 = 9400000000;
      int pontosturisticos2 = 21;
+     float densidadepopulacional2  = populacao2 / area2;;
+     float pibpercapita2 = pib4 / populacao2;
+
 
     printf("Carta: %d\n", carta2);
     printf("Estado: %c\n", estado2);
@@ -35,8 +45,11 @@ int main(){
     printf("Nome da Cidade: %s\n", cidade2);
     printf("População: %d\n", populacao2);
     printf("Área: %.3fkm²\n", area2);
-    printf("PIB: %.2fR$\n", pib2);
+    printf("PIB: %.2fbilhoes de reais\n", pib2);
     printf("Pontos Turísticos: %d\n", pontosturisticos2);
+    printf("Densidade populacional: %.2fhab/km²\n", densidadepopulacional2);
+    printf("PIB Per Capita: %.2freais\n", pibpercapita2);
+
 
     return 0;
 
