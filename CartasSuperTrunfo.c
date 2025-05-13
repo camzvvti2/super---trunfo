@@ -1,8 +1,11 @@
 #include <stdio.h>
 
-    int populacao1, ptTuristico1, populacao2, ptTuristico2;
-    float area1, pib1, area2, pib2, densidadePopulacao1, densidadePopulacao2, percaptaPIB1, percaptaPIB2;
+    unsigned long int populacao1, populacao2;
+    unsigned int ptTuristico1, ptTuristico2;
+    long double densidadePopulacao1, densidadePopulacao2, percaptaPIB1, percaptaPIB2;
+    float area1, pib1, area2, pib2;
     char pais1[50], pais2[50];
+    //unsigned long int superPoder;
 
 int main() {
 
@@ -19,8 +22,8 @@ int main() {
     // POPULÇÃO CARTA 1
 
     printf("Agora informa de quanto é a POPULAÇÃO do País: ");
-    scanf("%d", &populacao1);
-    printf("População de %d registrada para %s.\n\n", populacao1, pais1);
+    scanf("%ld", &populacao1);
+    printf("População de %ld registrada para %s.\n\n", populacao1, pais1);
 
     // ÁREA CARTA 1
 
@@ -55,8 +58,8 @@ int main() {
     // POPULÇÃO CARTA 2
 
     printf("Agora informa de quanto é a POPULAÇÃO do País: ");
-    scanf("%d", &populacao2);
-    printf("População de %d registrada para %s.\n\n", populacao2, pais2);
+    scanf("%ld", &populacao2);
+    printf("População de %ld registrada para %s.\n\n", populacao2, pais2);
 
     // ÁREA CARTA 2
 
@@ -86,7 +89,7 @@ int main() {
 
     printf("CARTA 1 - %s.\n\n", pais1);
     printf("Tem um área de %.2f km²\n", area1);
-    printf("Possue uma população de %d\n", populacao1);
+    printf("Possue uma população de %ld\n", populacao1);
     printf("Com um número de %d pontos turísticos\n", ptTuristico1);
     printf("Faz um PIB de R$%f\n", pib1);
 
@@ -95,24 +98,24 @@ int main() {
     densidadePopulacao1 = (float) populacao1 / area1;
     percaptaPIB1 = (float) pib1 / populacao1;
 
-    printf("Com isso a DENSIDADE POPULACIONAL é de %f pessoas por km²\n", densidadePopulacao1);
-    printf("E um PIB per capta de R$%f \n\n", percaptaPIB1);
+    printf("Com isso a DENSIDADE POPULACIONAL é de %lf pessoas por km²\n", densidadePopulacao1);
+    printf("E um PIB per capta de R$%lf \n\n", percaptaPIB1);
 
     // CARTA 2
 
     printf("CARTA 2 - %s.\n\n", pais2);
     printf("Tem um área de %.2f km²\n", area2);
-    printf("Possue uma população de %d\n", populacao2);
+    printf("Possue uma população de %ld\n", populacao2);
     printf("Com um número de %d pontos turísticos\n", ptTuristico2);
     printf("Faz um PIB de R$%f\n", pib2);
 
-    // Calculo da DENSIDADE POPULACIONAL e PIB PER CAPTA da CARTA 2
+    // Calculo da DENSIDADE POPULACIONAL, PIB PER CAPTA e SUPER PODER da CARTA 2
 
     densidadePopulacao2 = (float) populacao2 / area2;
     percaptaPIB2 = (float) pib2 / populacao2;
 
-    printf("Com isso a DENSIDADE POPULACIONAL é de %f pessoas por km²\n", densidadePopulacao2);
-    printf("E um PIB per capta de R$%f \n\n", percaptaPIB2);
+    printf("Com isso a DENSIDADE POPULACIONAL é de %lf pessoas por km²\n", densidadePopulacao2);
+    printf("E um PIB per capta de R$%lf \n\n", percaptaPIB2);
 
     return 0;
 }
