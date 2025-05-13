@@ -5,7 +5,7 @@
     long double densidadePopulacao1, densidadePopulacao2, percaptaPIB1, percaptaPIB2;
     float area1, pib1, area2, pib2;
     char pais1[50], pais2[50];
-    unsigned long int superPoder1, superPoder2;
+    long double superPoder1, superPoder2;
 
 int main() {
 
@@ -76,7 +76,7 @@ int main() {
     // PONTOS TURÍSTICOS CARTA 2
 
     printf("Por último informe quantos PONTOS TURÍSTICOS possue o País %s: ", pais2);
-    scanf("%d", &ptTuristico2);
+    //scanf("%d", &ptTuristico2);
     printf("%d pontos Turísticos reistrados no País %s. \n\n", ptTuristico2, pais2);
 
     printf("Com isso concluimos a SEGUNDA CARTA. Muito obrigado!\n\n");
@@ -102,9 +102,10 @@ int main() {
     printf("E um PIB per capta de R$%lf \n\n", percaptaPIB1);
 
     // SUPER PODER da CARTA 1
-    
+
+    densidadePopulacao1 = 1 / densidadePopulacao1;
     superPoder1 = area1 + populacao1 + ptTuristico1 + pib1 + densidadePopulacao1 + percaptaPIB1;
-    printf("O Super Poder dessa carta é de %ld.\n", superPoder1);
+    printf("O Super Poder dessa carta é de %lf.\n", superPoder1);
 
     // CARTA 2
 
@@ -123,13 +124,33 @@ int main() {
     printf("E um PIB per capta de R$%lf \n\n", percaptaPIB2);
     
     // SUPER PODER da CARTA 2
-    
+
+    densidadePopulacao2 = 1 / densidadePopulacao2;
     superPoder2 = area2 + populacao2 + ptTuristico2 + pib2 + densidadePopulacao2 + percaptaPIB2;
-    printf("O Super Poder dessa carta é de %ld.\n", superPoder2);
+    printf("O Super Poder dessa carta é de %lf.\n\n", superPoder2);
 
     // COMPARAÇÃO ENTRE CARTAS
 
-    
+    printf("A ÁREA TERRITORIAL do país %s é MAIOR que %s?\n", pais1, pais2);
+    printf("%d\n\n", area1 > area2);
+
+    printf("A POPULÇÃO do país %s é MAIOR que %s?\n", pais1, pais2);
+    printf("%d\n\n", populacao1 > populacao2);
+
+    printf("O número de PONTOS TURÍSTICOS do país %s é MAIOR que %s?\n", pais1, pais2);
+    printf("%d\n\n", ptTuristico1 > ptTuristico2);
+
+    printf("O PIB do país %s é maior que %s?\n", pais1, pais2);
+    printf("%d\n\n", pib1 > pib2);
+
+    printf("O PIB PER CAPTA do país %s é MAIOR que %s?\n", pais1, pais2);
+    printf("%d\n\n", percaptaPIB1 > percaptaPIB2);
+
+    printf("A DENSIDADE POPULACIONAL do país %s é MAIOR que %s?\n", pais1, pais2);
+    printf("%d\n\n", densidadePopulacao1 > densidadePopulacao2);
+
+    printf("Se o resultado for 1 a Carta 1 - %s vence, mas se for 0 a Carta 2 - %s vence)\n\n\n", pais1, pais2);
+
 
     return 0;
 }
