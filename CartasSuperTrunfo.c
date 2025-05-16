@@ -3,22 +3,22 @@
 void main()
 {
     //carta A vars
-    char EstadoA;
-    char codA[20];
-    char nomeA[20];
-    int populacaoA;
-    float areaA;
-    float pibA;
-    int pontostA;
+    char EstadoA; //Estado da Carta A
+    char codA[20]; //Codigo da Carta A
+    char nomeA[20]; //Nome da Cidade da Carta A
+    int populacaoA; //Populacao da Carta A
+    float areaA; //Area da Carta A
+    float pibA; //PIB da Carta A
+    int pontostA; //Pontos turisticos da Carta A
 
     //carta B vars
-    char EstadoB;
-    char codB[3];
-    char nomeB[20];
-    int populacaoB;
-    float areaB;
-    float pibB;
-    int pontostB;
+    char EstadoB; //Estado da Carta B
+    char codB[3]; //Codigo da Carta B
+    char nomeB[20]; //Nome da Cidade da Carta B
+    int populacaoB; //Populacao da Carta B
+    float areaB; //Area da Carta B
+    float pibB; //PIB da Carta B
+    int pontostB; //Pontos turisticos da Carta A
 
     //pegar info carta A
     printf("Insira os dados da carta A: \n");
