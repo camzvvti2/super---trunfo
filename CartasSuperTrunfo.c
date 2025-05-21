@@ -37,6 +37,9 @@ int main() {
     scanf("%d", &carta1.pontosTuristicos);
 
     // Cálculos da primeira carta
+    // Operação divisão: Densidade pepulacional = população/area 
+    // Operação divisão: PIb per capita = pib/populacao 
+
     carta1.densidadePopulacional = carta1.populacao / carta1.area;
     carta1.pibPerCapita = carta1.pib / carta1.populacao;
 
@@ -59,6 +62,8 @@ int main() {
     scanf("%d", &carta2.pontosTuristicos);
 
     // Cálculos da segunda carta
+    // Operação divisão: Densidade pepulacional = população/area 
+    // Operação divisão: PIb per capita = pib/populacao 
     carta2.densidadePopulacional = carta2.populacao / carta2.area;
     carta2.pibPerCapita = carta2.pib / carta2.populacao;
 
