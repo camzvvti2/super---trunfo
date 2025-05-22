@@ -35,11 +35,11 @@ int main() {
     // Exibição dos Dados das Cartas:
     printf("======================================");
     printf("Estado : %c\n", estado);
-    printf("Código: %d\n", codigo);
+    printf("Código: %c %s\n", estado, codigo);
     printf("Nome da cidade: %s\n", cidade);
     printf("População: %d\n", populacao);
-    printf("Área: %f Km²\n", area);
-    printf("PIB: %f bilhões de R$\n", pib);
+    printf("Área: %.2f Km²\n", area);
+    printf("PIB: %.2f bilhões de R$\n", pib);
     printf("Número de Pontos Turísticos: %d\n", pontos_turisticos);
     printf("\n");
 
