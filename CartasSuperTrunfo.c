@@ -33,14 +33,16 @@ int main() {
     scanf("%d", &pontos_turisticos);
 
     // Exibição dos Dados das Cartas:
-    printf("======================================");
+    printf("======================================\n");
     printf("Estado : %c\n", estado);
-    printf("Código: %c %s\n", estado, codigo);
+    printf("Código: %c%s\n", estado, codigo);
     printf("Nome da cidade: %s\n", cidade);
     printf("População: %d\n", populacao);
     printf("Área: %.2f Km²\n", area);
-    printf("PIB: %.2f bilhões de R$\n", pib);
+    printf("PIB: %.2f bilhões de reais\n", pib);
     printf("Número de Pontos Turísticos: %d\n", pontos_turisticos);
     printf("\n");
+
+    return 0;
 
 }
