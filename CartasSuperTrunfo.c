@@ -8,8 +8,7 @@ int main() {
     //Declarando as variáveis com as características das cartas 
     int populacao, pontos_turisticos;
     float area, pib;
-    char estado;
-    char codigo[5], cidade[50]; 
+    char estado, codigo[5], cidade[50]; 
 
     //Capturando características e atribuinda às variáveis
     printf("Digite a letra do estado: \n");
