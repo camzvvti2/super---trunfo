@@ -67,28 +67,33 @@ int main() {
     printf("Estas foram as cartas que voce adicionou!\n\n");
 
     //APRESETAÇÃO DA CARTA 1
-    printf("CARTA 1:\n");
-    printf("Estado: %s \n", estado);
-    printf("Codigo: %s \n", codigoCarta);
-    printf("Nome da Cidade: %s \n", nomeCidade);
-    printf("Populacao: %i \n", populacao);
-    printf("Area: %4.2f KM \n", areaCidade);
-    printf("PIB: R$ %3.2f MI \n", pib);
-    printf("Numero de pontos turisticos: %i \n", pontosTuristicos);
+    printf("CARTA 1:\n ");
+    printf("Estado: %s \n ", estado);
+    printf("Codigo: %s \n ", codigoCarta);
+    printf("Nome da Cidade: %s \n ", nomeCidade);
+    printf("Populacao: %i \n ", populacao);
+    printf("Area: %4.2f KM \n ", areaCidade);
+    printf("PIB: R$ %3.2f MI \n ", pib);
+    printf("Numero de pontos turisticos: %i \n ", pontosTuristicos);
+    printf("Densidade populacional: %.2f hab/km2\n ", populacao/areaCidade);
+    printf("PIB per Capita: %.2f R$\n ", pib/populacao);
 
     //BLOCO DE SEPARAÇÃO ENTRE APRESENTAÇÕES DAS CARTAS
     printf("\n");
     printf("Sua segunda carta:\n\n");
 
     //APRESETAÇÃO DA CARTA 2
-    printf("CARTA 2:\n");
-    printf("Estado: %s \n", estado2);
-    printf("Codigo: %s \n", codigoCarta2);
-    printf("Nome da Cidade: %s \n", nomeCidade2);
-    printf("Populacao: %i \n", populacao2);
-    printf("Area: %4.2f KM \n", areaCidade2);
-    printf("PIB: R$ %3.2f MI \n", pib2);
-    printf("Numero de pontos turisticos: %i \n", pontosTuristicos2);
+    printf("CARTA 2:\n ");
+    printf("Estado: %s \n ", estado2);
+    printf("Codigo: %s \n ", codigoCarta2);
+    printf("Nome da Cidade: %s \n ", nomeCidade2);
+    printf("Populacao: %i \n ", populacao2);
+    printf("Area: %4.2f KM \n ", areaCidade2);
+    printf("PIB: R$ %3.2f MI \n ", pib2);
+    printf("Numero de pontos turisticos: %i \n ", pontosTuristicos2);
+    printf("Densidade populacional: %.2f hab/km2\n ", populacao2/areaCidade2);
+    printf("PIB per Capita: %.2f R$\n ", pib2/populacao2);
+
 
     printf("\n");
 
