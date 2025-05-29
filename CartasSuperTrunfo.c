@@ -9,7 +9,7 @@ int main(){
     char codigoDaCarta[5] = "A01"; // Código da carta deve ter 3 caracteres + 1 para o terminador nulo
     char codigoDaCarta2[5] = "B02";
 
-    // Inicializando as variaveis PARA TESTE:
+    // Inicializando as variaveis:
     char nomeDaCidade[30] = "SÃO PAULO";
     char nomeDaCidade2[30] = "RIO DE JANEIRO";
 
@@ -21,8 +21,6 @@ int main(){
     float AreaPorKm22 = 1200.00; // 1.200,00 km²
     float PIB = 5000000000.0;
     float PIB2 = 3000000000.0;
-
-    int opcao;
 
     // ENTRADA DE DADOS CARTA 1
 
