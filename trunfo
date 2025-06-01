@@ -1,173 +1,133 @@
 #include <stdio.h>
+
+#define TAMANHO_TABULEIRO 10
+
 int main() {
-    unsigned long populacao1, populacao2;
-    float area1, area2, pib1, pib2;
-    int pontos1, pontos2;
-    int escolha;
-    // Cadastro das cartas
-    printf("Cadastro da Carta 1:\n");
-    printf("Populacao: ");
-    scanf("%lu", &populacao1);
-    printf("Area: ");
-    scanf("%f", &area1);
-    printf("PIB: ");
-    scanf("%f", &pib1);
-    printf("Pontos Turisticos: ");
-    scanf("%d", &pontos1);
-    printf("\nCadastro da Carta 2:\n");
-    printf("Populacao: ");
-    scanf("%lu", &populacao2);
-    printf("Area: ");
-    scanf("%f", &area2);
-    printf("PIB: ");
-    scanf("%f", &pib2);
-    printf("Pontos Turisticos: ");
-    scanf("%d", &pontos2);
+    int tabuleiro[TAMANHO_TABULEIRO] = {0}; // 0 = vazio, 1 = navio
+    int posicao;
 
-    // Menu simples
-    printf("\nEscolha o atributo para comparar:\n");
-    printf("1 - Populacao\n2 - Area\n3 - PIB\n4 - Pontos Turisticos\n");
-    printf("Opcao: ");
-    scanf("%d", &escolha);
+    printf("Digite a posição do navio (0 a %d): ", TAMANHO_TABULEIRO - 1);
+    scanf("%d", &posicao);
 
-    printf("\nResultado da Comparacao:\n");
-
-    if (escolha == 1) {
-        if (populacao1 > populacao2)
-            printf("Carta 1 vence em Populacao!\n");
-        else if (populacao1 < populacao2)
-            printf("Carta 2 vence em Populacao!\n");
-        else
-            printf("Empate em Populacao.\n");
+    if (posicao >= 0 && posicao < TAMANHO_TABULEIRO) {
+        tabuleiro[posicao] = 1;
+        printf("Navio colocado na posição %d\n", posicao);
+    } else {
+        printf("Posição inválida!\n");
     }
 
-    if (escolha == 2) {
-        if (area1 > area2)
-            printf("Carta 1 vence em Area!\n");
-        else if (area1 < area2)
-            printf("Carta 2 vence em Area!\n");
-        else
-            printf("Empate em Area.\n");
+    printf("Estado atual do tabuleiro:\n");
+    for (int i = 0; i < TAMANHO_TABULEIRO; i++) {
+        printf("%d ", tabuleiro[i]);
     }
-
-    if (escolha == 3) {
-        if (pib1 > pib2)
-            printf("Carta 1 vence em PIB!\n");
-        else if (pib1 < pib2)
-            printf("Carta 2 vence em PIB!\n");
-        else
-            printf("Empate em PIB.\n");
-    }
-
-    if (escolha == 4) {
-        if (pontos1 > pontos2)
-            printf("Carta 1 vence em Pontos Turisticos!\n");
-        else if (pontos1 < pontos2)
-            printf("Carta 2 vence em Pontos Turisticos!\n");
-        else
-            printf("Empate em Pontos Turisticos.\n");
-    }
+    printf("\n");
 
     return 0;
 }
-
-
-
-
-
 #include <stdio.h>
 
+#define TAM 10
+
+void imprimir_tabuleiro(int tab[TAM][TAM]) {
+    for (int i = 0; i < TAM; i++) {
+        for (int j = 0; j < TAM; j++) {
+            printf("%d ", tab[i][j]);
+        }
+        printf("\n");
+    }
+}
+
 int main() {
-    unsigned long pop1, pop2;
-    float area1, area2, pib1, pib2;
-    int pontos1, pontos2;
-    int opcao;
+    int tabuleiro[TAM][TAM] = {0};
+    int linha, coluna, tamanho_navio;
+    char direcao;
 
-    printf("Cadastro da Carta 1:\n");
-    printf("Populacao: "); scanf("%lu", &pop1);
-    printf("Area: "); scanf("%f", &area1);
-    printf("PIB: "); scanf("%f", &pib1);
-    printf("Pontos Turisticos: "); scanf("%d", &pontos1);
+    printf("Digite linha e coluna inicial do navio (0-9): ");
+    scanf("%d %d", &linha, &coluna);
+    printf("Tamanho do navio: ");
+    scanf("%d", &tamanho_navio);
+    printf("Direção (H=Horizontal, V=Vertical, D=Diagonal): ");
+    scanf(" %c", &direcao);
 
-    printf("\nCadastro da Carta 2:\n");
-    printf("Populacao: "); scanf("%lu", &pop2);
-    printf("Area: "); scanf("%f", &area2);
-    printf("PIB: "); scanf("%f", &pib2);
-    printf("Pontos Turisticos: "); scanf("%d", &pontos2);
-
-    float dens1 = pop1 / area1;
-    float dens2 = pop2 / area2;
-    float percapita1 = pib1 / pop1;
-    float percapita2 = pib2 / pop2;
-
-    printf("\nEscolha o atributo para comparar:\n");
-    printf("1 - Densidade Populacional\n2 - PIB per Capita\n3 - Populacao + Area\n");
-    printf("Opcao: ");
-    scanf("%d", &opcao);
-
-    switch(opcao) {
-        case 1:
-            if (dens1 < dens2)
-                printf("Carta 1 vence (menor Densidade Populacional)\n");
-            else if (dens2 < dens1)
-                printf("Carta 2 vence (menor Densidade Populacional)\n");
-            else
-                printf("Empate\n");
-            break;
-
-        case 2:
-            if (percapita1 > percapita2)
-                printf("Carta 1 vence (maior PIB per Capita)\n");
-            else if (percapita2 > percapita1)
-                printf("Carta 2 vence (maior PIB per Capita)\n");
-            else
-                printf("Empate\n");
-            break;
-
-        case 3:
-            if ((pop1 + (unsigned long)area1) > (pop2 + (unsigned long)area2))
-                printf("Carta 1 vence (Populacao + Area)\n");
-            else
-                printf("Carta 2 vence (Populacao + Area)\n");
-            break;
-
-        default:
-            printf("Opcao invalida.\n");
+    for (int i = 0; i < tamanho_navio; i++) {
+        if (direcao == 'H' && coluna + i < TAM)
+            tabuleiro[linha][coluna + i] = 1;
+        else if (direcao == 'V' && linha + i < TAM)
+            tabuleiro[linha + i][coluna] = 1;
+        else if (direcao == 'D' && linha + i < TAM && coluna + i < TAM)
+            tabuleiro[linha + i][coluna + i] = 1;
     }
 
+    imprimir_tabuleiro(tabuleiro);
     return 0;
 }
 
-
-
-
-
 #include <stdio.h>
+#include <stdlib.h>
+#include <math.h>
+
+#define TAM 10
+
+void imprimir_tabuleiro(int tab[TAM][TAM]) {
+    for (int i = 0; i < TAM; i++) {
+        for (int j = 0; j < TAM; j++) {
+            printf("%d ", tab[i][j]);
+        }
+        printf("\n");
+    }
+}
+
+void habilidade_cruz(int tab[TAM][TAM], int x, int y) {
+    for (int i = 0; i < TAM; i++) {
+        tab[i][y] = 2;
+        tab[x][i] = 2;
+    }
+}
+
+void habilidade_cone(int tab[TAM][TAM], int x, int y) {
+    for (int i = 0; i <= 2; i++) {
+        for (int j = -i; j <= i; j++) {
+            int linha = x + i;
+            int coluna = y + j;
+            if (linha >= 0 && linha < TAM && coluna >= 0 && coluna < TAM) {
+                tab[linha][coluna] = 3;
+            }
+        }
+    }
+}
+
+void habilidade_octaedro(int tab[TAM][TAM], int x, int y) {
+    for (int i = -2; i <= 2; i++) {
+        for (int j = -2; j <= 2; j++) {
+            if (abs(i) + abs(j) <= 2) {
+                int linha = x + i;
+                int coluna = y + j;
+                if (linha >= 0 && linha < TAM && coluna >= 0 && coluna < TAM) {
+                    tab[linha][coluna] = 4;
+                }
+            }
+        }
+    }
+}
 
 int main() {
-    unsigned long pop1, pop2;
-    float area1, area2, pib1, pib2;
-    int pontos1, pontos2;
+    int tabuleiro[TAM][TAM] = {0};
+    int x, y;
+    char habilidade;
 
-    printf("Cadastro da Carta 1:\n");
-    scanf("%lu %f %f %d", &pop1, &area1, &pib1, &pontos1);
-    printf("Cadastro da Carta 2:\n");
-    scanf("%lu %f %f %d", &pop2, &area2, &pib2, &pontos2);
+    printf("Digite a posição central (x y): ");
+    scanf("%d %d", &x, &y);
 
-    float dens1 = pop1 / area1;
-    float dens2 = pop2 / area2;
-    float ppc1 = pib1 / pop1;
-    float ppc2 = pib2 / pop2;
+    printf("Escolha a habilidade (C = Cruz, O = Octaedro, N = Cone): ");
+    scanf(" %c", &habilidade);
 
-    // Comparando dois atributos com lógica composta e operador ternário
-    printf("\nComparando PIB per Capita e Pontos Turísticos...\n");
+    switch (habilidade) {
+        case 'C': habilidade_cruz(tabuleiro, x, y); break;
+        case 'N': habilidade_cone(tabuleiro, x, y); break;
+        case 'O': habilidade_octaedro(tabuleiro, x, y); break;
+        default: printf("Habilidade inválida!\n"); return 1;
+    }
 
-    int resultado = (ppc1 > ppc2 && pontos1 > pontos2) ? 1 :
-                    (ppc2 > ppc1 && pontos2 > pontos1) ? 2 : 0;
-
-    (resultado == 1) ? printf("Carta 1 vence!\n") :
-    (resultado == 2) ? printf("Carta 2 vence!\n") :
-                       printf("Empate geral!\n");
-
+    imprimir_tabuleiro(tabuleiro);
     return 0;
 }
