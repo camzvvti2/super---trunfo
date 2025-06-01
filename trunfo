@@ -1,11 +1,9 @@
 #include <stdio.h>
-
 int main() {
     unsigned long populacao1, populacao2;
     float area1, area2, pib1, pib2;
     int pontos1, pontos2;
     int escolha;
-
     // Cadastro das cartas
     printf("Cadastro da Carta 1:\n");
     printf("Populacao: ");
@@ -16,7 +14,6 @@ int main() {
     scanf("%f", &pib1);
     printf("Pontos Turisticos: ");
     scanf("%d", &pontos1);
-
     printf("\nCadastro da Carta 2:\n");
     printf("Populacao: ");
     scanf("%lu", &populacao2);
